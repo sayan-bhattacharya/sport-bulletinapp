@@ -1,0 +1,57 @@
+name: Deploy To Hostinger
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+concurrency:
+  group: hostinger-deploy
+  cancel-in-progress: true
+
+jobs:
+  deploy-hostinger:
+    # Flip on after FTP secrets exist:
+    # Settings → Secrets and variables → Actions → Variables
+    # ENABLE_HOSTINGER_DEPLOY = true
+    if: ${{ vars.ENABLE_HOSTINGER_DEPLOY == 'true' }}
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Verify Hostinger FTP secrets
+        env:
+          FTP_SERVER: ${{ secrets.HOSTINGER_FTP_SERVER }}
+          FTP_USERNAME: ${{ secrets.HOSTINGER_FTP_USERNAME }}
+          FTP_PASSWORD: ${{ secrets.HOSTINGER_FTP_PASSWORD }}
+          FTP_SERVER_DIR: ${{ secrets.HOSTINGER_FTP_SERVER_DIR }}
+        run: |
+          missing=0
+          [ -n "$FTP_SERVER" ] || { echo "Missing secret: HOSTINGER_FTP_SERVER"; missing=1; }
+          [ -n "$FTP_USERNAME" ] || { echo "Missing secret: HOSTINGER_FTP_USERNAME"; missing=1; }
+          [ -n "$FTP_PASSWORD" ] || { echo "Missing secret: HOSTINGER_FTP_PASSWORD"; missing=1; }
+          [ -n "$FTP_SERVER_DIR" ] || { echo "Missing secret: HOSTINGER_FTP_SERVER_DIR (example: /public_html/)"; missing=1; }
+          if [ "$missing" -ne 0 ]; then
+            echo "Add Hostinger FTP secrets, then re-run this workflow."
+            exit 1
+          fi
+
+      - name: Deploy static site via FTP
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.5
+        with:
+          server: ${{ secrets.HOSTINGER_FTP_SERVER }}
+          username: ${{ secrets.HOSTINGER_FTP_USERNAME }}
+          password: ${{ secrets.HOSTINGER_FTP_PASSWORD }}
+          local-dir: ./
+          server-dir: ${{ secrets.HOSTINGER_FTP_SERVER_DIR }}
+          exclude: |
+            **/.git*
+            **/.git*/**
+            **/.env*
+            **/.github/**
+            **/node_modules/**
+            **/*.md
+            docs/**

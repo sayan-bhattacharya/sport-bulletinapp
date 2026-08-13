@@ -1,0 +1,35 @@
+name: CI
+
+on:
+  pull_request:
+  push:
+    branches:
+      - main
+
+jobs:
+  validate-static-site:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Verify required files
+        run: |
+          test -f index.html
+          test -f styles.css
+          test -f app.js
+          test -f .nojekyll
+
+      - name: Verify referenced local assets exist
+        run: |
+          grep -o '\./assets/[^"]*' index.html | sed 's#^\./##' | while read -r asset; do
+            test -f "$asset"
+          done
+
+      - name: Verify referenced docs exist
+        run: |
+          grep -o '\./docs/[^"]*' index.html | sed 's#^\./##' | while read -r doc; do
+            test -f "$doc"
+          done
+
