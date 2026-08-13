@@ -1,76 +1,77 @@
 import { AbsoluteFill, Easing, interpolate, useCurrentFrame, useVideoConfig } from "remotion";
 
-const ink = "#07080c";
 const chalk = "#f4f1ea";
 const signal = "#e11d2e";
-const dim = "rgba(244, 241, 234, 0.55)";
+const dim = "rgba(244, 241, 234, 0.72)";
 
+/** Match the 8s compressed hero MP4 */
 export const SCORE_ADDA_FPS = 30;
-export const SCORE_ADDA_DURATION = 300; // 10s loop
+export const SCORE_ADDA_DURATION = 240;
 
+/**
+ * Transparent kinetic overlay — sits on top of the real hero MP4.
+ * No solid fill so the background video stays visible.
+ */
 export const ScoreAddaLoop: React.FC = () => {
   const frame = useCurrentFrame();
   const { width, height, fps } = useVideoConfig();
 
-  const tickerX = interpolate(frame, [0, SCORE_ADDA_DURATION], [0, -width * 0.85], {
+  const tickerX = interpolate(frame, [0, SCORE_ADDA_DURATION], [0, -width * 0.9], {
     extrapolateRight: "clamp",
   });
 
-  const cricketOpacity = interpolate(frame, [18, 36, 90, 110], [0, 1, 1, 0], {
+  const cricketOpacity = interpolate(frame, [12, 28, 70, 88], [0, 1, 1, 0], {
     extrapolateLeft: "clamp",
     extrapolateRight: "clamp",
     easing: Easing.bezier(0.16, 1, 0.3, 1),
   });
 
-  const footballOpacity = interpolate(frame, [100, 120, 175, 195], [0, 1, 1, 0], {
+  const footballOpacity = interpolate(frame, [78, 96, 140, 158], [0, 1, 1, 0], {
     extrapolateLeft: "clamp",
     extrapolateRight: "clamp",
     easing: Easing.bezier(0.16, 1, 0.3, 1),
   });
 
-  const brandScale = interpolate(frame, [160, 190, 260, 285], [0.82, 1, 1, 0.96], {
+  const brandScale = interpolate(frame, [145, 170, 210, 232], [0.88, 1, 1, 0.97], {
     extrapolateLeft: "clamp",
     extrapolateRight: "clamp",
     easing: Easing.spring({ damping: 180 }),
     output: "perceptual-scale",
   });
 
-  const brandOpacity = interpolate(frame, [155, 175, 270, 295], [0, 1, 1, 0], {
+  const brandOpacity = interpolate(frame, [140, 158, 215, 235], [0, 1, 1, 0], {
     extrapolateLeft: "clamp",
     extrapolateRight: "clamp",
   });
 
-  const tagOpacity = interpolate(frame, [200, 220, 270, 290], [0, 1, 1, 0], {
+  const tagOpacity = interpolate(frame, [165, 180, 215, 232], [0, 1, 1, 0], {
     extrapolateLeft: "clamp",
     extrapolateRight: "clamp",
   });
 
-  const sweep = interpolate(frame, [0, 40], [-20, 120], {
+  const sweep = interpolate(frame, [0, 36], [-25, 125], {
     extrapolateLeft: "clamp",
     extrapolateRight: "clamp",
     easing: Easing.bezier(0.22, 1, 0.36, 1),
   });
 
-  const pulse = interpolate(frame % Math.round(fps * 1.2), [0, Math.round(fps * 0.6), Math.round(fps * 1.2)], [1, 1.35, 1], {
+  const pulse = interpolate(
+    frame % Math.round(fps * 1.2),
+    [0, Math.round(fps * 0.6), Math.round(fps * 1.2)],
+    [1, 1.35, 1],
+    { extrapolateRight: "clamp" }
+  );
+
+  const frameGlow = interpolate(frame, [0, 40, 120, 200, 239], [0.15, 0.35, 0.2, 0.4, 0.15], {
+    extrapolateLeft: "clamp",
     extrapolateRight: "clamp",
   });
 
   return (
-    <AbsoluteFill style={{ backgroundColor: ink, overflow: "hidden" }}>
+    <AbsoluteFill style={{ backgroundColor: "transparent", overflow: "hidden" }}>
       <AbsoluteFill
         style={{
-          backgroundImage:
-            "radial-gradient(ellipse 80% 60% at 70% 40%, rgba(225,29,46,0.28), transparent 55%), radial-gradient(ellipse 50% 40% at 20% 80%, rgba(244,241,234,0.06), transparent 50%)",
-        }}
-      />
-
-      <div
-        style={{
-          position: "absolute",
-          inset: 0,
-          opacity: 0.12,
-          backgroundImage:
-            "repeating-linear-gradient(0deg, transparent, transparent 3px, rgba(255,255,255,0.04) 3px, rgba(255,255,255,0.04) 4px)",
+          backgroundImage: `radial-gradient(ellipse 70% 55% at 75% 35%, rgba(225,29,46,${0.18 + frameGlow * 0.2}), transparent 55%)`,
         }}
       />
 
@@ -79,24 +80,26 @@ export const ScoreAddaLoop: React.FC = () => {
           position: "absolute",
           top: 0,
           left: `${sweep}%`,
-          width: "18%",
+          width: "16%",
           height: "100%",
-          background: "linear-gradient(90deg, transparent, rgba(244,241,234,0.08), transparent)",
+          background: "linear-gradient(90deg, transparent, rgba(244,241,234,0.12), transparent)",
           transform: "skewX(-12deg)",
+          mixBlendMode: "screen",
         }}
       />
 
       <div
         style={{
           position: "absolute",
-          top: 48,
+          top: 40,
           left: 0,
           right: 0,
           overflow: "hidden",
-          borderTop: "1px solid rgba(244,241,234,0.12)",
-          borderBottom: "1px solid rgba(244,241,234,0.12)",
-          padding: "14px 0",
-          background: "rgba(0,0,0,0.35)",
+          borderTop: "1px solid rgba(244,241,234,0.2)",
+          borderBottom: "1px solid rgba(244,241,234,0.2)",
+          padding: "12px 0",
+          background: "rgba(7,8,12,0.45)",
+          backdropFilter: "blur(6px)",
         }}
       >
         <div
@@ -106,48 +109,50 @@ export const ScoreAddaLoop: React.FC = () => {
             whiteSpace: "nowrap",
             translate: `${tickerX}px 0px`,
             fontFamily: "Bebas Neue, sans-serif",
-            fontSize: 28,
+            fontSize: 26,
             letterSpacing: 2,
             color: chalk,
           }}
         >
           <span>IND 184/4 · RR 9.8</span>
           <span style={{ color: signal }}>LIVE</span>
-          <span>BAR 2 — ARS 1 · 73'</span>
-          <span>ISL · MUMBAI CITY</span>
+          <span>MUM 1 — MBSG 1 · 64'</span>
+          <span>SCORE ADDA</span>
           <span style={{ color: signal }}>BRIEF READY</span>
-          <span>SCORE ADDA · CRICKET + FOOTBALL</span>
+          <span>CRICKET + FOOTBALL</span>
           <span>IND 184/4 · RR 9.8</span>
           <span style={{ color: signal }}>LIVE</span>
-          <span>BAR 2 — ARS 1 · 73'</span>
+          <span>MUM 1 — MBSG 1 · 64'</span>
         </div>
       </div>
 
       <div
         style={{
           position: "absolute",
-          left: width * 0.08,
-          top: height * 0.28,
+          left: width * 0.07,
+          top: height * 0.3,
           opacity: cricketOpacity,
           color: chalk,
-          maxWidth: width * 0.42,
+          maxWidth: width * 0.4,
+          textShadow: "0 8px 28px rgba(0,0,0,0.55)",
         }}
       >
-        <div style={{ display: "flex", alignItems: "center", gap: 12, marginBottom: 16 }}>
+        <div style={{ display: "flex", alignItems: "center", gap: 12, marginBottom: 14 }}>
           <div
             style={{
-              width: 12,
-              height: 12,
+              width: 11,
+              height: 11,
               borderRadius: "50%",
               background: signal,
               scale: String(pulse),
+              boxShadow: "0 0 16px rgba(225,29,46,0.8)",
             }}
           />
           <span
             style={{
               fontFamily: "DM Sans, sans-serif",
-              fontSize: 18,
-              fontWeight: 600,
+              fontSize: 16,
+              fontWeight: 700,
               letterSpacing: 3,
               textTransform: "uppercase",
               color: signal,
@@ -159,21 +164,14 @@ export const ScoreAddaLoop: React.FC = () => {
         <div
           style={{
             fontFamily: "Bebas Neue, sans-serif",
-            fontSize: 92,
+            fontSize: 84,
             lineHeight: 0.9,
             letterSpacing: 1,
           }}
         >
           INDIA vs AUS
         </div>
-        <div
-          style={{
-            fontFamily: "DM Sans, sans-serif",
-            fontSize: 28,
-            marginTop: 12,
-            color: dim,
-          }}
-        >
+        <div style={{ fontFamily: "DM Sans, sans-serif", fontSize: 24, marginTop: 10, color: dim }}>
           184/4 · 17.2 ov · Chase 201
         </div>
       </div>
@@ -181,12 +179,13 @@ export const ScoreAddaLoop: React.FC = () => {
       <div
         style={{
           position: "absolute",
-          right: width * 0.08,
-          top: height * 0.32,
+          right: width * 0.07,
+          top: height * 0.34,
           opacity: footballOpacity,
           color: chalk,
           textAlign: "right",
-          maxWidth: width * 0.42,
+          maxWidth: width * 0.4,
+          textShadow: "0 8px 28px rgba(0,0,0,0.55)",
         }}
       >
         <div
@@ -195,14 +194,14 @@ export const ScoreAddaLoop: React.FC = () => {
             alignItems: "center",
             justifyContent: "flex-end",
             gap: 12,
-            marginBottom: 16,
+            marginBottom: 14,
           }}
         >
           <span
             style={{
               fontFamily: "DM Sans, sans-serif",
-              fontSize: 18,
-              fontWeight: 600,
+              fontSize: 16,
+              fontWeight: 700,
               letterSpacing: 3,
               textTransform: "uppercase",
               color: signal,
@@ -212,33 +211,27 @@ export const ScoreAddaLoop: React.FC = () => {
           </span>
           <div
             style={{
-              width: 12,
-              height: 12,
+              width: 11,
+              height: 11,
               borderRadius: "50%",
               background: signal,
               scale: String(pulse),
+              boxShadow: "0 0 16px rgba(225,29,46,0.8)",
             }}
           />
         </div>
         <div
           style={{
             fontFamily: "Bebas Neue, sans-serif",
-            fontSize: 92,
+            fontSize: 84,
             lineHeight: 0.9,
             letterSpacing: 1,
           }}
         >
-          BAR 2 — ARS 1
+          MUM 1 — MBSG 1
         </div>
-        <div
-          style={{
-            fontFamily: "DM Sans, sans-serif",
-            fontSize: 28,
-            marginTop: 12,
-            color: dim,
-          }}
-        >
-          73' · Momentum shift
+        <div style={{ fontFamily: "DM Sans, sans-serif", fontSize: 24, marginTop: 10, color: dim }}>
+          64' · ISL night
         </div>
       </div>
 
@@ -252,17 +245,19 @@ export const ScoreAddaLoop: React.FC = () => {
           justifyContent: "center",
           opacity: brandOpacity,
           scale: String(brandScale),
-          paddingTop: 40,
+          paddingTop: 48,
+          pointerEvents: "none",
         }}
       >
         <div
           style={{
             fontFamily: "Bebas Neue, sans-serif",
-            fontSize: Math.min(width * 0.14, 220),
+            fontSize: Math.min(width * 0.13, 200),
             lineHeight: 0.85,
             color: chalk,
             letterSpacing: 4,
             textAlign: "center",
+            textShadow: "0 12px 40px rgba(0,0,0,0.65)",
           }}
         >
           SCORE
@@ -270,14 +265,15 @@ export const ScoreAddaLoop: React.FC = () => {
         </div>
         <div
           style={{
-            marginTop: 28,
+            marginTop: 22,
             opacity: tagOpacity,
             fontFamily: "DM Sans, sans-serif",
-            fontSize: 28,
-            fontWeight: 500,
+            fontSize: 24,
+            fontWeight: 600,
             letterSpacing: 4,
             textTransform: "uppercase",
             color: dim,
+            textShadow: "0 6px 20px rgba(0,0,0,0.55)",
           }}
         >
           Live state. Sharp brief. One adda.
@@ -287,21 +283,11 @@ export const ScoreAddaLoop: React.FC = () => {
       <div
         style={{
           position: "absolute",
-          bottom: 36,
-          left: 48,
-          right: 48,
-          display: "flex",
-          justifyContent: "space-between",
-          fontFamily: "DM Sans, sans-serif",
-          fontSize: 16,
-          letterSpacing: 2,
-          textTransform: "uppercase",
-          color: "rgba(244,241,234,0.35)",
+          inset: 18,
+          border: "1px solid rgba(244,241,234,0.18)",
+          pointerEvents: "none",
         }}
-      >
-        <span>Cricket + Football</span>
-        <span>India-first bulletin</span>
-      </div>
+      />
     </AbsoluteFill>
   );
 };
