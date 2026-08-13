@@ -1,0 +1,27 @@
+{
+  "name": "score-adda",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc -p tsconfig.json --noEmit && vite build",
+    "preview": "vite preview",
+    "remotion": "remotion studio src/remotion/index.ts"
+  },
+  "dependencies": {
+    "@remotion/player": "^4.0.314",
+    "framer-motion": "^12.23.12",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "remotion": "^4.0.314"
+  },
+  "devDependencies": {
+    "@remotion/cli": "^4.0.314",
+    "@types/react": "^18.3.18",
+    "@types/react-dom": "^18.3.5",
+    "@vitejs/plugin-react": "^4.7.0",
+    "typescript": "~5.8.3",
+    "vite": "^6.3.5"
+  }
+}
