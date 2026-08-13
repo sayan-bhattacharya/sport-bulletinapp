@@ -8,12 +8,12 @@ Use this after the repo exists on GitHub.
 HOSTINGER_FTP_SERVER
 HOSTINGER_FTP_USERNAME
 HOSTINGER_FTP_PASSWORD
+HOSTINGER_FTP_SERVER_DIR   # example: /public_html/
 ```
 
 Optional Hostinger:
 
 ```text
-HOSTINGER_FTP_SERVER_DIR   # default /public_html/
 HOSTINGER_FTP_PROTOCOL     # ftp or ftps
 HOSTINGER_FTP_PORT         # default 21
 ```
