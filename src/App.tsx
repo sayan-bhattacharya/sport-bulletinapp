@@ -1,9 +1,17 @@
 import { lazy, Suspense } from "react";
 import { motion, useReducedMotion } from "framer-motion";
+import { BeforeAfterGraphic } from "./components/BeforeAfterGraphic";
+import { HabitFlowGraphic } from "./components/HabitFlowGraphic";
+import { LiveValueMeters } from "./components/LiveValueMeters";
+import { ValueCompareGraphic } from "./components/ValueCompareGraphic";
 import "./styles.css";
 
 const HeroPlayer = lazy(() =>
   import("./components/HeroPlayer").then((m) => ({ default: m.HeroPlayer }))
+);
+
+const ValueLoopPlayer = lazy(() =>
+  import("./components/ValueLoopPlayer").then((m) => ({ default: m.ValueLoopPlayer }))
 );
 
 function useFadeUp() {
@@ -162,6 +170,7 @@ export default function App() {
             <p className="eyebrow">Live pulse</p>
             <h2>What fans open Score Adda for.</h2>
           </div>
+          <LiveValueMeters />
           <div className="match-rail" role="list">
             {matches.map((m) => (
               <article className="match-item" role="listitem" key={m.title}>
@@ -182,6 +191,7 @@ export default function App() {
             <p className="eyebrow">How it works</p>
             <h2>Three beats. One habit.</h2>
           </div>
+          <HabitFlowGraphic />
           <ol className="steps">
             {steps.map((s) => (
               <li key={s.n}>
@@ -198,6 +208,11 @@ export default function App() {
             <p className="eyebrow">Why Score Adda</p>
             <h2>Built for the gap between the alert and the article.</h2>
           </div>
+          <BeforeAfterGraphic />
+          <ValueCompareGraphic />
+          <Suspense fallback={null}>
+            <ValueLoopPlayer />
+          </Suspense>
           <div className="reason-grid">
             {reasons.map((r) => (
               <article key={r.title}>
