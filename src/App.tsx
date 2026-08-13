@@ -1,17 +1,28 @@
 import { lazy, Suspense } from "react";
-import { motion } from "framer-motion";
+import { motion, useReducedMotion } from "framer-motion";
 import "./styles.css";
 
 const HeroPlayer = lazy(() =>
   import("./components/HeroPlayer").then((m) => ({ default: m.HeroPlayer }))
 );
 
-const fadeUp = {
-  initial: { opacity: 0, y: 28 },
-  whileInView: { opacity: 1, y: 0 },
-  viewport: { once: true, amount: 0.25 },
-  transition: { duration: 0.55, ease: [0.16, 1, 0.3, 1] as const },
-};
+function useFadeUp() {
+  const reduced = useReducedMotion();
+  if (reduced) {
+    return {
+      initial: { opacity: 1, y: 0 },
+      whileInView: { opacity: 1, y: 0 },
+      viewport: { once: true, amount: 0.2 },
+      transition: { duration: 0 },
+    };
+  }
+  return {
+    initial: { opacity: 0, y: 24 },
+    whileInView: { opacity: 1, y: 0 },
+    viewport: { once: true, amount: 0.18 },
+    transition: { duration: 0.5, ease: [0.16, 1, 0.3, 1] as const },
+  };
+}
 
 const matches = [
   {
@@ -86,6 +97,8 @@ const quotes = [
 ];
 
 export default function App() {
+  const fadeUp = useFadeUp();
+
   return (
     <div className="page">
       <header className="nav">

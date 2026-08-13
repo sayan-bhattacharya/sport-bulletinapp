@@ -24,11 +24,14 @@
 
 html {
   scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
 }
 
 body {
   margin: 0;
   min-width: 320px;
+  overflow-x: hidden;
   background:
     radial-gradient(ellipse 90% 50% at 80% -10%, rgba(225, 29, 46, 0.22), transparent 50%),
     radial-gradient(ellipse 60% 40% at 0% 30%, rgba(244, 241, 234, 0.05), transparent 45%),
@@ -60,10 +63,14 @@ p {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 16px;
-  padding: 16px clamp(18px, 4vw, 40px);
-  background: linear-gradient(to bottom, rgba(7, 8, 12, 0.92), rgba(7, 8, 12, 0.55), transparent);
-  backdrop-filter: blur(6px);
+  gap: 12px;
+  padding:
+    calc(12px + env(safe-area-inset-top))
+    max(16px, env(safe-area-inset-right))
+    12px
+    max(16px, env(safe-area-inset-left));
+  background: linear-gradient(to bottom, rgba(7, 8, 12, 0.94), rgba(7, 8, 12, 0.55), transparent);
+  backdrop-filter: blur(8px);
 }
 
 .nav-brand {
@@ -89,6 +96,9 @@ p {
 
 .nav-cta {
   border: 1px solid var(--chalk);
+  min-height: 44px;
+  display: inline-flex;
+  align-items: center;
   padding: 8px 14px;
   transition: background 0.2s ease, color 0.2s ease;
 }
@@ -101,6 +111,7 @@ p {
 .hero {
   position: relative;
   min-height: 100dvh;
+  min-height: 100svh;
   display: grid;
   align-items: end;
   overflow: hidden;
@@ -125,7 +136,7 @@ p {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: center;
+  object-position: center center;
 }
 
 .hero-overlay {
@@ -142,6 +153,30 @@ p {
   background: transparent !important;
 }
 
+.hero-mobile-chrome {
+  position: absolute;
+  top: calc(72px + env(safe-area-inset-top));
+  left: 16px;
+  right: 16px;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.hero-mobile-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 14px;
+  background: rgba(7, 8, 12, 0.55);
+  border: 1px solid rgba(244, 241, 234, 0.16);
+  backdrop-filter: blur(8px);
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
 .hero-scrim {
   position: absolute;
   inset: 0;
@@ -152,19 +187,22 @@ p {
     linear-gradient(180deg, rgba(7, 8, 12, 0.28) 0%, transparent 28%, rgba(7, 8, 12, 0.72) 100%);
 }
 
+.hero-copy {
+  position: relative;
+  z-index: 3;
+  width: min(640px, 100%);
+  padding:
+    calc(96px + env(safe-area-inset-top))
+    clamp(16px, 4vw, 40px)
+    calc(48px + env(safe-area-inset-bottom));
+}
+
 .hero-fallback {
   position: absolute;
   inset: 0;
   background:
     radial-gradient(ellipse 80% 60% at 70% 40%, rgba(225, 29, 46, 0.28), transparent 55%),
     var(--ink);
-}
-
-.hero-copy {
-  position: relative;
-  z-index: 1;
-  width: min(640px, 92vw);
-  padding: calc(88px + env(safe-area-inset-top)) clamp(18px, 4vw, 40px) 56px;
 }
 
 .eyebrow {
@@ -215,6 +253,8 @@ p {
   font-size: 0.95rem;
   border: 1px solid transparent;
   transition: transform 0.2s ease, background 0.2s ease, color 0.2s ease;
+  -webkit-tap-highlight-color: transparent;
+  touch-action: manipulation;
 }
 
 .btn:hover {
@@ -471,13 +511,103 @@ p {
   flex-wrap: wrap;
   justify-content: space-between;
   gap: 12px;
-  padding: 28px clamp(18px, 4vw, 40px) 40px;
+  padding:
+    28px
+    max(16px, env(safe-area-inset-right))
+    calc(28px + env(safe-area-inset-bottom))
+    max(16px, env(safe-area-inset-left));
   border-top: 1px solid var(--line);
   color: var(--muted);
   font-size: 0.92rem;
 }
 
 @media (max-width: 900px) {
+  .nav {
+    flex-wrap: wrap;
+    row-gap: 10px;
+    padding-bottom: 10px;
+  }
+
+  .nav-brand {
+    font-size: 1.45rem;
+  }
+
+  .nav-links {
+    width: 100%;
+    justify-content: space-between;
+    gap: 8px;
+    font-size: 0.82rem;
+  }
+
+  .nav-links a:not(.nav-cta) {
+    display: inline-flex;
+    align-items: center;
+    min-height: 40px;
+    padding: 0 4px;
+  }
+
+  .nav-cta {
+    margin-left: auto;
+  }
+
+  .hero-scrim {
+    background:
+      linear-gradient(180deg, rgba(7, 8, 12, 0.55) 0%, rgba(7, 8, 12, 0.2) 32%, rgba(7, 8, 12, 0.82) 72%, rgba(7, 8, 12, 0.94) 100%);
+  }
+
+  .hero-copy {
+    width: 100%;
+    padding-top: calc(118px + env(safe-area-inset-top));
+    padding-bottom: calc(36px + env(safe-area-inset-bottom));
+  }
+
+  .brand-lockup {
+    font-size: clamp(3.6rem, 17vw, 5.4rem);
+    max-width: 9ch;
+  }
+
+  .hero-line {
+    font-size: 1.12rem;
+    max-width: 22ch;
+  }
+
+  .hero-support {
+    font-size: 0.98rem;
+    max-width: 34ch;
+  }
+
+  .hero-actions {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 10px;
+    margin-top: 22px;
+  }
+
+  .hero-actions .btn {
+    width: 100%;
+  }
+
+  .ticker-track {
+    font-size: 1.05rem;
+    gap: 28px;
+    animation-duration: 22s;
+  }
+
+  .section {
+    padding: 48px 16px;
+  }
+
+  .section-head {
+    max-width: 16ch;
+    margin-bottom: 24px;
+  }
+
+  .section-head h2,
+  .cta h2 {
+    font-size: clamp(2.4rem, 11vw, 3.4rem);
+    max-width: 12ch;
+  }
+
   .match-rail,
   .steps,
   .reason-grid,
@@ -485,26 +615,70 @@ p {
     grid-template-columns: 1fr;
   }
 
+  .match-item {
+    padding: 22px 0;
+  }
+
   .match-item + .match-item {
     padding-left: 0;
     border-left: 0;
   }
 
-  .section-head {
-    max-width: 20ch;
+  .match-item h3 {
+    font-size: clamp(1.7rem, 7vw, 2.1rem);
   }
 
-  .nav-links a:not(.nav-cta) {
-    display: none;
+  .steps,
+  .reason-grid {
+    gap: 22px;
+    padding-top: 22px;
+  }
+
+  .steps h3,
+  .reason-grid h3 {
+    font-size: 1.7rem;
+  }
+
+  .steps p,
+  .reason-grid p,
+  .cta-copy,
+  .quote-rail p {
+    max-width: none;
+  }
+
+  .cta .btn {
+    width: 100%;
   }
 }
 
 @media (max-width: 560px) {
-  .hero-copy {
-    padding-bottom: 40px;
+  .eyebrow {
+    font-size: 0.7rem;
+    letter-spacing: 0.14em;
   }
 
-  .brand-lockup {
-    font-size: clamp(4.2rem, 18vw, 6rem);
+  .hero-mobile-chrome {
+    top: calc(108px + env(safe-area-inset-top));
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  .ticker-track,
+  .live-dot::before {
+    animation: none !important;
+  }
+
+  .btn:hover {
+    transform: none;
+  }
+}
+
+@media (hover: none) {
+  .btn:hover {
+    transform: none;
   }
 }
