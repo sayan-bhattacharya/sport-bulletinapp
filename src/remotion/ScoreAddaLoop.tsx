@@ -117,8 +117,8 @@ export const ScoreAddaLoop: React.FC = () => {
           <span>IND 184/4 · RR 9.8</span>
           <span style={{ color: signal }}>LIVE</span>
           <span>MUM 1 — MBSG 1 · 64'</span>
-          <span>SCORE ADDA</span>
-          <span style={{ color: signal }}>BRIEF READY</span>
+          <span>SPORT IQ</span>
+          <span style={{ color: signal }}>AI BRIEF READY</span>
           <span>CRICKET + FOOTBALL</span>
           <span>IND 184/4 · RR 9.8</span>
           <span style={{ color: signal }}>LIVE</span>
@@ -150,7 +150,7 @@ export const ScoreAddaLoop: React.FC = () => {
           />
           <span
             style={{
-              fontFamily: "DM Sans, sans-serif",
+              fontFamily: "Plus Jakarta Sans, sans-serif",
               fontSize: 16,
               fontWeight: 700,
               letterSpacing: 3,
@@ -158,21 +158,21 @@ export const ScoreAddaLoop: React.FC = () => {
               color: signal,
             }}
           >
-            Cricket live
+            Live cricket pulse
           </span>
         </div>
         <div
           style={{
             fontFamily: "Bebas Neue, sans-serif",
-            fontSize: 84,
+            fontSize: 92,
             lineHeight: 0.9,
             letterSpacing: 1,
           }}
         >
-          INDIA vs AUS
+          IND 184/4
         </div>
-        <div style={{ fontFamily: "DM Sans, sans-serif", fontSize: 24, marginTop: 10, color: dim }}>
-          184/4 · 17.2 ov · Chase 201
+        <div style={{ fontFamily: "Plus Jakarta Sans, sans-serif", fontSize: 24, marginTop: 10, color: dim }}>
+          17.2 ov · Target 201
         </div>
       </div>
 
@@ -184,7 +184,7 @@ export const ScoreAddaLoop: React.FC = () => {
           opacity: footballOpacity,
           color: chalk,
           textAlign: "right",
-          maxWidth: width * 0.4,
+          maxWidth: width * 0.45,
           textShadow: "0 8px 28px rgba(0,0,0,0.55)",
         }}
       >
@@ -199,7 +199,7 @@ export const ScoreAddaLoop: React.FC = () => {
         >
           <span
             style={{
-              fontFamily: "DM Sans, sans-serif",
+              fontFamily: "Plus Jakarta Sans, sans-serif",
               fontSize: 16,
               fontWeight: 700,
               letterSpacing: 3,
@@ -230,8 +230,8 @@ export const ScoreAddaLoop: React.FC = () => {
         >
           MUM 1 — MBSG 1
         </div>
-        <div style={{ fontFamily: "DM Sans, sans-serif", fontSize: 24, marginTop: 10, color: dim }}>
-          64' · ISL night
+        <div style={{ fontFamily: "Plus Jakarta Sans, sans-serif", fontSize: 24, marginTop: 10, color: dim }}>
+          64' · ISL Matchday
         </div>
       </div>
 
@@ -260,23 +260,23 @@ export const ScoreAddaLoop: React.FC = () => {
             textShadow: "0 12px 40px rgba(0,0,0,0.65)",
           }}
         >
-          SCORE
-          <span style={{ color: signal }}> ADDA</span>
+          SPORT
+          <span style={{ color: signal }}> IQ</span>
         </div>
         <div
           style={{
             marginTop: 22,
             opacity: tagOpacity,
-            fontFamily: "DM Sans, sans-serif",
-            fontSize: 24,
-            fontWeight: 600,
-            letterSpacing: 4,
+            fontFamily: "Plus Jakarta Sans, sans-serif",
+            fontSize: 22,
+            fontWeight: 700,
+            letterSpacing: 3,
             textTransform: "uppercase",
             color: dim,
             textShadow: "0 6px 20px rgba(0,0,0,0.55)",
           }}
         >
-          Live state. Sharp brief. One adda.
+          News • Insights • Scores • Stories
         </div>
       </div>
 

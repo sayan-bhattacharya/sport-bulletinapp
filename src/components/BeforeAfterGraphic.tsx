@@ -3,13 +3,13 @@ import { motion, useReducedMotion } from "framer-motion";
 const panes = [
   {
     side: "before",
-    label: "Conventional",
-    lines: ["Alert spam", "Buried score", "Football afterthought", "Long scroll for context"],
+    label: "Conventional Feeds (Cricbuzz / ESPN)",
+    lines: ["Ad-cluttered popups", "Buried live scores", "Football treated as afterthought", "Endless scroll for context"],
   },
   {
     side: "after",
-    label: "Score Adda",
-    lines: ["One front pulse", "Score always visible", "Cricket = Football", "Brief in one tap"],
+    label: "SPORT IQ (15-Sec Match Pulse)",
+    lines: ["Zero ad clutter, 100% signal", "Scores always pinned & live", "Cricket + Football dual-fandom", "AI micro-bulletins in 40 words"],
   },
 ];
 
@@ -17,7 +17,7 @@ export function BeforeAfterGraphic() {
   const reduced = useReducedMotion();
 
   return (
-    <div className="infographic before-after" aria-label="Conventional versus Score Adda">
+    <div className="infographic before-after" aria-label="Conventional versus SPORT IQ">
       <div className="before-after-grid">
         {panes.map((pane, pi) => (
           <motion.div

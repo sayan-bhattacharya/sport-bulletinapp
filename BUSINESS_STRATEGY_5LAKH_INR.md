@@ -1,5 +1,7 @@
-# PROJECT "BALLR / DUKGO" : EXECUTIVE STRATEGY DOSSIER
+# PROJECT "SPORT IQ" (SPORTS BULLETIN) : EXECUTIVE STRATEGY DOSSIER
 **CONFIDENTIAL & PROPRIETARY | PREPARED FOR INVESTOR & CONSULTANT PRESENTATION**
+**INCUBATING ENTITY: DIALMATE AI TECHNOLOGIES**
+**FLAGSHIP BRAND: SPORT IQ (NEWS • INSIGHTS • SCORES • STORIES)**
 **CAPITAL DEPLOYMENT: ₹5,00,000 INR ($6,000 USD EQUIV.) SEED CAPITAL**
 **SECTOR: SPORTS DIGITAL CONTENT, MICRO-BULLETIN & FAN-ENGAGEMENT TECH**
 
@@ -9,7 +11,9 @@
 
 The Indian digital sports landscape is undergoing a structural paradigm shift. With over 600M+ digital sports fans consuming content daily, the market is over-indexed on bloated, long-form broadcast OTTs (JioHotstar, SonyLIV) and text-heavy legacy scorecards (Cricbuzz, ESPN Cricinfo). 
 
-**The Unaddressed Gap:** Gen-Z and millennial sports fans demand **snackable, high-velocity, contextual micro-bulletins (30-second AI-curated reads, real-time tactical meme-cards, and instant match-pulse updates)** delivered where they live: Instagram, Telegram, WhatsApp, and a feather-light progressive mobile application.
+**The Unaddressed Gap:** Gen-Z and millennial sports fans demand **snackable, high-velocity, contextual micro-bulletins (15-30 second AI-curated reads, real-time tactical meme-cards, and instant match-pulse updates)** delivered where they live: Instagram, Telegram, WhatsApp, and a feather-light progressive mobile application.
+
+**The Solution:** **SPORT IQ** — India's high-velocity digital sports bulletin, powered by Dialmate AI's automated summarization engine.
 
 ### Leadership & Division of Execution (The Core Moat)
 1. **Sayan Bhattacharya (Co-Founder & Chief Technology Officer / Head of Product):** 
@@ -21,19 +25,17 @@ The Indian digital sports landscape is undergoing a structural paradigm shift. W
 
 ---
 
-## 2. QUIRKY & HIP BRAND NAMES (CURATED FOR CONSULTANT & GEN-Z FIT)
+## 2. BRAND ARCHITECTURE & POSITIONING
 
-We have crafted 5 distinct naming archetypes designed to capture cultural zeitgeist, high domain memorability, and Gen-Z recall:
+| Brand Name | Tagline / Pitch Hook | Brand Persona | Role |
+| :--- | :--- | :--- | :--- |
+| **SPORT IQ** | *"News • Insights • Scores • Stories"* | High-octane, futuristic sports bulletin, 3D broadcast speed. | **Primary Flagship** |
+| **DUKGO** *(Duck-Go)* | *"Sports without the fluff."* | Fast, eccentric, minimalist, instantly viral (cricket duck pun + fast delivery). | Viral Sub-Brand |
+| **BALLR** | *"The raw pulse of the game."* | Premium, bold, street-style, urban sports culture. | Lifestyle / Merch |
+| **SHORTPITCH** | *"Every match in 40 words."* | Clean, hyper-fast, Inshorts-for-sports proposition. | Mass Utility Feed |
+| **GULLYTECH** | *"Street fandom to stadium stats."* | Rooted Indian culture meets Silicon Valley data speed. | Grassroots Channel |
 
-| Brand Name | Tagline / Pitch Hook | Brand Persona |
-| :--- | :--- | :--- |
-| **DUKGO** *(Duck-Go)* | *"Sports without the fluff."* | Fast, eccentric, minimalist, instantly viral (cricket duck pun + fast delivery). |
-| **BALLR** | *"The raw pulse of the game."* | Premium, bold, street-style, urban sports culture. |
-| **PITCHSLAP** | *"Hard truths, fastest scores."* | Edgy, opinionated, high-retention social commentary & instant bulletins. |
-| **SHORTPITCH** | *"Every match in 40 words."* | Clean, hyper-fast, Inshorts-for-sports proposition. |
-| **GULLYTECH / PAVILION9** | *"Street fandom to stadium stats."* | Rooted Indian culture meets Silicon Valley data speed. |
-
-> **Recommendation for Middleman / Consultant:** Pitch **BALLR** for mainstream lifestyle-sports appeal or **DUKGO** for hyper-catchy Gen-Z tech appeal.
+> **Official Recommendation:** Lead with **SPORT IQ** as the primary flagship brand backed by Dialmate AI's technical engine.
 
 ---
 
@@ -45,11 +47,11 @@ A zero-waste, capital-efficient distribution model ensuring 6 months of operatio
 ┌────────────────────────────────────────────────────────────────────────┐
 │               ₹5,00,000 INR SEED CAPITAL ALLOCATION                    │
 ├────────────────────────────────────────────────────────────────────────┤
-│  [1] Product & Cloud Infrastructure (Sayan Lead) : ₹1,20,000 (24%)     │
-│  [2] Influencer & Creator Seed Fund (Rajrup Lead): ₹2,10,000 (42%)     │
-│  [3] Content Production & Motion Design Asset Kits: ₹70,000 (14%)      │
-│  [4] Legal, Domain, Google/Apple Developer & IP : ₹30,000 (6%)        │
-│  [5] Contingency / Working Capital Reserve       : ₹70,000 (14%)       │
+│  [1] Product Architecture & Cloud Infrastructure : ₹1,20,000 (24%)     │
+│  [2] Influencer & Creator Distribution Seed Fund : ₹2,10,000 (42%)     │
+│  [3] Content Production & Motion Design Kits     : ₹70,000 (14%)       │
+│  [4] Entity Setup, Trademark & Store Developer IP: ₹30,000 (6%)        │
+│  [5] Working Capital & Tournament Buffer Reserve : ₹70,000 (14%)       │
 └────────────────────────────────────────────────────────────────────────┘
 ```
 

@@ -53,7 +53,7 @@ export const ValueLoop: React.FC = () => {
           VALUE SHIFT
         </div>
         <div style={{ fontSize: 14, letterSpacing: 2, textTransform: "uppercase", opacity: 0.55 }}>
-          Conventional → Score Adda
+          Conventional → SPORT IQ
         </div>
       </div>
 
@@ -128,7 +128,7 @@ export const ValueLoop: React.FC = () => {
         }}
       >
         <span style={{ opacity: 0.4 }}>NOISE</span>
-        <span style={{ color: "#e11d2e" }}>ADDA</span>
+        <span style={{ color: "#e11d2e", fontWeight: 900 }}>SPORT IQ</span>
       </div>
 
       <div

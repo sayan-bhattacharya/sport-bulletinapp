@@ -1,16 +1,16 @@
 import { motion, useReducedMotion } from "framer-motion";
 
 const beats = [
-  { n: "01", title: "Score", hint: "Live state first" },
-  { n: "02", title: "Brief", hint: "Why it matters" },
-  { n: "03", title: "Follow", hint: "Your habit loop" },
+  { n: "01", title: "15s Score Pulse", hint: "Instant match state" },
+  { n: "02", title: "AI Micro-Bulletin", hint: "35-word tactical context" },
+  { n: "03", title: "Viral Social Card", hint: "1-click WhatsApp share" },
 ];
 
 export function HabitFlowGraphic() {
   const reduced = useReducedMotion();
 
   return (
-    <div className="infographic habit-flow" aria-label="Score Adda habit loop">
+    <div className="infographic habit-flow" aria-label="SPORT IQ habit loop">
       <div className="habit-flow-rail">
         {beats.map((b, i) => (
           <div className="habit-node-wrap" key={b.n}>
@@ -52,7 +52,7 @@ export function HabitFlowGraphic() {
         viewport={{ once: true }}
         transition={{ delay: reduced ? 0 : 0.7, duration: reduced ? 0 : 0.4 }}
       >
-        Conventional sites split these into separate apps and tabs. Score Adda keeps them one habit.
+        Conventional apps bury scores under video feeds and banner ads. SPORT IQ delivers match intelligence in one unified 15-second loop.
       </motion.p>
     </div>
   );

@@ -3,16 +3,16 @@ import { motion, useReducedMotion } from "framer-motion";
 type Metric = {
   label: string;
   conventional: number;
-  scoreAdda: number;
+  sportIq: number;
   unit: string;
   invert?: boolean;
 };
 
 const metrics: Metric[] = [
-  { label: "Time to clarity", conventional: 38, scoreAdda: 92, unit: "speed" },
-  { label: "Front-page clutter", conventional: 86, scoreAdda: 22, unit: "noise", invert: true },
-  { label: "Dual-sport parity", conventional: 34, scoreAdda: 96, unit: "balance" },
-  { label: "Live + brief together", conventional: 28, scoreAdda: 94, unit: "habit" },
+  { label: "Time to clarity (Seconds)", conventional: 38, sportIq: 94, unit: "speed" },
+  { label: "Zero-clutter signal index", conventional: 24, sportIq: 96, unit: "signal" },
+  { label: "Cricket + Football dual parity", conventional: 34, sportIq: 98, unit: "balance" },
+  { label: "AI Micro-bulletin delivery speed", conventional: 18, sportIq: 95, unit: "speed" },
 ];
 
 function Bar({
@@ -47,10 +47,10 @@ export function ValueCompareGraphic() {
   const reduced = useReducedMotion();
 
   return (
-    <div className="infographic value-compare" aria-label="Score Adda versus conventional bulletin">
+    <div className="infographic value-compare" aria-label="SPORT IQ versus conventional bulletin">
       <div className="value-compare-legend">
-        <span className="legend-mute">Conventional bulletin</span>
-        <span className="legend-signal">Score Adda</span>
+        <span className="legend-mute">Conventional Apps (Cricbuzz/ESPN)</span>
+        <span className="legend-signal" style={{ color: "#dc2626", fontWeight: 800 }}>SPORT IQ (High-Velocity)</span>
       </div>
       <ul className="value-metric-list">
         {metrics.map((m, i) => (
@@ -58,17 +58,17 @@ export function ValueCompareGraphic() {
             <div className="value-metric-label">
               <span>{m.label}</span>
               <span className="value-metric-scores">
-                <span className="score-mute">{m.conventional}</span>
-                <span className="score-signal">{m.scoreAdda}</span>
+                <span className="score-mute">{m.conventional}%</span>
+                <span className="score-signal" style={{ color: "#dc2626", fontWeight: 800 }}>{m.sportIq}%</span>
               </span>
             </div>
             <Bar value={m.conventional} tone="mute" delay={0.08 + i * 0.1} reduced={reduced} />
-            <Bar value={m.scoreAdda} tone="signal" delay={0.16 + i * 0.1} reduced={reduced} />
+            <Bar value={m.sportIq} tone="signal" delay={0.16 + i * 0.1} reduced={reduced} />
           </li>
         ))}
       </ul>
       <p className="infographic-footnote">
-        Same match night. Less chrome. Faster meaning.
+        High-octane sports pulse. Sub-2.5s AI summary generation. Zero ad bloat.
       </p>
     </div>
   );
