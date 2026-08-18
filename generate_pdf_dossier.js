@@ -575,12 +575,12 @@ const htmlContent = `<!DOCTYPE html>
     <div style="margin: 1px 0 3px 0;">
       <span class="tag-pill tag-red">Venture Strategy Dossier</span>
       <span class="tag-pill tag-dark" style="margin-left: 4px;">Seed Capital: INR 5,00,000 ($6,000 USD)</span>
-      <span class="tag-pill tag-green" style="margin-left: 4px;">Scope: Digital Sports Bulletin Disruption</span>
+      <span class="tag-pill tag-green" style="margin-left: 4px;">Monetization Plan: 4-Mo Foundation to Month 5 Inception</span>
     </div>
 
-    <h1 class="hero-title">SPORT IQ: What Is New That Competitors Have Not Done — <span class="hero-gradient">Market Innovation & Business Model</span></h1>
+    <h1 class="hero-title">SPORT IQ: What Is New That Competitors Have Not Done — <span class="hero-gradient">Market Innovation & Fail-Proof Business Model</span></h1>
     <p class="hero-sub">
-      A high-velocity commercial memorandum prepared for strategic advisors and investors. <strong>SPORT IQ</strong> (<em>News • Insights • Scores • Stories</em>), incubated by <strong>Dialmate AI</strong>, systematically captures market share from legacy scorecards and news aggregators through real-time 15-second micro-tactical bulletins, dual-sport parity, and automated viral story cards.
+      A high-velocity, fail-proof commercial strategy prepared for Rajrup (CGO) and strategic advisors. <strong>SPORT IQ</strong> (<em>News • Insights • Scores • Stories</em>), incubated by <strong>Dialmate AI</strong>, dedicates Months 1–4 to product perfection, audience retention, and creator syndication to guarantee high-margin monetization inception and immediate operational breakeven starting <strong>Month 5</strong>.
     </p>
 
     <!-- Key Metrics Row -->
@@ -591,7 +591,7 @@ const htmlContent = `<!DOCTYPE html>
       </div>
       <div class="metric-card success">
         <div class="metric-val">Month 5</div>
-        <div class="metric-label">Operational Breakeven</div>
+        <div class="metric-label">Guaranteed Revenue Inception</div>
       </div>
       <div class="metric-card gold">
         <div class="metric-val">86.4%</div>
@@ -748,7 +748,7 @@ const htmlContent = `<!DOCTYPE html>
   </div>
 </div>
 
-<!-- ================= PAGE 2: CORE ENGINEERING TEAM & BUSINESS MODEL ================= -->
+<!-- ================= PAGE 2: CORE ENGINEERING TEAM & FAIL-PROOF BUSINESS MODEL ================= -->
 <div class="page">
   <div class="page-body">
     <div class="doc-header">
@@ -761,12 +761,12 @@ const htmlContent = `<!DOCTYPE html>
       </div>
       <div class="doc-meta-badge">
         <span class="confidential-tag">STRICTLY CONFIDENTIAL</span>
-        <div class="doc-date">ENGINEERING CORE & BUSINESS MODEL</div>
+        <div class="doc-date">ENGINEERING CORE & MONETIZATION ENGINE</div>
       </div>
     </div>
 
     <div class="section-title">
-      <span>TECHNICAL TEAM STRUCTURE & COMMERCIAL MONETIZATION ENGINE</span>
+      <span>TECHNICAL TEAM STRUCTURE & HIGH-ROI BUSINESS MODEL</span>
       <span class="tag">Execution Engine</span>
     </div>
 
@@ -818,11 +818,11 @@ const htmlContent = `<!DOCTYPE html>
           <span class="tag-pill tag-dark">Growth & Monetization</span>
         </div>
         <div class="role-summary">
-          <strong>Mandate:</strong> Creator syndication, brand sponsorship deals, WhatsApp VIP community loops, and affiliate growth.
+          <strong>Mandate:</strong> Creator syndication, pre-selling brand sponsorship packages in Months 3-4, and launching Month 5 cashflow.
         </div>
         <ul class="role-list">
           <li>Onboards 50+ regional micro-creators.</li>
-          <li>Drives CAC < INR 3.80 across channels.</li>
+          <li>Secures pre-monetization sponsor pipeline.</li>
         </ul>
       </div>
     </div>
@@ -830,7 +830,7 @@ const htmlContent = `<!DOCTYPE html>
     <!-- INFOGRAPHIC 2: THE BUSINESS MODEL & MONETIZATION ENGINE -->
     <div class="diagram-card">
       <div class="diagram-title">
-        <span>INFOGRAPHIC: THE SPORT IQ BUSINESS MODEL & REVENUE ENGINE</span>
+        <span>INFOGRAPHIC: THE SPORT IQ BUSINESS MODEL & REVENUE ENGINE (STARTING MONTH 5)</span>
         <span style="font-size: 5.5pt; color: #a7f3d0;">86.4% Gross Operating Margin</span>
       </div>
       <svg viewBox="0 0 760 120" style="width: 100%; height: auto; display: block;">
@@ -938,7 +938,7 @@ const htmlContent = `<!DOCTYPE html>
     </div>
 
     <p style="font-size: 7.2pt; color: #475569; margin-bottom: 4px; line-height: 1.28;">
-      A disciplined capital allocation framework supporting 1 Full-Time Lead Software Developer working directly alongside Sayan (CTO), while securing creator distribution and sports data infrastructure.
+      A disciplined capital allocation framework supporting 1 Full-Time Lead Software Developer working directly alongside Sayan (CTO), while funding creator syndication and product scaling across Months 1–4.
     </p>
 
     <!-- Allocation Visual Diagram & Breakdown Table -->
@@ -1097,13 +1097,13 @@ const htmlContent = `<!DOCTYPE html>
           </tr>
           <tr>
             <td><strong>Tranche 2 (Month 2-3)</strong></td>
-            <td>Beta retention D7 > 35%, 5k MAU achieved, WhatsApp VIP live.</td>
+            <td>Beta retention D7 > 35%, 25k MAU achieved, WhatsApp VIP live.</td>
             <td>35 micro-creator campaign rollout, paid social boosts.</td>
             <td class="num">INR 2,00,000</td>
           </tr>
           <tr>
             <td><strong>Tranche 3 (Month 4-5)</strong></td>
-            <td>First direct brand sponsor contracted, MAU crossing 25,000.</td>
+            <td>50,000 MAU reached & Month 5 Monetization Launch.</td>
             <td>Regional vernacular expansion, gaming affiliate scaling.</td>
             <td class="num">INR 1,00,000</td>
           </tr>
@@ -1119,7 +1119,7 @@ const htmlContent = `<!DOCTYPE html>
   </div>
 </div>
 
-<!-- ================= PAGE 4: 6-MONTH ROADMAP & VALUE LIFECYCLE ================= -->
+<!-- ================= PAGE 4: 6-MONTH ROADMAP & 4-MONTH PRE-REVENUE FOUNDATION ================= -->
 <div class="page">
   <div class="page-body">
     <div class="doc-header">
@@ -1137,55 +1137,55 @@ const htmlContent = `<!DOCTYPE html>
     </div>
 
     <div class="section-title">
-      <span>INFOGRAPHIC & 6-MONTH MILESTONE EXECUTION ROADMAP</span>
+      <span>INFOGRAPHIC: 4-MONTH VALUE FOUNDATION TO GUARANTEED MONTH 5 MONETIZATION</span>
       <span class="tag">Zero to 75,000 MAU</span>
     </div>
 
-    <!-- INFOGRAPHIC 3: CAPITAL DEPLOYMENT TO CASHFLOW BREAKEVEN -->
+    <!-- INFOGRAPHIC 3: CAPITAL DEPLOYMENT TO GUARANTEED MONTH 5 BREAKEVEN -->
     <div class="diagram-card">
       <div class="diagram-title">
-        <span>INFOGRAPHIC: CAPITAL DEPLOYMENT TO CASHFLOW BREAKEVEN</span>
-        <span style="font-size: 5.5pt; color: #fde68a;">Month 5 Cashflow Positive</span>
+        <span>INFOGRAPHIC: 4-MONTH AUDIENCE & PRODUCT FOUNDATION TO MONTH 5 REVENUE INCEPTION</span>
+        <span style="font-size: 5.5pt; color: #fde68a;">Fail-Proof Inception at Month 5</span>
       </div>
       <svg viewBox="0 0 760 120" style="width: 100%; height: auto; display: block;">
         <!-- Step 1 -->
         <g>
           <rect x="15" y="15" width="165" height="90" rx="5" fill="#1e293b" stroke="#ef4444" stroke-width="1.2"/>
-          <text x="97" y="32" fill="#fca5a5" font-size="9" font-weight="800" text-anchor="middle" font-family="Plus Jakarta Sans">MONTH 1: SEED SETUP</text>
-          <text x="25" y="48" fill="#ffffff" font-size="7.5" font-family="Plus Jakarta Sans">- INR 2.0L Tranche 1 Input</text>
-          <text x="25" y="60" fill="#ffffff" font-size="7.5" font-family="Plus Jakarta Sans">- Full-Time Dev Onboarded</text>
-          <text x="25" y="72" fill="#ffffff" font-size="7.5" font-family="Plus Jakarta Sans">- 35 Creator Deals Secured</text>
-          <text x="97" y="92" fill="#ef4444" font-size="8" font-weight="800" text-anchor="middle" font-family="JetBrains Mono">MVP Delivered</text>
+          <text x="97" y="32" fill="#fca5a5" font-size="9" font-weight="800" text-anchor="middle" font-family="Plus Jakarta Sans">MONTHS 1-2: BUILD & BETA</text>
+          <text x="25" y="48" fill="#ffffff" font-size="7.5" font-family="Plus Jakarta Sans">- Full-Time Dev Onboarded</text>
+          <text x="25" y="60" fill="#ffffff" font-size="7.5" font-family="Plus Jakarta Sans">- PWA & Scrapers Live</text>
+          <text x="25" y="72" fill="#ffffff" font-size="7.5" font-family="Plus Jakarta Sans">- 5,000 Beta Users (D7 > 38%)</text>
+          <text x="97" y="92" fill="#ef4444" font-size="8" font-weight="800" text-anchor="middle" font-family="JetBrains Mono">Foundation Stage</text>
         </g>
 
         <!-- Step 2 -->
         <g>
           <rect x="205" y="15" width="165" height="90" rx="5" fill="#1e293b" stroke="#3b82f6" stroke-width="1.2"/>
-          <text x="287" y="32" fill="#93c5fd" font-size="9" font-weight="800" text-anchor="middle" font-family="Plus Jakarta Sans">MONTH 2: BETA SEEDING</text>
-          <text x="215" y="48" fill="#ffffff" font-size="7.5" font-family="Plus Jakarta Sans">- 5,000 Beta MAU</text>
-          <text x="215" y="60" fill="#ffffff" font-size="7.5" font-family="Plus Jakarta Sans">- D7 Retention > 38%</text>
-          <text x="215" y="72" fill="#ffffff" font-size="7.5" font-family="Plus Jakarta Sans">- WhatsApp VIP Launch</text>
-          <text x="287" y="92" fill="#60a5fa" font-size="8" font-weight="800" text-anchor="middle" font-family="JetBrains Mono">High Engagement</text>
+          <text x="287" y="32" fill="#93c5fd" font-size="9" font-weight="800" text-anchor="middle" font-family="Plus Jakarta Sans">MONTHS 3-4: SCALE & VIRALITY</text>
+          <text x="215" y="48" fill="#ffffff" font-size="7.5" font-family="Plus Jakarta Sans">- 25k to 50k Active MAU</text>
+          <text x="215" y="60" fill="#ffffff" font-size="7.5" font-family="Plus Jakarta Sans">- 35 Creator Syndication</text>
+          <text x="215" y="72" fill="#ffffff" font-size="7.5" font-family="Plus Jakarta Sans">- Brand Sponsors Pre-Committed</text>
+          <text x="287" y="92" fill="#60a5fa" font-size="8" font-weight="800" text-anchor="middle" font-family="JetBrains Mono">Distribution Moat</text>
         </g>
 
         <!-- Step 3 -->
         <g>
-          <rect x="395" y="15" width="165" height="90" rx="5" fill="#1e293b" stroke="#f59e0b" stroke-width="1.2"/>
-          <text x="477" y="32" fill="#fde68a" font-size="9" font-weight="800" text-anchor="middle" font-family="Plus Jakarta Sans">MONTH 3: FIRST REVENUE</text>
-          <text x="405" y="48" fill="#ffffff" font-size="7.5" font-family="Plus Jakarta Sans">- 25,000 Public MAU</text>
-          <text x="405" y="60" fill="#ffffff" font-size="7.5" font-family="Plus Jakarta Sans">- Brand Sponsors Live</text>
-          <text x="405" y="72" fill="#ffffff" font-size="7.5" font-family="Plus Jakarta Sans">- INR 25,000 Inflow</text>
-          <text x="477" y="92" fill="#f59e0b" font-size="8" font-weight="800" text-anchor="middle" font-family="JetBrains Mono">Revenue Inception</text>
+          <rect x="395" y="15" width="165" height="90" rx="5" fill="#064e3b" stroke="#34d399" stroke-width="1.4"/>
+          <text x="477" y="32" fill="#a7f3d0" font-size="9" font-weight="800" text-anchor="middle" font-family="Plus Jakarta Sans">MONTH 5: REVENUE INCEPTION</text>
+          <text x="405" y="48" fill="#ffffff" font-size="7.5" font-family="Plus Jakarta Sans">- 75,000 Active MAU</text>
+          <text x="405" y="60" fill="#ffffff" font-size="7.5" font-family="Plus Jakarta Sans">- INR 1,45,000 MRR Live</text>
+          <text x="405" y="72" fill="#ffffff" font-size="7.5" font-family="Plus Jakarta Sans">- Immediate Cashflow Breakeven</text>
+          <text x="477" y="92" fill="#34d399" font-size="8" font-weight="800" text-anchor="middle" font-family="JetBrains Mono">CASHFLOW POSITIVE</text>
         </g>
 
         <!-- Step 4 -->
         <g>
-          <rect x="585" y="15" width="160" height="90" rx="5" fill="#064e3b" stroke="#34d399" stroke-width="1.4"/>
-          <text x="665" y="32" fill="#a7f3d0" font-size="9" font-weight="800" text-anchor="middle" font-family="Plus Jakarta Sans">MONTH 5: BREAKEVEN</text>
-          <text x="593" y="48" fill="#ffffff" font-size="7.5" font-family="Plus Jakarta Sans">- 75,000 Active MAU</text>
-          <text x="593" y="60" fill="#ffffff" font-size="7.5" font-family="Plus Jakarta Sans">- INR 1,45,000 MRR</text>
-          <text x="593" y="72" fill="#ffffff" font-size="7.5" font-family="Plus Jakarta Sans">- Pro Tier Micro-Subs</text>
-          <text x="665" y="92" fill="#34d399" font-size="8" font-weight="800" text-anchor="middle" font-family="JetBrains Mono">CASHFLOW POSITIVE</text>
+          <rect x="585" y="15" width="160" height="90" rx="5" fill="#1e293b" stroke="#f59e0b" stroke-width="1.2"/>
+          <text x="665" y="32" fill="#fde68a" font-size="9" font-weight="800" text-anchor="middle" font-family="Plus Jakarta Sans">MONTH 6: SEED PITCH</text>
+          <text x="593" y="48" fill="#ffffff" font-size="7.5" font-family="Plus Jakarta Sans">- 120,000 Active MAU</text>
+          <text x="593" y="60" fill="#ffffff" font-size="7.5" font-family="Plus Jakarta Sans">- INR 2,45,000 MRR Run Rate</text>
+          <text x="593" y="72" fill="#ffffff" font-size="7.5" font-family="Plus Jakarta Sans">- Pitch INR 2.5-5 Cr Seed</text>
+          <text x="665" y="92" fill="#f59e0b" font-size="8" font-weight="800" text-anchor="middle" font-family="JetBrains Mono">Scale Milestone</text>
         </g>
       </svg>
     </div>
@@ -1214,41 +1214,41 @@ const htmlContent = `<!DOCTYPE html>
       </div>
 
       <!-- Month 3 -->
-      <div class="month-card" style="border-top: 2.5px solid #dc2626;">
-        <div class="month-badge red">MONTH 3: REVENUE START</div>
-        <div class="month-title">Public Launch (25k MAU)</div>
+      <div class="month-card" style="border-top: 2.5px solid #0f172a;">
+        <div class="month-badge">MONTH 3: SCALE</div>
+        <div class="month-title">Creator Syndication (25k MAU)</div>
         <ul class="month-points">
           <li><strong>Tech:</strong> Google Play Store launch; automated tournament bracket trackers; real-time polling modules.</li>
-          <li><strong>Growth:</strong> Creator syndication blast; onboard first direct brand sponsors.</li>
-          <li><strong>Revenue:</strong> INR 25,000 first month ad & sponsorship inflow.</li>
+          <li><strong>Growth:</strong> Full creator syndication blast across 35 channels; launch X match threads.</li>
+          <li><strong>Focus:</strong> Maximize organic user acquisition & daily active retention.</li>
         </ul>
       </div>
 
       <!-- Month 4 -->
-      <div class="month-card" style="border-top: 2.5px solid #16a34a;">
-        <div class="month-badge" style="background: #16a34a;">MONTH 4</div>
-        <div class="month-title">Affiliates & Engagement Depth</div>
+      <div class="month-card" style="border-top: 2.5px solid #2563eb;">
+        <div class="month-badge" style="background: #2563eb;">MONTH 4: PRE-SELLING</div>
+        <div class="month-title">Sponsor Packaging (50k MAU)</div>
         <ul class="month-points">
           <li><strong>Tech:</strong> Gamified fantasy prediction battleground; user badges; offline bulletin reading support.</li>
-          <li><strong>Growth:</strong> Partner with sports gaming platforms on CPA affiliate model.</li>
-          <li><strong>Revenue:</strong> INR 70,000/mo (Brand Ads + Gaming Affiliates).</li>
+          <li><strong>Growth:</strong> Pre-commit 3 major brand sponsors for Month 5 launch; finalize Dream11/affiliate contracts.</li>
+          <li><strong>Focus:</strong> Lock in guaranteed Month 5 commercial pipeline.</li>
         </ul>
       </div>
 
       <!-- Month 5 -->
-      <div class="month-card" style="border-top: 2.5px solid #d97706;">
-        <div class="month-badge" style="background: #d97706;">MONTH 5: BREAKEVEN</div>
-        <div class="month-title">Pro Sub & Vernacular (75k MAU)</div>
+      <div class="month-card" style="border-top: 2.5px solid #16a34a;">
+        <div class="month-badge" style="background: #16a34a;">MONTH 5: REVENUE INCEPTION</div>
+        <div class="month-title">Monetization Go-Live (75k MAU)</div>
         <ul class="month-points">
           <li><strong>Tech:</strong> Launch Hindi & regional feeds; launch INR 49/mo "SPORT IQ Pro" ad-free subscription.</li>
-          <li><strong>Growth:</strong> Tier-2/3 regional creator campaign; campus ambassador program across 20 college sports clubs.</li>
-          <li><strong>Revenue:</strong> INR 1,45,000/mo (Operational cashflow positive).</li>
+          <li><strong>Growth:</strong> Go-live with paid brand sponsor cards and gaming affiliate conversion drops.</li>
+          <li><strong>Revenue:</strong> INR 1,45,000/mo (Immediate operational cashflow breakeven).</li>
         </ul>
       </div>
 
       <!-- Month 6 -->
-      <div class="month-card" style="border-top: 2.5px solid #0f172a;">
-        <div class="month-badge">MONTH 6: SEED PITCH</div>
+      <div class="month-card" style="border-top: 2.5px solid #d97706;">
+        <div class="month-badge" style="background: #d97706;">MONTH 6: SEED PITCH</div>
         <div class="month-title">Institutional Seed Pitch</div>
         <ul class="month-points">
           <li><strong>Tech:</strong> High-availability telemetry, sub-second latency records, and AI synthesis documentation.</li>
@@ -1310,7 +1310,7 @@ const htmlContent = `<!DOCTYPE html>
   </div>
 </div>
 
-<!-- ================= PAGE 5: FINANCIAL MODEL & UNIT ECONOMICS ================= -->
+<!-- ================= PAGE 5: FINANCIAL MODEL & UNIT ECONOMICS (REVENUE FROM MONTH 5) ================= -->
 <div class="page">
   <div class="page-body">
     <div class="doc-header">
@@ -1328,12 +1328,12 @@ const htmlContent = `<!DOCTYPE html>
     </div>
 
     <div class="section-title">
-      <span>12-MONTH REVENUE PROJECTIONS & FINANCIAL ARCHITECTURE</span>
-      <span class="tag">Conservative Projections</span>
+      <span>12-MONTH REVENUE PROJECTIONS: GUARANTEED MONTH 5 INCEPTION</span>
+      <span class="tag">Conservative Model</span>
     </div>
 
     <p style="font-size: 7.2pt; color: #475569; margin-bottom: 4px; line-height: 1.28;">
-      A certified three-pillar revenue projection demonstrating fast cashflow scaling from INR 25,000 in Month 3 to INR 12,50,000/month by Month 12.
+      A certified fail-proof three-pillar financial model where Months 1-4 build a 50,000+ MAU audience foundation, unlocking immediate cashflow breakeven of INR 1,45,000 in Month 5 and scaling to INR 12,50,000/month by Month 12.
     </p>
 
     <!-- 12-Month Financial Table -->
@@ -1351,7 +1351,7 @@ const htmlContent = `<!DOCTYPE html>
       </thead>
       <tbody>
         <tr>
-          <td><strong>Month 1 (MVP)</strong></td>
+          <td><strong>Month 1 (MVP Build)</strong></td>
           <td class="num">0</td>
           <td class="num">INR 0</td>
           <td class="num">INR 0</td>
@@ -1360,7 +1360,7 @@ const htmlContent = `<!DOCTYPE html>
           <td class="num">INR 0</td>
         </tr>
         <tr>
-          <td><strong>Month 2 (Beta)</strong></td>
+          <td><strong>Month 2 (Closed Beta)</strong></td>
           <td class="num">5,000</td>
           <td class="num">INR 0</td>
           <td class="num">INR 0</td>
@@ -1369,31 +1369,31 @@ const htmlContent = `<!DOCTYPE html>
           <td class="num">INR 0</td>
         </tr>
         <tr>
-          <td><strong>Month 3 (Launch)</strong></td>
+          <td><strong>Month 3 (Public Scale)</strong></td>
           <td class="num">25,000</td>
-          <td class="num">INR 15,000</td>
-          <td class="num">INR 10,000</td>
           <td class="num">INR 0</td>
-          <td class="num" style="color: #dc2626;"><strong>INR 25,000</strong></td>
-          <td class="num">INR 25,000</td>
+          <td class="num">INR 0</td>
+          <td class="num">INR 0</td>
+          <td class="num"><strong>INR 0</strong></td>
+          <td class="num">INR 0</td>
         </tr>
         <tr>
-          <td><strong>Month 4 (Scale)</strong></td>
-          <td class="num">45,000</td>
-          <td class="num">INR 40,000</td>
-          <td class="num">INR 25,000</td>
-          <td class="num">INR 5,000</td>
-          <td class="num" style="color: #dc2626;"><strong>INR 70,000</strong></td>
-          <td class="num">INR 95,000</td>
+          <td><strong>Month 4 (Sponsor Pre-Sell)</strong></td>
+          <td class="num">50,000</td>
+          <td class="num">INR 0</td>
+          <td class="num">INR 0</td>
+          <td class="num">INR 0</td>
+          <td class="num"><strong>INR 0</strong></td>
+          <td class="num">INR 0</td>
         </tr>
         <tr>
-          <td><strong>Month 5 (Breakeven)</strong></td>
+          <td><strong>Month 5 (Revenue Launch)</strong></td>
           <td class="num">75,000</td>
           <td class="num">INR 80,000</td>
           <td class="num">INR 45,000</td>
           <td class="num">INR 20,000</td>
           <td class="num" style="color: #dc2626;"><strong>INR 1,45,000</strong></td>
-          <td class="num">INR 2,40,000</td>
+          <td class="num">INR 1,45,000</td>
         </tr>
         <tr>
           <td><strong>Month 6 (Seed Pitch)</strong></td>
@@ -1402,7 +1402,7 @@ const htmlContent = `<!DOCTYPE html>
           <td class="num">INR 70,000</td>
           <td class="num">INR 45,000</td>
           <td class="num" style="color: #dc2626;"><strong>INR 2,45,000</strong></td>
-          <td class="num">INR 4,85,000</td>
+          <td class="num">INR 3,90,000</td>
         </tr>
         <tr>
           <td><strong>Month 9 (Post-Seed)</strong></td>
@@ -1411,7 +1411,7 @@ const htmlContent = `<!DOCTYPE html>
           <td class="num">INR 1,80,000</td>
           <td class="num">INR 1,20,000</td>
           <td class="num" style="color: #dc2626;"><strong>INR 6,20,000</strong></td>
-          <td class="num">INR 17,45,000</td>
+          <td class="num">INR 16,50,000</td>
         </tr>
         <tr class="total-row">
           <td><strong>Month 12 (Year 1 Exit)</strong></td>
@@ -1420,7 +1420,7 @@ const htmlContent = `<!DOCTYPE html>
           <td class="num">INR 3,50,000</td>
           <td class="num">INR 2,50,000</td>
           <td class="num"><strong>INR 12,50,000 / mo</strong></td>
-          <td class="num"><strong>INR 45,95,000</strong></td>
+          <td class="num"><strong>INR 45,00,000</strong></td>
         </tr>
       </tbody>
     </table>
@@ -1526,7 +1526,7 @@ const htmlContent = `<!DOCTYPE html>
     </div>
 
     <p style="font-size: 7.2pt; color: #475569; margin-bottom: 4px; line-height: 1.28;">
-      This document serves as the formal briefing for our lead strategic consultant/advisor. We seek active advisory support in facilitating angel/seed investor introductions, brokering regional sports relationships, and guiding brand sponsorship outreach.
+      This document serves as the formal briefing for Rajrup and our lead strategic consultant/advisor. We prioritize building a 50,000+ MAU retained audience foundation over Months 1-4 to guarantee self-sustaining monetization from Month 5 onwards.
     </p>
 
     <!-- Consultant Scope & Terms -->
@@ -1534,8 +1534,8 @@ const htmlContent = `<!DOCTYPE html>
       <div class="card">
         <div class="card-header-sm" style="color: #0f172a;">Advisory Scope & Deliverables</div>
         <ul class="role-list">
-          <li><strong>Investor Syndication:</strong> Facilitating strategic introductions to angel networks and early-stage VCs for INR 2.5 Cr - 5 Cr seed round.</li>
-          <li><strong>Sponsorship Dealmaking:</strong> Connecting growth lead to regional brand marketing heads, sports brands, and gaming platforms.</li>
+          <li><strong>Investor Syndication:</strong> Facilitating strategic introductions to angel networks and early-stage VCs for INR 2.5 Cr - 5 Cr seed round in Month 6.</li>
+          <li><strong>Sponsorship Dealmaking:</strong> Pre-selling sponsor slots during Months 3-4 for guaranteed Month 5 monetization launch.</li>
           <li><strong>Corporate Governance:</strong> Monthly strategic oversight on financial audits, CAC benchmarks, and cap table optimization.</li>
           <li><strong>Brand Positioning:</strong> Scaling commercial brand identity of <strong>SPORT IQ</strong> for institutional investors.</li>
         </ul>
