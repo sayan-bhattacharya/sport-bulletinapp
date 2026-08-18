@@ -10,6 +10,7 @@ const baseUrl = import.meta.env.BASE_URL || "/";
 const logoSrc = `${baseUrl}sport_iq_logo.png`;
 const pdfUrl = `${baseUrl}SPORT_IQ_STRATEGY_DOSSIER.pdf`;
 const dossierUrl = `${baseUrl}strategy_dossier.html`;
+const investorDeckUrl = `${baseUrl}investor_deck.html`;
 
 const HeroPlayer = lazy(() =>
   import("./components/HeroPlayer").then((m) => ({ default: m.HeroPlayer }))
@@ -59,6 +60,37 @@ const matches = [
     score: "35-Word Tactical Breakdown",
     meta: "Context delivered in 15 seconds without endless scrolling",
   },
+  {
+    sport: "Cricket",
+    live: false,
+    title: "IPL Auction Strategy Recap",
+    score: "CSK vs MI Bidding Matrix",
+    meta: "Fast insight on pace-bowler purse distribution",
+  },
+];
+
+const briefs = [
+  {
+    tag: "Cricket · IPL Pulse",
+    title: "Bumrah's 19th over mastery: How 4 dot balls sealed the match",
+    summary:
+      "Pinpoint yorkers outside off stump denied boundary leverage. Zero fluff, pure tactical pulse delivered in 30 words.",
+    stat: "15s read",
+  },
+  {
+    tag: "Football · Premier League",
+    title: "Arsenal's defensive block: Dissecting the 1-0 clean sheet",
+    summary:
+      "Midfield compactness limited central line breaks to zero in second half. Real-time tactical clarity without video bloat.",
+    stat: "12s read",
+  },
+  {
+    tag: "Motorsport · F1",
+    title: "McLaren's undercut strategy: Pit window execution at Monza",
+    summary:
+      "Lap 28 tire delta provided 1.8s in-lap advantage. Complete telemetry insight in two sentences.",
+    stat: "18s read",
+  },
 ];
 
 const steps = [
@@ -81,31 +113,35 @@ const steps = [
 
 const reasons = [
   {
-    title: "Zero Clutter, 100% Signal",
-    body: "Unlike Cricbuzz and ESPN that bury scores under programmatic banner ads, SPORT IQ gives you pure match intelligence in seconds.",
+    title: "35-Word Micro-Bulletins",
+    body: "Why a match shifted, delivered in 15 seconds. No 500-page bloated navigation, just instant clarity.",
   },
   {
-    title: "Engineered for Indian Dual-Fandom",
-    body: "Built natively for fans who follow both high-stakes cricket nights and Premier League / ISL football fixtures.",
+    title: "Zero Ad Clutter",
+    body: "No intrusive banner takeovers or 30-second unskippable video ads. Pure, high-speed readability.",
   },
   {
-    title: "Dialmate AI Incubation Moat",
-    body: "Powered by Dialmate AI's automated scraping and NLP summarization algorithms, operating with 85%+ gross margins.",
+    title: "Cricket & Football Parity",
+    body: "Equal home-screen real estate for IPL/Test cricket and European/ISL football for multi-sport fans.",
+  },
+  {
+    title: "1-Click Viral Story Cards",
+    body: "Automated match graphics generated in real time for effortless sharing to WhatsApp and Instagram.",
   },
 ];
 
 const quotes = [
   {
-    handle: "@cricpulse_india",
-    text: "SPORT IQ is the first sports feed that respects my time. 15 seconds is all I need between meetings.",
+    text: "SPORT IQ gives me everything happening in the IPL match in 15 seconds between my Zoom calls.",
+    handle: "@rahul_sportsdev",
   },
   {
-    handle: "@isl_superfan",
-    text: "When the goal happens and the tactical card drops within 3 seconds — that’s the new standard.",
+    text: "Finally an Indian app that treats Premier League and ISL with the same prime priority as cricket.",
+    handle: "@ananya_football",
   },
   {
-    handle: "@tech_scout_vc",
-    text: "Zero agency overhead and sub-second latency. The founder division of execution is as solid as it gets.",
+    text: "The shareable match cards are brilliant. Our WhatsApp sports group uses them after every match.",
+    handle: "@kabir_fantasyleague",
   },
 ];
 
@@ -113,34 +149,38 @@ export default function App() {
   const fadeUp = useFadeUp();
 
   return (
-    <div className="page">
-      {/* NAVIGATION BAR */}
-      <header className="nav">
-        <div className="nav-brand-group">
-          <img
-            src={logoSrc}
-            alt="SPORT IQ Logo"
-            className="nav-logo-img"
-          />
-          <div className="nav-brand-text-block">
-            <a className="nav-brand" href="#top" aria-label="SPORT IQ home">
-              SPORT <span>IQ</span>
+    <div className="app-shell">
+      {/* GLOBAL HEADER */}
+      <header className="header">
+        <div className="header-brand-wrap">
+          <img src={logoSrc} alt="SPORT IQ Logo" className="nav-brand-logo" />
+          <div className="header-brand-text">
+            <a href="#top" className="brand-title">
+              SPORT <span className="brand-accent">IQ</span>
             </a>
-            <div className="nav-tagline">News • Insights • Scores • Stories</div>
+            <span className="brand-incubation-tag">Incubated by Dialmate AI</span>
           </div>
         </div>
 
         <nav className="nav-links" aria-label="Primary">
           <a href="#live">Live Pulse</a>
           <a href="#briefs">AI Bulletins</a>
-          <a href="#why">Why SPORT IQ</a>
+          <a
+            href={investorDeckUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="nav-badge-doc"
+            style={{ background: "rgba(220, 38, 38, 0.2)", color: "#fca5a5" }}
+          >
+            Investor Deck (20 Slides)
+          </a>
           <a
             href={pdfUrl}
             target="_blank"
             rel="noopener noreferrer"
             className="nav-badge-doc"
           >
-            INR 5L Strategy PDF
+            Strategy PDF
           </a>
           <a className="nav-cta" href="mailto:hello@dialmate.ai?subject=SPORT%20IQ%20Consultant%20Brief">
             Get in Touch
@@ -189,14 +229,19 @@ export default function App() {
               <div className="hero-actions">
                 <a
                   className="btn btn-primary"
+                  href={investorDeckUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  View Investor Deck (20 Slides)
+                </a>
+                <a
+                  className="btn btn-secondary"
                   href={pdfUrl}
                   target="_blank"
                   rel="noopener noreferrer"
                 >
                   Download Strategy PDF
-                </a>
-                <a className="btn btn-secondary" href={dossierUrl} target="_blank">
-                  View Executive Dossier
                 </a>
                 <a className="btn btn-secondary" href="#live">
                   See Live Pulse
@@ -268,6 +313,25 @@ export default function App() {
         {/* HOW IT WORKS / HABIT FLOW */}
         <motion.section className="section briefs" id="briefs" {...fadeUp}>
           <div className="section-head">
+            <p className="eyebrow">AI Micro-Bulletins in Action</p>
+            <h2>35-word tactical context. Sub-2.5s speed.</h2>
+          </div>
+          <div className="match-rail" role="list" style={{ marginBottom: 24 }}>
+            {briefs.map((b) => (
+              <article className="match-item" role="listitem" key={b.title}>
+                <div className="match-meta">
+                  <span className="sport-label">{b.tag}</span>
+                  <span className="fresh">{b.stat}</span>
+                </div>
+                <h3>{b.title}</h3>
+                <p className="match-note" style={{ color: "#cbd5e1", marginTop: 6, fontSize: "0.85rem" }}>
+                  {b.summary}
+                </p>
+              </article>
+            ))}
+          </div>
+
+          <div className="section-head" style={{ marginTop: 32 }}>
             <p className="eyebrow">How SPORT IQ Works</p>
             <h2>Three beats. One daily habit loop.</h2>
           </div>
@@ -313,23 +377,31 @@ export default function App() {
               <div className="eyebrow-badge" style={{ marginBottom: 8 }}>
                 <span>Investor & Consultant Ready</span>
               </div>
-              <h3>SPORT IQ — INR 5,00,000 Seed Allocation Dossier</h3>
+              <h3>SPORT IQ — 20-Slide Pitch & INR 5,00,000 Seed Dossier</h3>
               <p>
                 Complete financial architecture, founder execution division (Sayan - CTO / Rajrup - CGO),
-                6-month GTM roadmap, and unit economics model.
+                6-month GTM roadmap, and fail-proof Month 5 revenue model.
               </p>
             </div>
             <div style={{ display: "flex", gap: 12, flexWrap: "wrap" }}>
               <a
                 className="btn btn-primary"
+                href={investorDeckUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                View 20-Slide Pitch Deck
+              </a>
+              <a
+                className="btn btn-secondary"
                 href={pdfUrl}
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                Download Shareable PDF
+                Download Strategy PDF
               </a>
               <a className="btn btn-secondary" href={dossierUrl} target="_blank">
-                Interactive Web View
+                Executive Dossier Web
               </a>
             </div>
           </div>
