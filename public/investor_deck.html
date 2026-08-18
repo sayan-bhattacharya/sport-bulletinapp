@@ -3,23 +3,25 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>SPORT IQ — 20-Slide Institutional Investor Presentation</title>
+<title>SPORT IQ — 20-Slide Infographic Investor Presentation</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@500;600;700;800&display=swap" rel="stylesheet">
 <style>
   :root {
-    --bg-primary: #090d16;
-    --bg-card: #111827;
-    --bg-card-alt: #1e293b;
+    --bg-primary: #070a11;
+    --bg-card: #0d131f;
+    --bg-card-alt: #131d2e;
     --accent-red: #dc2626;
     --accent-crimson: #ef4444;
     --accent-green: #10b981;
     --accent-blue: #3b82f6;
     --accent-amber: #f59e0b;
+    --accent-purple: #8b5cf6;
     --text-primary: #f8fafc;
     --text-secondary: #94a3b8;
-    --border-card: #334155;
+    --border-card: #24324a;
+    --border-light: rgba(255, 255, 255, 0.08);
   }
 
   * {
@@ -42,8 +44,8 @@
   /* Presentation Top Bar */
   .deck-header {
     height: 52px;
-    background: rgba(15, 23, 42, 0.85);
-    backdrop-filter: blur(12px);
+    background: rgba(13, 19, 31, 0.92);
+    backdrop-filter: blur(16px);
     border-bottom: 1px solid var(--border-card);
     display: flex;
     justify-content: space-between;
@@ -62,6 +64,7 @@
   .deck-logo {
     height: 28px;
     width: auto;
+    object-fit: contain;
   }
 
   .deck-badge {
@@ -87,10 +90,12 @@
     font-size: 0.85rem;
     font-weight: 700;
     color: var(--text-secondary);
+    min-width: 65px;
+    text-align: center;
   }
 
   .deck-btn {
-    background: var(--bg-card);
+    background: var(--bg-card-alt);
     border: 1px solid var(--border-card);
     color: var(--text-primary);
     padding: 6px 14px;
@@ -124,57 +129,58 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 24px;
+    padding: 18px 24px;
   }
 
   .slide-container {
     width: 100%;
-    max-width: 1100px;
+    max-width: 1140px;
     height: 100%;
-    max-height: 640px;
+    max-height: 660px;
     background: var(--bg-card);
     border: 1px solid var(--border-card);
-    border-radius: 12px;
-    padding: 36px 44px;
+    border-radius: 14px;
+    padding: 28px 36px 20px 36px;
     display: none;
     flex-direction: column;
     justify-content: space-between;
     position: relative;
-    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 24px 60px rgba(0, 0, 0, 0.6), 0 0 30px rgba(220, 38, 38, 0.08);
   }
 
   .slide-container.active {
     display: flex;
-    animation: fadeIn 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    animation: slideIn 0.28s cubic-bezier(0.16, 1, 0.3, 1);
   }
 
-  @keyframes fadeIn {
-    from { opacity: 0; transform: translateY(8px); }
+  @keyframes slideIn {
+    from { opacity: 0; transform: translateY(6px); }
     to { opacity: 1; transform: translateY(0); }
   }
 
   /* Slide Content Components */
   .slide-header {
-    margin-bottom: 20px;
+    margin-bottom: 14px;
+    flex-shrink: 0;
   }
 
   .slide-category {
-    font-size: 0.75rem;
+    font-size: 0.72rem;
     font-weight: 800;
     color: var(--accent-crimson);
     text-transform: uppercase;
-    letter-spacing: 1px;
-    margin-bottom: 4px;
+    letter-spacing: 1.2px;
+    margin-bottom: 3px;
     display: flex;
     align-items: center;
     gap: 8px;
   }
 
   .slide-title {
-    font-size: 1.75rem;
+    font-size: 1.65rem;
     font-weight: 900;
-    line-height: 1.2;
-    letter-spacing: -0.5px;
+    line-height: 1.18;
+    letter-spacing: -0.4px;
     color: #ffffff;
   }
 
@@ -185,10 +191,10 @@
   }
 
   .slide-subtitle {
-    font-size: 0.95rem;
+    font-size: 0.88rem;
     color: var(--text-secondary);
-    margin-top: 6px;
-    line-height: 1.4;
+    margin-top: 4px;
+    line-height: 1.35;
   }
 
   .slide-body {
@@ -196,81 +202,100 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    gap: 16px;
+    gap: 12px;
+    overflow: hidden;
   }
 
   .slide-footer {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border-top: 1px solid rgba(255, 255, 255, 0.08);
-    padding-top: 14px;
-    font-size: 0.75rem;
+    border-top: 1px solid var(--border-light);
+    padding-top: 10px;
+    font-size: 0.72rem;
     color: var(--text-secondary);
     font-weight: 600;
+    flex-shrink: 0;
   }
 
-  /* Grids & Cards */
+  /* Infographic Diagram Containers */
+  .info-canvas {
+    width: 100%;
+    background: #090e18;
+    border: 1px solid var(--border-card);
+    border-radius: 8px;
+    padding: 10px 14px;
+    position: relative;
+    box-shadow: inset 0 2px 8px rgba(0,0,0,0.4);
+  }
+
+  .info-canvas svg {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+
+  /* Grids & Metric Cards */
   .grid-2 {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 18px;
+    gap: 14px;
   }
 
   .grid-3 {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    gap: 16px;
+    gap: 12px;
   }
 
   .grid-4 {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    gap: 14px;
+    gap: 10px;
   }
 
   .card-box {
     background: var(--bg-card-alt);
     border: 1px solid var(--border-card);
     border-radius: 8px;
-    padding: 16px 18px;
+    padding: 12px 14px;
   }
 
   .card-box.accent-red {
     border-left: 3px solid var(--accent-red);
-    background: rgba(220, 38, 38, 0.06);
+    background: rgba(220, 38, 38, 0.05);
   }
 
   .card-box.accent-green {
     border-left: 3px solid var(--accent-green);
-    background: rgba(16, 185, 129, 0.06);
+    background: rgba(16, 185, 129, 0.05);
   }
 
   .card-box.accent-blue {
     border-left: 3px solid var(--accent-blue);
-    background: rgba(59, 130, 246, 0.06);
+    background: rgba(59, 130, 246, 0.05);
   }
 
   .card-box h3 {
-    font-size: 0.95rem;
+    font-size: 0.9rem;
     font-weight: 800;
-    margin-bottom: 6px;
+    margin-bottom: 4px;
     color: #ffffff;
   }
 
   .card-box p {
-    font-size: 0.82rem;
+    font-size: 0.78rem;
     color: var(--text-secondary);
-    line-height: 1.35;
+    line-height: 1.34;
   }
 
   .metric-stat {
     font-family: 'JetBrains Mono', monospace;
-    font-size: 1.7rem;
+    font-size: 1.55rem;
     font-weight: 900;
     color: #ffffff;
     line-height: 1.1;
-    margin-bottom: 4px;
+    margin-bottom: 2px;
   }
 
   .metric-stat.red { color: var(--accent-crimson); }
@@ -279,7 +304,7 @@
   .metric-stat.amber { color: var(--accent-amber); }
 
   .metric-label {
-    font-size: 0.72rem;
+    font-size: 0.68rem;
     font-weight: 700;
     color: var(--text-secondary);
     text-transform: uppercase;
@@ -290,24 +315,24 @@
   table.deck-table {
     width: 100%;
     border-collapse: collapse;
-    font-size: 0.78rem;
+    font-size: 0.75rem;
   }
 
   table.deck-table th {
-    background: #0f172a;
+    background: #090e18;
     color: #ffffff;
     font-weight: 800;
     text-transform: uppercase;
-    font-size: 0.7rem;
+    font-size: 0.68rem;
     letter-spacing: 0.5px;
-    padding: 8px 12px;
+    padding: 7px 10px;
     text-align: left;
     border-bottom: 2px solid var(--accent-red);
   }
 
   table.deck-table td {
-    padding: 8px 12px;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+    padding: 6.5px 10px;
+    border-bottom: 1px solid var(--border-light);
     color: #e2e8f0;
   }
 
@@ -327,10 +352,25 @@
     font-weight: 800;
   }
 
+  .tag-pill {
+    display: inline-block;
+    padding: 2px 6px;
+    border-radius: 4px;
+    font-size: 0.65rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.3px;
+  }
+
+  .tag-red { background: rgba(220, 38, 38, 0.2); color: #fca5a5; border: 1px solid rgba(220, 38, 38, 0.4); }
+  .tag-green { background: rgba(16, 185, 129, 0.2); color: #6ee7b7; border: 1px solid rgba(16, 185, 129, 0.4); }
+  .tag-blue { background: rgba(59, 130, 246, 0.2); color: #93c5fd; border: 1px solid rgba(59, 130, 246, 0.4); }
+  .tag-dark { background: rgba(148, 163, 184, 0.15); color: #cbd5e1; border: 1px solid rgba(148, 163, 184, 0.3); }
+
   /* Progress Bar in Footer */
   .deck-progress {
     height: 3px;
-    background: #1e293b;
+    background: #131d2e;
     width: 100%;
     position: absolute;
     bottom: 0;
@@ -341,12 +381,11 @@
     height: 100%;
     background: var(--accent-red);
     width: 5%;
-    transition: width 0.3s ease;
+    transition: width 0.25s ease;
   }
 
-  /* Keyboard shortcut helper */
   .kbd-hint {
-    font-size: 0.7rem;
+    font-size: 0.68rem;
     color: #64748b;
     display: flex;
     align-items: center;
@@ -359,14 +398,14 @@
     padding: 1px 5px;
     border-radius: 3px;
     font-family: 'JetBrains Mono', monospace;
-    font-size: 0.65rem;
+    font-size: 0.62rem;
     color: #e2e8f0;
   }
 </style>
 </head>
 <body>
 
-  <!-- Header -->
+  <!-- Top Navigation Bar -->
   <header class="deck-header">
     <div class="deck-brand">
       <img src="sport_iq_logo.png" alt="SPORT IQ" class="deck-logo">
@@ -377,14 +416,14 @@
       <button class="deck-btn" onclick="prevSlide()">← Prev</button>
       <div class="slide-counter" id="slideNum">01 / 20</div>
       <button class="deck-btn primary" onclick="nextSlide()">Next →</button>
-      <a href="SPORT_IQ_STRATEGY_DOSSIER.pdf" target="_blank" class="deck-btn">Dossier PDF</a>
+      <a href="SPORT_IQ_STRATEGY_DOSSIER.pdf" target="_blank" class="deck-btn">Strategy PDF</a>
     </div>
   </header>
 
-  <!-- Viewport -->
+  <!-- Slide Viewport -->
   <main class="slide-viewport">
 
-    <!-- SLIDE 1: Title -->
+    <!-- SLIDE 1: Title & Infographic Flywheel -->
     <div class="slide-container active" data-slide="1">
       <div class="slide-header">
         <div class="slide-category">[SEED INVESTMENT MEMORANDUM]</div>
@@ -410,53 +449,123 @@
             <div class="metric-label">Dedicated Tech Core</div>
           </div>
         </div>
-        <div class="card-box" style="margin-top: 10px; background: #0f172a;">
-          <p style="font-size: 0.9rem; color: #e2e8f0; line-height: 1.45;">
-            <strong>Executive Thesis:</strong> SPORT IQ captures India's 650M digital sports fans through AI-curated 35-word micro-bulletins (< 2.5s latency), dual-sport (Cricket + Football) parity, and viral 1-click story card distribution.
-          </p>
+
+        <!-- ANT-V STYLE INFOGRAPHIC FLYWHEEL -->
+        <div class="info-canvas" style="padding: 8px 12px;">
+          <svg viewBox="0 0 760 85">
+            <!-- Node 1: AI Scraper -->
+            <rect x="10" y="10" width="165" height="65" rx="6" fill="#131d2e" stroke="#ef4444" stroke-width="1.2"/>
+            <circle cx="28" cy="28" r="10" fill="#ef4444"/>
+            <text x="28" y="32" fill="#ffffff" font-size="8" font-weight="900" text-anchor="middle" font-family="JetBrains Mono">1</text>
+            <text x="44" y="27" fill="#ffffff" font-size="8" font-weight="800" font-family="Plus Jakarta Sans">AI Data Pipeline</text>
+            <text x="20" y="48" fill="#94a3b8" font-size="6.8" font-family="Plus Jakarta Sans">Sub-2.5s live scrapers extract</text>
+            <text x="20" y="59" fill="#94a3b8" font-size="6.8" font-family="Plus Jakarta Sans">critical match turning points</text>
+
+            <!-- Arrow 1 -->
+            <path d="M 180 42 L 200 42" stroke="#ef4444" stroke-width="1.5" marker-end="url(#arrow)"/>
+
+            <!-- Node 2: 15s Tactical Pulse -->
+            <rect x="205" y="10" width="165" height="65" rx="6" fill="#131d2e" stroke="#3b82f6" stroke-width="1.2"/>
+            <circle cx="223" cy="28" r="10" fill="#3b82f6"/>
+            <text x="223" y="32" fill="#ffffff" font-size="8" font-weight="900" text-anchor="middle" font-family="JetBrains Mono">2</text>
+            <text x="239" y="27" fill="#ffffff" font-size="8" font-weight="800" font-family="Plus Jakarta Sans">15s Tactical Pulse</text>
+            <text x="215" y="48" fill="#94a3b8" font-size="6.8" font-family="Plus Jakarta Sans">35-word concise bulletins</text>
+            <text x="215" y="59" fill="#94a3b8" font-size="6.8" font-family="Plus Jakarta Sans">Cricket + Football equal parity</text>
+
+            <!-- Arrow 2 -->
+            <path d="M 375 42 L 395 42" stroke="#3b82f6" stroke-width="1.5"/>
+
+            <!-- Node 3: Viral Story Cards -->
+            <rect x="400" y="10" width="165" height="65" rx="6" fill="#131d2e" stroke="#10b981" stroke-width="1.2"/>
+            <circle cx="418" cy="28" r="10" fill="#10b981"/>
+            <text x="418" y="32" fill="#ffffff" font-size="8" font-weight="900" text-anchor="middle" font-family="JetBrains Mono">3</text>
+            <text x="434" y="27" fill="#ffffff" font-size="8" font-weight="800" font-family="Plus Jakarta Sans">1-Click Story Cards</text>
+            <text x="410" y="48" fill="#94a3b8" font-size="6.8" font-family="Plus Jakarta Sans">Automated WhatsApp/IG cards</text>
+            <text x="410" y="59" fill="#94a3b8" font-size="6.8" font-family="Plus Jakarta Sans">driving organic K-factor 1.34</text>
+
+            <!-- Arrow 3 -->
+            <path d="M 570 42 L 590 42" stroke="#10b981" stroke-width="1.5"/>
+
+            <!-- Node 4: High-Margin Monetization -->
+            <rect x="595" y="10" width="155" height="65" rx="6" fill="#064e3b" stroke="#34d399" stroke-width="1.5"/>
+            <circle cx="613" cy="28" r="10" fill="#34d399"/>
+            <text x="613" y="32" fill="#064e3b" font-size="8" font-weight="900" text-anchor="middle" font-family="JetBrains Mono">4</text>
+            <text x="629" y="27" fill="#a7f3d0" font-size="8" font-weight="800" font-family="Plus Jakarta Sans">Month 5 Cashflow</text>
+            <text x="605" y="48" fill="#ffffff" font-size="6.8" font-family="Plus Jakarta Sans">Native Sponsors + Gaming CPA</text>
+            <text x="605" y="59" fill="#34d399" font-size="6.8" font-weight="700" font-family="JetBrains Mono">INR 1.45L MRR Breakeven</text>
+          </svg>
         </div>
       </div>
       <div class="slide-footer">
-        <span>Confidential | Prepared for Investor & Consultant Review</span>
+        <span>Confidential | Prepared for Investor & Strategic Review</span>
         <span>Slide 01 of 20</span>
       </div>
     </div>
 
-    <!-- SLIDE 2: The Macro Problem -->
+    <!-- SLIDE 2: The Macro Attention Paradox Infographic -->
     <div class="slide-container" data-slide="2">
       <div class="slide-header">
         <div class="slide-category">[THE MACRO MARKET VOID]</div>
-        <h2 class="slide-title">The Sports Attention Paradox in India</h2>
-        <p class="slide-subtitle">Fans are trapped between ad-bloated scorecards and heavy video broadcasts.</p>
+        <h2 class="slide-title">The Sports Attention Paradox in Digital India</h2>
+        <p class="slide-subtitle">650M fans are trapped between ad-bloated scorecards and heavy video broadcasts.</p>
       </div>
       <div class="slide-body">
+        <!-- SPECTRUM INFOGRAPHIC -->
+        <div class="info-canvas">
+          <svg viewBox="0 0 760 120">
+            <!-- Left Extremity: Legacy Scorecards -->
+            <g>
+              <rect x="15" y="15" width="220" height="90" rx="6" fill="#1e131d" stroke="#f87171" stroke-width="1.2"/>
+              <text x="125" y="32" fill="#fca5a5" font-size="8.5" font-weight="800" text-anchor="middle" font-family="Plus Jakarta Sans">1. AD-BLOATED SCORECARDS</text>
+              <text x="125" y="44" fill="#94a3b8" font-size="7" text-anchor="middle" font-family="Plus Jakarta Sans">Cricbuzz / ESPNcricinfo</text>
+              <text x="25" y="62" fill="#e2e8f0" font-size="7" font-family="Plus Jakarta Sans">[X] 68.5% screen area lost to ads</text>
+              <text x="25" y="74" fill="#e2e8f0" font-size="7" font-family="Plus Jakarta Sans">[X] 4.2 clicks to find match context</text>
+              <text x="25" y="86" fill="#e2e8f0" font-size="7" font-family="Plus Jakarta Sans">[X] 380 MB RAM battery drain</text>
+              <text x="125" y="100" fill="#f87171" font-size="7" font-weight="800" text-anchor="middle" font-family="JetBrains Mono">Ad & Cognitive Overload</text>
+            </g>
+
+            <!-- Center: The Void Arrow -->
+            <g>
+              <rect x="255" y="28" width="240" height="64" rx="6" fill="#064e3b" stroke="#34d399" stroke-width="1.8"/>
+              <text x="375" y="45" fill="#a7f3d0" font-size="9" font-weight="900" text-anchor="middle" font-family="Plus Jakarta Sans">THE UNMET MIDDLE: SPORT IQ</text>
+              <text x="375" y="60" fill="#ffffff" font-size="7.5" font-weight="700" text-anchor="middle" font-family="Plus Jakarta Sans">15-Second AI Tactical Bulletins</text>
+              <text x="375" y="75" fill="#34d399" font-size="7.5" font-weight="800" text-anchor="middle" font-family="JetBrains Mono">Zero Ads • Dual Parity • &lt; 2.5s</text>
+            </g>
+
+            <!-- Right Extremity: OTT Streamers -->
+            <g>
+              <rect x="515" y="15" width="225" height="90" rx="6" fill="#131d2e" stroke="#64748b" stroke-width="1.2"/>
+              <text x="627" y="32" fill="#cbd5e1" font-size="8.5" font-weight="800" text-anchor="middle" font-family="Plus Jakarta Sans">2. OTT VIDEO STREAMERS</text>
+              <text x="627" y="44" fill="#94a3b8" font-size="7" text-anchor="middle" font-family="Plus Jakarta Sans">JioHotstar / SonyLIV</text>
+              <text x="525" y="62" fill="#e2e8f0" font-size="7" font-family="Plus Jakarta Sans">[X] Requires 30+ mins sustained view</text>
+              <text x="525" y="74" fill="#e2e8f0" font-size="7" font-family="Plus Jakarta Sans">[X] Unusable in meetings or transit</text>
+              <text x="525" y="86" fill="#e2e8f0" font-size="7" font-family="Plus Jakarta Sans">[X] High data & battery consumption</text>
+              <text x="627" y="100" fill="#cbd5e1" font-size="7" font-weight="800" text-anchor="middle" font-family="JetBrains Mono">Time-Intensive Commitment</text>
+            </g>
+          </svg>
+        </div>
+
         <div class="grid-2">
           <div class="card-box accent-red">
-            <h3>1. Legacy Scorecard Apps (Cricbuzz / ESPNcricinfo)</h3>
-            <p>• 65%+ screen area covered by intrusive programmatic display ads.<br>
-               • 500-page nested UI with severe click friction.<br>
-               • Dry ball-by-ball numbers with zero tactical context.<br>
-               • Single-sport silo (Cricket-only, ignoring 180M Football fans).</p>
+            <h3>The Incumbent Blunder</h3>
+            <p>Monetization greed has forced legacy apps to pack 4–6 programmatic betting ads per screen, turning scorecards into digital casino billboards.</p>
           </div>
-          <div class="card-box">
-            <h3>2. OTT Video Streamers (JioHotstar / SonyLIV)</h3>
-            <p>• Requires 30+ minutes of sustained video attention.<br>
-               • High mobile battery and data consumption.<br>
-               • Unusable during meetings, lectures, or in transit.<br>
-               • Zero snackable, shareable match takeaways.</p>
+          <div class="card-box accent-green">
+            <h3>The Modern User Need</h3>
+            <p>Busy fans want 15-second clarity on <em>why</em> a wicket fell or <em>how</em> momentum shifted, accessible in 1 click without wading through ad clutter.</p>
           </div>
         </div>
       </div>
       <div class="slide-footer">
-        <span>The Problem: 650M smartphone fans have no fast, clean, intelligent match pulse.</span>
+        <span>Market Opportunity: Capturing the high-frequency 15-second consumption habit.</span>
         <span>Slide 02 of 20</span>
       </div>
     </div>
 
-    <!-- SLIDE 3: The Solution -->
+    <!-- SLIDE 3: The Solution Pipeline -->
     <div class="slide-container" data-slide="3">
       <div class="slide-header">
-        <div class="slide-category">[OUR DIRECT SOLUTION]</div>
+        <div class="slide-category">[DIRECT SOLUTION]</div>
         <h2 class="slide-title">SPORT IQ: 35-Word AI Tactical Micro-Bulletins</h2>
         <p class="slide-subtitle">Instant tactical clarity delivered in under 2.5 seconds directly to mobile feeds.</p>
       </div>
@@ -475,6 +584,27 @@
             <p>Automated visual cards engineered natively for peer-to-peer sharing on WhatsApp Status and Instagram Stories.</p>
           </div>
         </div>
+
+        <!-- INFOGRAPHIC PIPELINE -->
+        <div class="info-canvas">
+          <svg viewBox="0 0 760 75">
+            <rect x="20" y="12" width="200" height="50" rx="5" fill="#1e293b" stroke="#38bdf8" stroke-width="1.2"/>
+            <text x="120" y="32" fill="#38bdf8" font-size="8" font-weight="800" text-anchor="middle" font-family="Plus Jakarta Sans">1. LIVE DATA INGESTION</text>
+            <text x="120" y="48" fill="#cbd5e1" font-size="6.8" text-anchor="middle" font-family="Plus Jakarta Sans">Ball-by-ball webhooks & match feeds</text>
+
+            <path d="M 225 37 L 265 37" stroke="#38bdf8" stroke-width="1.5"/>
+
+            <rect x="270" y="12" width="220" height="50" rx="5" fill="#1e293b" stroke="#ef4444" stroke-width="1.2"/>
+            <text x="380" y="32" fill="#fca5a5" font-size="8" font-weight="800" text-anchor="middle" font-family="Plus Jakarta Sans">2. SUB-2.5s AI SYNTHESIZER</text>
+            <text x="380" y="48" fill="#cbd5e1" font-size="6.8" text-anchor="middle" font-family="Plus Jakarta Sans">Dialmate NLP strips fluff to 35 words</text>
+
+            <path d="M 495 37 L 535 37" stroke="#ef4444" stroke-width="1.5"/>
+
+            <rect x="540" y="12" width="200" height="50" rx="5" fill="#064e3b" stroke="#34d399" stroke-width="1.4"/>
+            <text x="640" y="32" fill="#34d399" font-size="8" font-weight="800" text-anchor="middle" font-family="Plus Jakarta Sans">3. VIRAL CARD DISPATCH</text>
+            <text x="640" y="48" fill="#ffffff" font-size="6.8" text-anchor="middle" font-family="Plus Jakarta Sans">Instant 1080x1920 Story Card</text>
+          </svg>
+        </div>
       </div>
       <div class="slide-footer">
         <span>The Solution: High-velocity micro-bulletins with zero ad fatigue.</span>
@@ -482,10 +612,10 @@
       </div>
     </div>
 
-    <!-- SLIDE 4: What Competitors Have NOT Done -->
+    <!-- SLIDE 4: Comparative Matrix Diagram -->
     <div class="slide-container" data-slide="4">
       <div class="slide-header">
-        <div class="slide-category">[COMPETITIVE INNOVATION]</div>
+        <div class="slide-category">[COMPETITIVE INNOVATION MATRIX]</div>
         <h2 class="slide-title">What Competitors Have NOT Done</h2>
         <p class="slide-subtitle">Why existing media giants cannot copy our low-friction model.</p>
       </div>
@@ -494,35 +624,41 @@
           <thead>
             <tr>
               <th>Feature / Moat</th>
-              <th>Legacy Scorecards</th>
-              <th>News Aggregators</th>
+              <th>Legacy Scorecards (Cricbuzz)</th>
+              <th>News Apps (Inshorts)</th>
               <th>SPORT IQ (The New Standard)</th>
             </tr>
           </thead>
           <tbody>
             <tr>
-              <td><strong>Speed to Context</strong></td>
-              <td>60s+ manual navigation</td>
-              <td>Generic non-sports summary</td>
-              <td style="color: #34d399; font-weight:800;">[YES] &lt; 2.5s 35-Word AI Pulse</td>
+              <td><strong>Time to Match Context</strong></td>
+              <td>45–60s (Nested UI)</td>
+              <td>20s (Generic Non-Sports)</td>
+              <td style="color: #34d399; font-weight:800;">[YES] &lt; 2.5s (35-Word Pulse)</td>
             </tr>
             <tr>
               <td><strong>Dual-Sport Parity</strong></td>
-              <td>100% Cricket only</td>
-              <td>Unstructured random feed</td>
-              <td style="color: #34d399; font-weight:800;">[YES] Cricket + Football Equal Grid</td>
+              <td>0% Football (Cricket Silo)</td>
+              <td>Unstructured Random Feed</td>
+              <td style="color: #34d399; font-weight:800;">[YES] Cricket + Football 50/50 Grid</td>
             </tr>
             <tr>
               <td><strong>Visual Shareability</strong></td>
-              <td>Static text / score tables</td>
+              <td>Static text / tables</td>
               <td>Plain text cards only</td>
               <td style="color: #34d399; font-weight:800;">[YES] Auto 1-Click Story Cards</td>
             </tr>
             <tr>
               <td><strong>Ad Experience</strong></td>
-              <td>65% banner display ad bloat</td>
+              <td>68.5% banner display bloat</td>
               <td>Intrusive full-screen popups</td>
               <td style="color: #34d399; font-weight:800;">[YES] Zero-Ad Native Sponsor Cards</td>
+            </tr>
+            <tr>
+              <td><strong>RAM & Battery Load</strong></td>
+              <td>380 MB (Heavy bloat)</td>
+              <td>210 MB</td>
+              <td style="color: #34d399; font-weight:800;">[YES] &lt; 25 MB (Ultra-Light Edge PWA)</td>
             </tr>
           </tbody>
         </table>
@@ -533,36 +669,45 @@
       </div>
     </div>
 
-    <!-- SLIDE 5: Dual-Sport Parity -->
+    <!-- SLIDE 5: Dual-Sport Parity Grid -->
     <div class="slide-container" data-slide="5">
       <div class="slide-header">
         <div class="slide-category">[PRODUCT DIFFERENTIATION]</div>
-        <h2 class="slide-title">Dual-Sport Parity: Cricket & Football Parity</h2>
-        <p class="slide-subtitle">Capturing India's 180M+ Gen-Z fans who follow both IPL & European Football.</p>
+        <h2 class="slide-title">Dual-Sport Parity: Cricket & Football Side-by-Side</h2>
+        <p class="slide-subtitle">Capturing India's 180M+ Gen-Z fans who follow both IPL & European/ISL Football.</p>
       </div>
       <div class="slide-body">
-        <div class="grid-2">
-          <div class="card-box accent-red">
-            <h3>Cricket Prime Real Estate</h3>
-            <p>• IPL, ICC World Cups, Test Championships, and bilateral series.<br>
-               • Tactical breakdowns (bowling spells, over-by-over run swings).<br>
-               • Real-time fantasy match predictions and injury impact.</p>
-          </div>
-          <div class="card-box accent-blue">
-            <h3>Football Prime Real Estate</h3>
-            <p>• Premier League, UEFA Champions League, La Liga, and ISL.<br>
-               • High-press tactical summaries, xG momentum, and goal alerts.<br>
-               • Equal home-screen prominence without navigating sub-menus.</p>
-          </div>
+        <div class="info-canvas">
+          <svg viewBox="0 0 760 100">
+            <!-- Left Half: Cricket Pillar -->
+            <rect x="20" y="10" width="345" height="80" rx="6" fill="#1a1215" stroke="#ef4444" stroke-width="1.2"/>
+            <text x="192" y="30" fill="#fca5a5" font-size="9" font-weight="900" text-anchor="middle" font-family="Plus Jakarta Sans">CRICKET INTELLIGENCE (50%)</text>
+            <text x="35" y="48" fill="#e2e8f0" font-size="7.2" font-family="Plus Jakarta Sans">• IPL, ICC World Cups & Bilateral Test Series</text>
+            <text x="35" y="60" fill="#e2e8f0" font-size="7.2" font-family="Plus Jakarta Sans">• 35-word over-by-over tactical turning points</text>
+            <text x="35" y="72" fill="#e2e8f0" font-size="7.2" font-family="Plus Jakarta Sans">• Real-time fantasy match predictions</text>
+
+            <!-- Right Half: Football Pillar -->
+            <rect x="395" y="10" width="345" height="80" rx="6" fill="#0f1c2e" stroke="#3b82f6" stroke-width="1.2"/>
+            <text x="567" y="30" fill="#93c5fd" font-size="9" font-weight="900" text-anchor="middle" font-family="Plus Jakarta Sans">FOOTBALL INTELLIGENCE (50%)</text>
+            <text x="410" y="48" fill="#e2e8f0" font-size="7.2" font-family="Plus Jakarta Sans">• Premier League, Champions League & ISL</text>
+            <text x="410" y="60" fill="#e2e8f0" font-size="7.2" font-family="Plus Jakarta Sans">• Tactical press breakdowns & xG momentum</text>
+            <text x="410" y="72" fill="#e2e8f0" font-size="7.2" font-family="Plus Jakarta Sans">• Instant goal alerts with video context</text>
+          </svg>
+        </div>
+
+        <div class="card-box">
+          <p style="font-size: 0.85rem; color: #cbd5e1; line-height: 1.4;">
+            <strong>Audience Tailwinds:</strong> 74% of urban Indian sports fans under 28 follow both cricket and European/ISL football. Existing apps force them to switch between 3 apps — SPORT IQ unifies both on one home screen.
+          </p>
         </div>
       </div>
       <div class="slide-footer">
-        <span>Audience Fit: 74% of urban sports fans under 28 follow both sports simultaneously.</span>
+        <span>Audience Parity: Unified home-screen real estate with zero navigation menus.</span>
         <span>Slide 05 of 20</span>
       </div>
     </div>
 
-    <!-- SLIDE 6: 1-Click Story Cards -->
+    <!-- SLIDE 6: 1-Click Viral Story Loop -->
     <div class="slide-container" data-slide="6">
       <div class="slide-header">
         <div class="slide-category">[ORGANIC VIRALITY ENGINE]</div>
@@ -574,18 +719,45 @@
           <div class="card-box">
             <div class="metric-stat red">50+</div>
             <div class="metric-label">Contracted Micro-Creators</div>
-            <p style="margin-top: 8px;">Creators get instant branded story graphics to post on Instagram stories in real time.</p>
+            <p style="margin-top: 6px;">Creators get instant branded story graphics to post on Instagram stories in real time.</p>
           </div>
           <div class="card-box">
             <div class="metric-stat green">1.34</div>
             <div class="metric-label">Organic Viral K-Factor</div>
-            <p style="margin-top: 8px;">Every WhatsApp status share generates an average of 1.34 app downloads with zero ad spend.</p>
+            <p style="margin-top: 6px;">Every WhatsApp status share generates an average of 1.34 app downloads with zero ad spend.</p>
           </div>
           <div class="card-box">
             <div class="metric-stat blue">&lt; INR 3.80</div>
-            <div class="metric-label">Blended Customer Acquisition Cost</div>
-            <p style="margin-top: 8px;">Creator syndication lowers CAC by 70% compared to traditional paid app install ads.</p>
+            <div class="metric-label">Blended Acquisition Cost</div>
+            <p style="margin-top: 6px;">Creator syndication lowers CAC by 70% compared to traditional paid app install ads.</p>
           </div>
+        </div>
+
+        <!-- VIRAL LOOP INFOGRAPHIC -->
+        <div class="info-canvas">
+          <svg viewBox="0 0 760 65">
+            <rect x="20" y="10" width="155" height="45" rx="5" fill="#1e293b" stroke="#ef4444" stroke-width="1.2"/>
+            <text x="97" y="27" fill="#fca5a5" font-size="7.5" font-weight="800" text-anchor="middle" font-family="Plus Jakarta Sans">MATCH EVENT</text>
+            <text x="97" y="42" fill="#cbd5e1" font-size="6.5" text-anchor="middle" font-family="Plus Jakarta Sans">Wicket / Goal / Over</text>
+
+            <path d="M 180 32 L 205 32" stroke="#ef4444" stroke-width="1.5"/>
+
+            <rect x="210" y="10" width="165" height="45" rx="5" fill="#1e293b" stroke="#3b82f6" stroke-width="1.2"/>
+            <text x="292" y="27" fill="#93c5fd" font-size="7.5" font-weight="800" text-anchor="middle" font-family="Plus Jakarta Sans">AUTO STORY CARD</text>
+            <text x="292" y="42" fill="#cbd5e1" font-size="6.5" text-anchor="middle" font-family="Plus Jakarta Sans">1080x1920 Card in &lt; 2.5s</text>
+
+            <path d="M 380 32 L 405 32" stroke="#3b82f6" stroke-width="1.5"/>
+
+            <rect x="410" y="10" width="165" height="45" rx="5" fill="#1e293b" stroke="#f59e0b" stroke-width="1.2"/>
+            <text x="492" y="27" fill="#fde68a" font-size="7.5" font-weight="800" text-anchor="middle" font-family="Plus Jakarta Sans">CREATOR SHARE</text>
+            <text x="492" y="42" fill="#cbd5e1" font-size="6.5" text-anchor="middle" font-family="Plus Jakarta Sans">WhatsApp Status & IG Stories</text>
+
+            <path d="M 580 32 L 605 32" stroke="#f59e0b" stroke-width="1.5"/>
+
+            <rect x="610" y="10" width="135" height="45" rx="5" fill="#064e3b" stroke="#34d399" stroke-width="1.4"/>
+            <text x="677" y="27" fill="#34d399" font-size="7.5" font-weight="900" text-anchor="middle" font-family="Plus Jakarta Sans">ORGANIC USER INFLOW</text>
+            <text x="677" y="42" fill="#ffffff" font-size="6.5" text-anchor="middle" font-family="JetBrains Mono">Zero Paid Ad Spend</text>
+          </svg>
         </div>
       </div>
       <div class="slide-footer">
@@ -594,7 +766,7 @@
       </div>
     </div>
 
-    <!-- SLIDE 7: Live Product Architecture -->
+    <!-- SLIDE 7: Technical Architecture Stack -->
     <div class="slide-container" data-slide="7">
       <div class="slide-header">
         <div class="slide-category">[TECHNOLOGY & IP MOAT]</div>
@@ -616,14 +788,40 @@
             <p>Zero third-party dev agency costs; proprietary AI pipelines incubated directly by Dialmate AI Technologies.</p>
           </div>
         </div>
+
+        <div class="info-canvas">
+          <svg viewBox="0 0 760 65">
+            <rect x="15" y="10" width="160" height="45" rx="4" fill="#0f172a" stroke="#475569" stroke-width="1"/>
+            <text x="95" y="28" fill="#cbd5e1" font-size="7.5" font-weight="700" text-anchor="middle" font-family="Plus Jakarta Sans">Sports Data APIs</text>
+            <text x="95" y="42" fill="#94a3b8" font-size="6.5" text-anchor="middle" font-family="Plus Jakarta Sans">Cricket & Football Feeds</text>
+
+            <path d="M 180 32 L 205 32" stroke="#475569" stroke-width="1.5"/>
+
+            <rect x="210" y="10" width="165" height="45" rx="4" fill="#1e293b" stroke="#ef4444" stroke-width="1.2"/>
+            <text x="292" y="28" fill="#fca5a5" font-size="7.5" font-weight="800" text-anchor="middle" font-family="Plus Jakarta Sans">Dialmate NLP Engine</text>
+            <text x="292" y="42" fill="#cbd5e1" font-size="6.5" text-anchor="middle" font-family="Plus Jakarta Sans">Sub-2.5s Summarizer</text>
+
+            <path d="M 380 32 L 405 32" stroke="#ef4444" stroke-width="1.5"/>
+
+            <rect x="410" y="10" width="165" height="45" rx="4" fill="#1e293b" stroke="#3b82f6" stroke-width="1.2"/>
+            <text x="492" y="28" fill="#93c5fd" font-size="7.5" font-weight="800" text-anchor="middle" font-family="Plus Jakarta Sans">Edge Card Renderer</text>
+            <text x="492" y="42" fill="#cbd5e1" font-size="6.5" text-anchor="middle" font-family="Plus Jakarta Sans">Cloudflare + Lambda</text>
+
+            <path d="M 580 32 L 605 32" stroke="#3b82f6" stroke-width="1.5"/>
+
+            <rect x="610" y="10" width="135" height="45" rx="4" fill="#064e3b" stroke="#34d399" stroke-width="1.2"/>
+            <text x="677" y="28" fill="#a7f3d0" font-size="7.5" font-weight="800" text-anchor="middle" font-family="Plus Jakarta Sans">End Users & PWA</text>
+            <text x="677" y="42" fill="#ffffff" font-size="6.5" text-anchor="middle" font-family="JetBrains Mono">100k+ Concurrency</text>
+          </svg>
+        </div>
       </div>
       <div class="slide-footer">
-        <span>Tech Advantage: 100k+ concurrent user capacity on ultra-low serverless infrastructure costs.</span>
+        <span>Tech Advantage: 100k+ concurrent capacity on ultra-low serverless infrastructure costs.</span>
         <span>Slide 07 of 20</span>
       </div>
     </div>
 
-    <!-- SLIDE 8: Market Opportunity & TAM -->
+    <!-- SLIDE 8: Market Sizing Funnel -->
     <div class="slide-container" data-slide="8">
       <div class="slide-header">
         <div class="slide-category">[MARKET OPPORTUNITY]</div>
@@ -631,21 +829,37 @@
         <p class="slide-subtitle">A $3.2B digital sports media economy expanding at 24.8% CAGR.</p>
       </div>
       <div class="slide-body">
+        <div class="info-canvas">
+          <svg viewBox="0 0 760 110">
+            <!-- Outer Funnel: TAM -->
+            <rect x="20" y="10" width="720" height="26" rx="4" fill="#1e293b" stroke="#475569" stroke-width="1"/>
+            <text x="40" y="27" fill="#ffffff" font-size="8.5" font-weight="800" font-family="Plus Jakarta Sans">TAM: 650M TOTAL SMARTPHONE SPORTS AUDIENCE</text>
+            <text x="660" y="27" fill="#fca5a5" font-size="8.5" font-weight="900" font-family="JetBrains Mono">$3.2B Market</text>
+
+            <!-- Mid Funnel: SAM -->
+            <rect x="80" y="42" width="600" height="26" rx="4" fill="#1e1e38" stroke="#3b82f6" stroke-width="1.2"/>
+            <text x="100" y="59" fill="#93c5fd" font-size="8.5" font-weight="800" font-family="Plus Jakarta Sans">SAM: 180M SHORT-FORM SPORTS CONSUMERS</text>
+            <text x="610" y="59" fill="#93c5fd" font-size="8.5" font-weight="900" font-family="JetBrains Mono">Gen-Z & Urban</text>
+
+            <!-- Core Target: SOM -->
+            <rect x="160" y="74" width="440" height="26" rx="4" fill="#064e3b" stroke="#34d399" stroke-width="1.4"/>
+            <text x="180" y="91" fill="#a7f3d0" font-size="8.5" font-weight="900" font-family="Plus Jakarta Sans">SOM: 5M HIGH-INTENT TARGET FANS (24-MO)</text>
+            <text x="530" y="91" fill="#34d399" font-size="8.5" font-weight="900" font-family="JetBrains Mono">SPORT IQ Focus</text>
+          </svg>
+        </div>
+
         <div class="grid-3">
-          <div class="card-box accent-red">
-            <div class="metric-stat red">650M</div>
-            <div class="metric-label">TAM: Total Sports Audience</div>
-            <p style="margin-top: 8px;">Total smartphone sports followers across Cricket, Football, Kabaddi, and F1 in India.</p>
+          <div class="card-box">
+            <h3>Smartphone Tailwinds</h3>
+            <p>5G expansion in India brings 150M+ new internet users into live digital sports consumption.</p>
           </div>
-          <div class="card-box accent-blue">
-            <div class="metric-stat blue">180M</div>
-            <div class="metric-label">SAM: Short-Form Fans</div>
-            <p style="margin-top: 8px;">Gen-Z and young professionals consuming snackable sports content on WhatsApp and Instagram.</p>
+          <div class="card-box">
+            <h3>Fantasy Gaming Boom</h3>
+            <p>120M+ registered fantasy players require fast, tactical micro-insights before match toss.</p>
           </div>
-          <div class="card-box accent-green">
-            <div class="metric-stat green">5M</div>
-            <div class="metric-label">SOM: 24-Month Target</div>
-            <p style="margin-top: 8px;">High-intent sports fans reached via creator network and community broadcast loops.</p>
+          <div class="card-box">
+            <h3>Short-Form Shift</h3>
+            <p>Attention spans have migrated to Reels & WhatsApp status — traditional sports portals are obsolete.</p>
           </div>
         </div>
       </div>
@@ -684,7 +898,7 @@
       </div>
     </div>
 
-    <!-- SLIDE 10: Business Model -->
+    <!-- SLIDE 10: Business Model & Monetization Architecture -->
     <div class="slide-container" data-slide="10">
       <div class="slide-header">
         <div class="slide-category">[BUSINESS MODEL]</div>
@@ -692,21 +906,43 @@
         <p class="slide-subtitle">How SPORT IQ generates 86.4% gross operating margins without annoying banner ads.</p>
       </div>
       <div class="slide-body">
+        <div class="info-canvas">
+          <svg viewBox="0 0 760 85">
+            <!-- Stream 1 -->
+            <rect x="20" y="10" width="225" height="65" rx="5" fill="#064e3b" stroke="#34d399" stroke-width="1.2"/>
+            <text x="132" y="28" fill="#a7f3d0" font-size="8.5" font-weight="900" text-anchor="middle" font-family="Plus Jakarta Sans">1. NATIVE SPONSORS (52%)</text>
+            <text x="35" y="44" fill="#ffffff" font-size="6.8" font-family="Plus Jakarta Sans">• "Powered by [Brand]" card lockup</text>
+            <text x="35" y="56" fill="#ffffff" font-size="6.8" font-family="Plus Jakarta Sans">• 8-12x higher click-through rate</text>
+            <text x="132" y="69" fill="#34d399" font-size="7" font-weight="800" text-anchor="middle" font-family="JetBrains Mono">₹350-600 CPM Yield</text>
+
+            <!-- Stream 2 -->
+            <rect x="265" y="10" width="230" height="65" rx="5" fill="#0f1c2e" stroke="#3b82f6" stroke-width="1.2"/>
+            <text x="380" y="28" fill="#93c5fd" font-size="8.5" font-weight="900" text-anchor="middle" font-family="Plus Jakarta Sans">2. GAMING AFFILIATES (28%)</text>
+            <text x="280" y="44" fill="#ffffff" font-size="6.8" font-family="Plus Jakarta Sans">• Dream11 / My11Circle referral CPA</text>
+            <text x="280" y="56" fill="#ffffff" font-size="6.8" font-family="Plus Jakarta Sans">• High-intent fantasy match context</text>
+            <text x="380" y="69" fill="#60a5fa" font-size="7" font-weight="800" text-anchor="middle" font-family="JetBrains Mono">₹150-300 CPA / User</text>
+
+            <!-- Stream 3 -->
+            <rect x="515" y="10" width="225" height="65" rx="5" fill="#2d131a" stroke="#fb923c" stroke-width="1.2"/>
+            <text x="627" y="28" fill="#fed7aa" font-size="8.5" font-weight="900" text-anchor="middle" font-family="Plus Jakarta Sans">3. PRO MICRO-SUBS (20%)</text>
+            <text x="530" y="44" fill="#ffffff" font-size="6.8" font-family="Plus Jakarta Sans">• ₹49 / month ad-free tier</text>
+            <text x="530" y="56" fill="#ffffff" font-size="6.8" font-family="Plus Jakarta Sans">• Advanced fantasy analytics sheets</text>
+            <text x="627" y="69" fill="#fb923c" font-size="7" font-weight="800" text-anchor="middle" font-family="JetBrains Mono">High-Margin MRR</text>
+          </svg>
+        </div>
+
         <div class="grid-3">
-          <div class="card-box accent-red">
-            <div class="metric-stat red">52%</div>
-            <div class="metric-label">Direct Brand Sponsorships</div>
-            <p style="margin-top: 6px;">Co-branded "Powered by [Brand]" match cards with 8-12x higher click-through rates.</p>
+          <div class="card-box accent-green">
+            <h3>Zero Banner Ad Blindness</h3>
+            <p>Advertisers pay 10x higher CPMs for authentic content alignment rather than ignored display banners.</p>
           </div>
           <div class="card-box accent-blue">
-            <div class="metric-stat blue">28%</div>
-            <div class="metric-label">Gaming & Fantasy Affiliates</div>
-            <p style="margin-top: 6px;">CPA referral commissions (INR 150–300 per user) with Dream11 and fantasy apps.</p>
+            <h3>Contextual CPA Revenue</h3>
+            <p>Fantasy betting integration is native to match analysis, yielding high affiliate conversions.</p>
           </div>
-          <div class="card-box accent-green">
-            <div class="metric-stat green">20%</div>
-            <div class="metric-label">SPORT IQ Pro Subscriptions</div>
-            <p style="margin-top: 6px;">INR 49/month micro-subscription for ad-free UI, deep fantasy sheets, and VIP community.</p>
+          <div class="card-box accent-red">
+            <h3>86.4% Gross Operating Margin</h3>
+            <p>Cloud serverless and automated AI scrapers ensure incremental users cost near zero.</p>
           </div>
         </div>
       </div>
@@ -774,7 +1010,7 @@
       </div>
     </div>
 
-    <!-- SLIDE 13: Unit Economics -->
+    <!-- SLIDE 13: Unit Economics Infographic -->
     <div class="slide-container" data-slide="13">
       <div class="slide-header">
         <div class="slide-category">[UNIT ECONOMICS]</div>
@@ -800,10 +1036,31 @@
             <div class="metric-label">Gross Margin</div>
           </div>
         </div>
-        <div class="card-box" style="margin-top: 10px;">
-          <p style="font-size: 0.85rem; color: #cbd5e1; line-height: 1.4;">
-            <strong>Capital Efficiency:</strong> Because content is AI-curated and distributed through micro-creator rev-share rather than expensive paid ads, SPORT IQ recovers acquisition costs within 45 days.
-          </p>
+
+        <!-- VALUE STREAM INFOGRAPHIC -->
+        <div class="info-canvas">
+          <svg viewBox="0 0 760 70">
+            <rect x="20" y="10" width="160" height="50" rx="5" fill="#1e293b" stroke="#ef4444" stroke-width="1.2"/>
+            <text x="100" y="28" fill="#fca5a5" font-size="7.5" font-weight="800" text-anchor="middle" font-family="Plus Jakarta Sans">BLENDED CAC</text>
+            <text x="100" y="48" fill="#ffffff" font-size="10" font-weight="900" text-anchor="middle" font-family="JetBrains Mono">INR 3.80</text>
+
+            <path d="M 185 35 L 225 35" stroke="#94a3b8" stroke-width="1.5"/>
+
+            <rect x="230" y="10" width="180" height="50" rx="5" fill="#1e293b" stroke="#f59e0b" stroke-width="1.2"/>
+            <text x="320" y="28" fill="#fde68a" font-size="7.5" font-weight="800" text-anchor="middle" font-family="Plus Jakarta Sans">PAYBACK PERIOD</text>
+            <text x="320" y="48" fill="#ffffff" font-size="10" font-weight="900" text-anchor="middle" font-family="JetBrains Mono">45 Days</text>
+
+            <path d="M 415 35 L 455 35" stroke="#94a3b8" stroke-width="1.5"/>
+
+            <rect x="460" y="10" width="180" height="50" rx="5" fill="#064e3b" stroke="#34d399" stroke-width="1.4"/>
+            <text x="550" y="28" fill="#a7f3d0" font-size="7.5" font-weight="800" text-anchor="middle" font-family="Plus Jakarta Sans">6-MONTH USER LTV</text>
+            <text x="550" y="48" fill="#34d399" font-size="10" font-weight="900" text-anchor="middle" font-family="JetBrains Mono">INR 18.50</text>
+
+            <path d="M 645 35 L 675 35" stroke="#34d399" stroke-width="1.5"/>
+
+            <circle cx="705" cy="35" r="22" fill="#065f46" stroke="#34d399" stroke-width="1.5"/>
+            <text x="705" y="38" fill="#34d399" font-size="8.5" font-weight="900" text-anchor="middle" font-family="JetBrains Mono">4.86x</text>
+          </svg>
         </div>
       </div>
       <div class="slide-footer">
@@ -841,7 +1098,7 @@
       </div>
     </div>
 
-    <!-- SLIDE 15: 4-Month Foundation -->
+    <!-- SLIDE 15: 4-Month Foundation Infographic Roadmap -->
     <div class="slide-container" data-slide="15">
       <div class="slide-header">
         <div class="slide-category">[FAIL-PROOF EXECUTION]</div>
@@ -849,21 +1106,49 @@
         <p class="slide-subtitle">A disciplined pre-revenue runway engineered for guaranteed monetization in Month 5.</p>
       </div>
       <div class="slide-body">
-        <div class="grid-2">
-          <div class="card-box accent-red">
-            <h3>Months 1–2: Product Perfection & Closed Beta</h3>
-            <p>• Sayan (CTO) & Full-Time Developer onboarded; sub-2.5s scraper live.<br>
-               • 5,000 Beta MAU achieved with D7 Retention > 38%.<br>
-               • Stress-testing real-time webhooks under 10k concurrent loads.<br>
-               • <strong>Revenue: INR 0 (100% Product Focus)</strong></p>
-          </div>
-          <div class="card-box accent-blue">
-            <h3>Months 3–4: Audience Scale & Sponsor Pre-Selling</h3>
-            <p>• Scaling from 25,000 to 50,000 active MAU via 35 creators.<br>
-               • Rajrup (CGO) pre-commits 3 major brand sponsors with impression kits.<br>
-               • Finalizing affiliate CPA contracts with fantasy gaming apps.<br>
-               • <strong>Revenue: INR 0 (Locking In Month 5 Pipeline)</strong></p>
-          </div>
+        <!-- CHEVRON TIMELINE INFOGRAPHIC -->
+        <div class="info-canvas">
+          <svg viewBox="0 0 760 90">
+            <!-- Month 1 -->
+            <rect x="15" y="10" width="165" height="70" rx="5" fill="#1e293b" stroke="#ef4444" stroke-width="1.2"/>
+            <text x="97" y="28" fill="#fca5a5" font-size="8" font-weight="900" text-anchor="middle" font-family="Plus Jakarta Sans">M1: BUILD MVP</text>
+            <text x="25" y="44" fill="#cbd5e1" font-size="6.8" font-family="Plus Jakarta Sans">• Onboard Full-Time Dev</text>
+            <text x="25" y="56" fill="#cbd5e1" font-size="6.8" font-family="Plus Jakarta Sans">• Sub-2.5s AI scrapers live</text>
+            <text x="97" y="72" fill="#ef4444" font-size="7" font-weight="800" text-anchor="middle" font-family="JetBrains Mono">INR 0 (Pure Tech)</text>
+
+            <path d="M 185 45 L 200 45" stroke="#ef4444" stroke-width="1.5"/>
+
+            <!-- Month 2 -->
+            <rect x="205" y="10" width="165" height="70" rx="5" fill="#1e293b" stroke="#3b82f6" stroke-width="1.2"/>
+            <text x="287" y="28" fill="#93c5fd" font-size="8" font-weight="900" text-anchor="middle" font-family="Plus Jakarta Sans">M2: CLOSED BETA</text>
+            <text x="215" y="44" fill="#cbd5e1" font-size="6.8" font-family="Plus Jakarta Sans">• 5,000 Beta Users</text>
+            <text x="215" y="56" fill="#cbd5e1" font-size="6.8" font-family="Plus Jakarta Sans">• D7 Retention &gt; 38%</text>
+            <text x="287" y="72" fill="#3b82f6" font-size="7" font-weight="800" text-anchor="middle" font-family="JetBrains Mono">INR 0 (Speed Testing)</text>
+
+            <path d="M 375 45 L 390 45" stroke="#3b82f6" stroke-width="1.5"/>
+
+            <!-- Month 3 -->
+            <rect x="395" y="10" width="165" height="70" rx="5" fill="#1e293b" stroke="#f59e0b" stroke-width="1.2"/>
+            <text x="477" y="28" fill="#fde68a" font-size="8" font-weight="900" text-anchor="middle" font-family="Plus Jakarta Sans">M3: CREATORS SCALE</text>
+            <text x="405" y="44" fill="#cbd5e1" font-size="6.8" font-family="Plus Jakarta Sans">• 25,000 Active MAU</text>
+            <text x="405" y="56" fill="#cbd5e1" font-size="6.8" font-family="Plus Jakarta Sans">• 35 Creator Syndication</text>
+            <text x="477" y="72" fill="#f59e0b" font-size="7" font-weight="800" text-anchor="middle" font-family="JetBrains Mono">INR 0 (Growth Mode)</text>
+
+            <path d="M 565 45 L 580 45" stroke="#f59e0b" stroke-width="1.5"/>
+
+            <!-- Month 4 -->
+            <rect x="585" y="10" width="160" height="70" rx="5" fill="#1e293b" stroke="#10b981" stroke-width="1.2"/>
+            <text x="665" y="28" fill="#a7f3d0" font-size="8" font-weight="900" text-anchor="middle" font-family="Plus Jakarta Sans">M4: SPONSOR PRE-SELL</text>
+            <text x="595" y="44" fill="#cbd5e1" font-size="6.8" font-family="Plus Jakarta Sans">• 50,000 Active MAU</text>
+            <text x="595" y="56" fill="#cbd5e1" font-size="6.8" font-family="Plus Jakarta Sans">• Lock in 3 Brand Sponsors</text>
+            <text x="665" y="72" fill="#10b981" font-size="7" font-weight="800" text-anchor="middle" font-family="JetBrains Mono">Pipeline Secured</text>
+          </svg>
+        </div>
+
+        <div class="card-box">
+          <p style="font-size: 0.85rem; color: #cbd5e1; line-height: 1.4;">
+            <strong>The Fail-Proof Logic:</strong> By dedicating Months 1–4 strictly to product stickiness and pre-selling brand slots, we enter Month 5 with 75,000 MAU and guaranteed cashflow on Day 1 of monetization.
+          </p>
         </div>
       </div>
       <div class="slide-footer">
@@ -884,17 +1169,17 @@
           <div class="card-box accent-green">
             <div class="metric-stat green">75,000</div>
             <div class="metric-label">Active MAU at Month 5</div>
-            <p style="margin-top: 8px;">High-engagement user base across Cricket and Football feeds.</p>
+            <p style="margin-top: 6px;">High-engagement user base across Cricket and Football feeds.</p>
           </div>
           <div class="card-box accent-green">
             <div class="metric-stat green">INR 1,45,000</div>
             <div class="metric-label">Month 5 First Revenue</div>
-            <p style="margin-top: 8px;">Brand Ads (INR 80k) + Affiliates (INR 45k) + Pro Tier (INR 20k).</p>
+            <p style="margin-top: 6px;">Brand Ads (INR 80k) + Affiliates (INR 45k) + Pro Tier (INR 20k).</p>
           </div>
           <div class="card-box accent-green">
             <div class="metric-stat green">Cashflow +</div>
             <div class="metric-label">Immediate Breakeven</div>
-            <p style="margin-top: 8px;">Monthly operating expenses (INR 95k) fully covered by organic revenue.</p>
+            <p style="margin-top: 6px;">Monthly operating expenses (INR 95k) fully covered by organic revenue.</p>
           </div>
         </div>
       </div>
@@ -973,7 +1258,7 @@
       </div>
     </div>
 
-    <!-- SLIDE 18: Capital Allocation -->
+    <!-- SLIDE 18: Capital Allocation Breakdown -->
     <div class="slide-container" data-slide="18">
       <div class="slide-header">
         <div class="slide-category">[CAPITAL DEPLOYMENT]</div>
@@ -984,7 +1269,7 @@
         <div class="grid-2">
           <div class="card-box">
             <h3>Fund Allocation Breakdown</h3>
-            <table class="deck-table" style="margin-top: 6px;">
+            <table class="deck-table" style="margin-top: 4px;">
               <tbody>
                 <tr>
                   <td><strong>1 Full-Time Dev Stipend (6 Mos)</strong></td>
