@@ -140,7 +140,7 @@ export default function App() {
             rel="noopener noreferrer"
             className="nav-badge-doc"
           >
-            📄 ₹5L Strategy PDF
+            INR 5L Strategy PDF
           </a>
           <a className="nav-cta" href="mailto:hello@dialmate.ai?subject=SPORT%20IQ%20Consultant%20Brief">
             Get in Touch
@@ -155,7 +155,7 @@ export default function App() {
             <div className="hero-copy">
               {/* EYEBROW PARTNER BADGE */}
               <div className="eyebrow-badge">
-                <span>⚡ Sports Bulletin</span>
+                <span>Sports Bulletin</span>
                 <span>•</span>
                 <span>Incubated by Dialmate AI</span>
               </div>
@@ -193,13 +193,13 @@ export default function App() {
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  📥 Download ₹5L Strategy PDF
+                  Download Strategy PDF
                 </a>
                 <a className="btn btn-secondary" href={dossierUrl} target="_blank">
-                  📊 View Executive Dossier
+                  View Executive Dossier
                 </a>
                 <a className="btn btn-secondary" href="#live">
-                  ⚡ See Live Pulse
+                  See Live Pulse
                 </a>
               </div>
             </div>
@@ -311,9 +311,9 @@ export default function App() {
           <div className="strategy-banner">
             <div>
               <div className="eyebrow-badge" style={{ marginBottom: 8 }}>
-                <span>💼 Investor & Consultant Ready</span>
+                <span>Investor & Consultant Ready</span>
               </div>
-              <h3>SPORT IQ — ₹5,00,000 Seed Allocation Dossier</h3>
+              <h3>SPORT IQ — INR 5,00,000 Seed Allocation Dossier</h3>
               <p>
                 Complete financial architecture, founder execution division (Sayan - CTO / Rajrup - CGO),
                 6-month GTM roadmap, and unit economics model.
@@ -326,10 +326,10 @@ export default function App() {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                📥 Download Shareable PDF
+                Download Shareable PDF
               </a>
               <a className="btn btn-secondary" href={dossierUrl} target="_blank">
-                🌐 Interactive Web View
+                Interactive Web View
               </a>
             </div>
           </div>
