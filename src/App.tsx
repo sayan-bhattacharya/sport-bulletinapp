@@ -117,6 +117,7 @@ export default function App() {
           <a href="#live">Live</a>
           <a href="#briefs">Briefs</a>
           <a href="#why">Why us</a>
+          <a href="./strategy.html" style={{ color: "#06B6D4", fontWeight: 700 }}>₹5L Strategy Deck</a>
           <a className="nav-cta" href="mailto:hello@scoreadda.in?subject=Score%20Adda%20walkthrough">
             Book
           </a>
@@ -142,8 +143,8 @@ export default function App() {
               right now.
             </p>
             <div className="hero-actions">
-              <a className="btn btn-primary" href="mailto:hello@scoreadda.in?subject=Score%20Adda%20walkthrough">
-                Book a walkthrough
+              <a className="btn btn-primary" href="./strategy.html">
+                📊 View ₹5L Strategy Deck
               </a>
               <a className="btn btn-ghost" href="#live">
                 See the pulse
