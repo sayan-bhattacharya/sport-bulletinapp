@@ -122,7 +122,7 @@ export default function App() {
             alt="SPORT IQ Logo"
             className="nav-logo-img"
           />
-          <div>
+          <div className="nav-brand-text-block">
             <a className="nav-brand" href="#top" aria-label="SPORT IQ home">
               SPORT <span>IQ</span>
             </a>
@@ -153,22 +153,34 @@ export default function App() {
         <section className="hero" aria-label="SPORT IQ Sports Bulletin">
           <div className="hero-content-grid">
             <div className="hero-copy">
+              {/* EYEBROW PARTNER BADGE */}
               <div className="eyebrow-badge">
                 <span>⚡ Sports Bulletin</span>
                 <span>•</span>
                 <span>Incubated by Dialmate AI</span>
               </div>
 
-              <img
-                src={logoSrc}
-                alt="SPORT IQ Sports Bulletin"
-                className="hero-logo-banner"
-              />
+              {/* READABLE & PROMINENT BRAND HEADER LOCKUP */}
+              <div className="hero-brand-lockup">
+                <img
+                  src={logoSrc}
+                  alt="SPORT IQ Logo"
+                  className="hero-brand-logo"
+                />
+                <div className="hero-brand-details">
+                  <div className="hero-brand-name">
+                    SPORT <span className="highlight">IQ</span>
+                  </div>
+                  <div className="hero-brand-sub">
+                    News • Insights • Scores • Stories
+                  </div>
+                </div>
+              </div>
 
               <h1 className="hero-title">
                 The 15-Second <span>Match Pulse</span> for Next-Gen Fans.
               </h1>
-              <p className="hero-tagline">News • Insights • Scores • Stories</p>
+
               <p className="hero-support">
                 India's high-velocity digital sports media platform. AI-curated 35-word bulletins,
                 real-time scorecards, and viral tactical cards delivered where fans live.
@@ -192,8 +204,9 @@ export default function App() {
               </div>
             </div>
 
+            {/* HIGHLIGHTED & FULLY ASPECTED VIDEO CONTAINER */}
             <div className="hero-visual-card">
-              <Suspense fallback={<div style={{ height: 280, background: "#0e1422" }} />}>
+              <Suspense fallback={<div style={{ aspectRatio: "16/9", background: "#0e1422", width: "100%" }} />}>
                 <HeroPlayer />
               </Suspense>
             </div>
@@ -345,7 +358,7 @@ export default function App() {
           <img src={logoSrc} alt="SPORT IQ" className="footer-logo" />
           <div>
             <div style={{ fontWeight: 800, fontSize: "1.1rem" }}>SPORT IQ</div>
-            <div style={{ fontSize: "0.7rem", color: "#94a3b8" }}>Incubated by Dialmate AI Technologies</div>
+            <div style={{ fontSize: "0.75rem", color: "#94a3b8" }}>Incubated by Dialmate AI Technologies</div>
           </div>
         </div>
         <span className="footer-note">
