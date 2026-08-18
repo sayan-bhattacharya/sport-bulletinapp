@@ -181,7 +181,7 @@ const htmlContent = `<!DOCTYPE html>
 
   /* Typography & Headers */
   h1.hero-title {
-    font-size: 14pt;
+    font-size: 13.5pt;
     font-weight: 900;
     line-height: 1.15;
     color: #0f172a;
@@ -339,6 +339,10 @@ const htmlContent = `<!DOCTYPE html>
     background: linear-gradient(90deg, #dc2626, #f43f5e);
   }
 
+  .role-card.dev::before {
+    background: linear-gradient(90deg, #2563eb, #3b82f6);
+  }
+
   .role-card.rajrup::before {
     background: linear-gradient(90deg, #0f172a, #334155);
   }
@@ -362,6 +366,10 @@ const htmlContent = `<!DOCTYPE html>
     color: #dc2626;
     text-transform: uppercase;
     letter-spacing: 0.3px;
+  }
+
+  .role-card.dev .role-title {
+    color: #2563eb;
   }
 
   .role-card.rajrup .role-title {
@@ -399,27 +407,12 @@ const htmlContent = `<!DOCTYPE html>
     font-weight: bold;
   }
 
+  .role-card.dev .role-list li::before {
+    color: #2563eb;
+  }
+
   .role-card.rajrup .role-list li::before {
     color: #0f172a;
-  }
-
-  .kpi-chip-row {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 2px;
-    margin-top: 3px;
-    padding-top: 2px;
-    border-top: 1px dashed #e2e8f0;
-  }
-
-  .kpi-chip {
-    font-size: 5pt;
-    font-weight: 600;
-    background: #f1f5f9;
-    color: #475569;
-    padding: 1px 3px;
-    border-radius: 3px;
-    border: 1px solid #e2e8f0;
   }
 
   /* Table styling */
@@ -562,7 +555,7 @@ const htmlContent = `<!DOCTYPE html>
 </head>
 <body>
 
-<!-- ================= PAGE 1: COVER & WHAT IS NEW ON THE TABLE ================= -->
+<!-- ================= PAGE 1: COVER & COMPETITIVE UNFAIR ADVANTAGES ================= -->
 <div class="page">
   <div class="page-body">
     <div class="doc-header">
@@ -580,14 +573,14 @@ const htmlContent = `<!DOCTYPE html>
     </div>
 
     <div style="margin: 1px 0 3px 0;">
-      <span class="tag-pill tag-red">Venture & Commercial Strategy</span>
+      <span class="tag-pill tag-red">Venture Strategy Dossier</span>
       <span class="tag-pill tag-dark" style="margin-left: 4px;">Seed Capital: ₹5,00,000 INR ($6,000 USD)</span>
-      <span class="tag-pill tag-green" style="margin-left: 4px;">Category: 15-Second Sports Media Disruption</span>
+      <span class="tag-pill tag-green" style="margin-left: 4px;">Scope: Digital Sports Bulletin Disruption</span>
     </div>
 
-    <h1 class="hero-title">SPORT IQ — The High-Velocity Sports Bulletin: <span class="hero-gradient">Commercial Model & Product Disruption</span></h1>
+    <h1 class="hero-title">SPORT IQ — What Is New That Competitors Have Not Done: <span class="hero-gradient">Market Innovation & Business Model</span></h1>
     <p class="hero-sub">
-      A high-velocity, capital-efficient commercial strategy prepared for strategic advisors and investors. <strong>SPORT IQ</strong> (<em>News • Insights • Scores • Stories</em>), incubated by <strong>Dialmate AI</strong>, captures the unmet demand of 600M+ digital sports fans in India through AI-curated 15-second micro-bulletins, dual-sport (Cricket + Football) parity, and high-margin community monetization.
+      A high-velocity commercial strategy prepared for strategic advisors and investors. <strong>SPORT IQ</strong> (<em>News • Insights • Scores • Stories</em>), incubated by <strong>Dialmate AI</strong>, solves the critical market gaps left behind by legacy scorecards and news aggregators through real-time 15-second micro-tactical bulletins, dual-sport parity, and automated viral story cards.
     </p>
 
     <!-- Key Metrics Row -->
@@ -605,77 +598,86 @@ const htmlContent = `<!DOCTYPE html>
         <div class="metric-label">Gross Operating Margin</div>
       </div>
       <div class="metric-card">
-        <div class="metric-val">4.86x</div>
-        <div class="metric-label">LTV / CAC Unit Multiple</div>
+        <div class="metric-val">1 Dev + CTO</div>
+        <div class="metric-label">Dedicated Tech Core</div>
       </div>
     </div>
 
-    <!-- INFOGRAPHIC 1: WHAT IS NEW ON THE TABLE (DISRUPTION MATRIX) -->
+    <!-- INFOGRAPHIC 1: WHAT COMPETITORS HAVE NOT DONE (UNFAIR INNOVATION MATRIX) -->
     <div class="diagram-card">
       <div class="diagram-title">
-        <span>⚡ INFOGRAPHIC: WHAT IS NEW ON THE TABLE — THE 15-SECOND SPORTS BULLETIN DISRUPTION</span>
-        <span style="font-size: 5pt; color: #fecdd3;">Zero-Ad Clutter vs Legacy Media</span>
+        <span>INFOGRAPHIC: COMPETITOR BLIND SPOTS VS. SPORT IQ UNFAIR INNOVATIONS</span>
+        <span style="font-size: 5pt; color: #fecdd3;">Market Differentiation Matrix</span>
       </div>
-      <svg viewBox="0 0 760 135" style="width: 100%; height: auto; display: block;">
-        <!-- Legacy Apps -->
+      <svg viewBox="0 0 760 140" style="width: 100%; height: auto; display: block;">
+        <!-- Column 1: Legacy Scorecards -->
         <g>
-          <rect x="15" y="15" width="220" height="105" rx="6" fill="#450a0a" stroke="#f87171" stroke-width="1.2"/>
-          <text x="125" y="34" fill="#fca5a5" font-size="9.5" font-weight="800" text-anchor="middle" font-family="Plus Jakarta Sans">1. LEGACY SCORECARDS</text>
-          <text x="25" y="52" fill="#ffffff" font-size="8" font-family="Plus Jakarta Sans">❌ Cricbuzz / ESPNcricinfo</text>
-          <text x="25" y="66" fill="#ffffff" font-size="8" font-family="Plus Jakarta Sans">• Cluttered banner ad fatigue</text>
-          <text x="25" y="80" fill="#ffffff" font-size="8" font-family="Plus Jakarta Sans">• Dry statistics without context</text>
-          <text x="125" y="104" fill="#f87171" font-size="8.5" font-weight="800" text-anchor="middle" font-family="JetBrains Mono">High Friction (60s+ to read)</text>
+          <rect x="10" y="15" width="175" height="112" rx="5" fill="#450a0a" stroke="#f87171" stroke-width="1.2"/>
+          <text x="97" y="32" fill="#fca5a5" font-size="9" font-weight="800" text-anchor="middle" font-family="Plus Jakarta Sans">1. LEGACY SCORECARDS</text>
+          <text x="97" y="44" fill="#cbd5e1" font-size="7.5" text-anchor="middle" font-family="Plus Jakarta Sans">Cricbuzz / ESPNcricinfo</text>
+          <text x="20" y="62" fill="#ffffff" font-size="7.5" font-family="Plus Jakarta Sans">• 65% display banner ad bloat</text>
+          <text x="20" y="74" fill="#ffffff" font-size="7.5" font-family="Plus Jakarta Sans">• Dry stats without tactical context</text>
+          <text x="20" y="86" fill="#ffffff" font-size="7.5" font-family="Plus Jakarta Sans">• 0% football coverage for Gen-Z</text>
+          <text x="97" y="112" fill="#f87171" font-size="8" font-weight="800" text-anchor="middle" font-family="JetBrains Mono">Ad & Friction Overload</text>
         </g>
 
-        <!-- Broadcast Stream -->
+        <!-- Column 2: General News Apps -->
         <g>
-          <rect x="270" y="15" width="220" height="105" rx="6" fill="#1e293b" stroke="#64748b" stroke-width="1.2"/>
-          <text x="380" y="34" fill="#cbd5e1" font-size="9.5" font-weight="800" text-anchor="middle" font-family="Plus Jakarta Sans">2. OTT BROADCAST STREAMS</text>
-          <text x="280" y="52" fill="#ffffff" font-size="8" font-family="Plus Jakarta Sans">❌ JioHotstar / SonyLIV</text>
-          <text x="280" y="66" fill="#ffffff" font-size="8" font-family="Plus Jakarta Sans">• 30-minute attention commitment</text>
-          <text x="280" y="80" fill="#ffffff" font-size="8" font-family="Plus Jakarta Sans">• High mobile data consumption</text>
-          <text x="380" y="104" fill="#cbd5e1" font-size="8.5" font-weight="800" text-anchor="middle" font-family="JetBrains Mono">Heavy Stream (Unsuited for work)</text>
+          <rect x="198" y="15" width="175" height="112" rx="5" fill="#1e293b" stroke="#64748b" stroke-width="1.2"/>
+          <text x="285" y="32" fill="#cbd5e1" font-size="9" font-weight="800" text-anchor="middle" font-family="Plus Jakarta Sans">2. NEWS AGGREGATORS</text>
+          <text x="285" y="44" fill="#94a3b8" font-size="7.5" text-anchor="middle" font-family="Plus Jakarta Sans">Inshorts / Dailyhunt</text>
+          <text x="208" y="62" fill="#ffffff" font-size="7.5" font-family="Plus Jakarta Sans">• Generic non-sports aggregation</text>
+          <text x="208" y="74" fill="#ffffff" font-size="7.5" font-family="Plus Jakarta Sans">• Static text cards without live data</text>
+          <text x="208" y="86" fill="#ffffff" font-size="7.5" font-family="Plus Jakarta Sans">• Zero real-time match telemetry</text>
+          <text x="285" y="112" fill="#cbd5e1" font-size="8" font-weight="800" text-anchor="middle" font-family="JetBrains Mono">Lack Sports Depth</text>
         </g>
 
-        <!-- SPORT IQ Solution -->
+        <!-- Column 3: Social Feeds -->
         <g>
-          <rect x="525" y="15" width="220" height="105" rx="6" fill="#064e3b" stroke="#34d399" stroke-width="1.4"/>
-          <text x="635" y="34" fill="#a7f3d0" font-size="10" font-weight="900" text-anchor="middle" font-family="Plus Jakarta Sans">🚀 SPORT IQ (NEW ON TABLE)</text>
-          <text x="535" y="52" fill="#ffffff" font-size="8" font-weight="700" font-family="Plus Jakarta Sans">✅ 15-Second Match Pulse</text>
-          <text x="535" y="66" fill="#ffffff" font-size="8" font-family="Plus Jakarta Sans">• 35-Word AI Tactical Bulletins</text>
-          <text x="535" y="80" fill="#ffffff" font-size="8" font-family="Plus Jakarta Sans">• Dual Cricket + Football Parity</text>
-          <text x="635" y="104" fill="#34d399" font-size="9.5" font-weight="800" text-anchor="middle" font-family="JetBrains Mono">Instant Match Intelligence</text>
+          <rect x="386" y="15" width="175" height="112" rx="5" fill="#1e293b" stroke="#94a3b8" stroke-width="1.2"/>
+          <text x="473" y="32" fill="#cbd5e1" font-size="9" font-weight="800" text-anchor="middle" font-family="Plus Jakarta Sans">3. SOCIAL MEDIA FEEDS</text>
+          <text x="473" y="44" fill="#94a3b8" font-size="7.5" text-anchor="middle" font-family="Plus Jakarta Sans">Instagram Reels / X Threads</text>
+          <text x="396" y="62" fill="#ffffff" font-size="7.5" font-family="Plus Jakarta Sans">• Unverified opinion noise</text>
+          <text x="396" y="74" fill="#ffffff" font-size="7.5" font-family="Plus Jakarta Sans">• Fragmented video clips</text>
+          <text x="396" y="86" fill="#ffffff" font-size="7.5" font-family="Plus Jakarta Sans">• No structured scorecard sync</text>
+          <text x="473" y="112" fill="#cbd5e1" font-size="8" font-weight="800" text-anchor="middle" font-family="JetBrains Mono">Fragmented & Noisy</text>
         </g>
 
-        <path d="M 235 67 L 270 67" stroke="#f87171" stroke-width="2" fill="none"/>
-        <path d="M 490 67 L 525 67" stroke="#34d399" stroke-width="2.5" fill="none"/>
+        <!-- Column 4: SPORT IQ (NEW ON TABLE) -->
+        <g>
+          <rect x="574" y="15" width="176" height="112" rx="5" fill="#064e3b" stroke="#34d399" stroke-width="1.5"/>
+          <text x="662" y="32" fill="#a7f3d0" font-size="9.5" font-weight="900" text-anchor="middle" font-family="Plus Jakarta Sans">4. SPORT IQ (NEW ON TABLE)</text>
+          <text x="662" y="44" fill="#34d399" font-size="7.5" font-weight="700" text-anchor="middle" font-family="Plus Jakarta Sans">Category Disruption</text>
+          <text x="584" y="62" fill="#ffffff" font-size="7.5" font-weight="700" font-family="Plus Jakarta Sans">• 15s AI Micro-Tactical Pulse</text>
+          <text x="584" y="74" fill="#ffffff" font-size="7.5" font-weight="700" font-family="Plus Jakarta Sans">• Cricket + Football Parity</text>
+          <text x="584" y="86" fill="#ffffff" font-size="7.5" font-weight="700" font-family="Plus Jakarta Sans">• Automated 1-Click Story Cards</text>
+          <text x="662" y="112" fill="#34d399" font-size="8.5" font-weight="800" text-anchor="middle" font-family="JetBrains Mono">Instant Match Intelligence</text>
+        </g>
       </svg>
     </div>
 
-    <!-- Market Void & Unique Value Drivers -->
+    <!-- Competitive Differentiation Pillars -->
     <div class="grid-2">
       <div class="card highlight">
-        <div class="card-header-sm" style="color: #b91c1c;">💡 The Value Proposition to Fans</div>
+        <div class="card-header-sm" style="color: #b91c1c;">[THE NEW FACTOR 1] 15-Second AI Tactical Micro-Bulletins</div>
         <p style="font-size: 6pt; color: #475569; line-height: 1.22;">
-          • <strong>15-Second Match Pulse:</strong> Get instant tactical clarity between meetings or on the commute without watching 20-minute video recaps.<br>
-          • <strong>Dual-Sport Parity:</strong> Built specifically for Gen-Z fans in India who follow both high-stakes IPL Cricket and European/ISL Football.<br>
-          • <strong>Viral Social Cards:</strong> 1-click shareable match graphics engineered natively for WhatsApp status and Telegram groups.
+          • <strong>Sub-2.5s Automated Synthesis:</strong> Instead of dry scoreboards, SPORT IQ extracts live match data and formats 35-word tactical context (e.g., why a bowling change worked or how a press collapsed).<br>
+          • <strong>Zero Ad Distraction:</strong> Bypasses intrusive banner ads with clean, high-contrast readability.
         </p>
       </div>
       <div class="card">
-        <div class="card-header-sm" style="color: #15803d;">💰 Asymmetric Value Proposition to Advertisers</div>
+        <div class="card-header-sm" style="color: #15803d;">[THE NEW FACTOR 2] Dual-Sport Parity & Peer Shareability</div>
         <p style="font-size: 6pt; color: #475569; line-height: 1.22;">
-          • <strong>100% Native Sponsor Integration:</strong> Non-intrusive "Powered by [Brand]" on viral match cards instead of ignored banner ads.<br>
-          • <strong>High-Intent Sports Audience:</strong> Direct connection to young, tech-savvy sports bettors, fantasy players, and sports consumers.<br>
-          • <strong>Unmatched CTR & Retention:</strong> 8-12x higher click-through rates than traditional programmatic display banners.
+          • <strong>Cricket + Football Side-by-Side:</strong> Built for India's 180M+ Gen-Z fans who follow both IPL/International Cricket and Premier League/ISL Football with equal passion.<br>
+          • <strong>Native Story Cards:</strong> Generates dynamic, 1-click visual match cards tailored for WhatsApp status and Instagram stories.
         </p>
       </div>
     </div>
 
-    <!-- Sizing & TAM -->
+    <!-- Sizing & Market Need -->
     <div class="card" style="background: #f8fafc;">
       <div class="card-header-sm">
-        <span>🌐 MARKET SIZING & CONSUMPTION TAILWINDS (INDIA 2026-2030)</span>
+        <span>MARKET SIZE & CONSUMPTION TAILWINDS (INDIA 2026-2030)</span>
         <span class="tag-pill tag-dark">CAGR 24.8%</span>
       </div>
       <div class="grid-3" style="font-size: 5.6pt; color: #475569; line-height: 1.18;">
@@ -697,7 +699,7 @@ const htmlContent = `<!DOCTYPE html>
     <!-- Brand Matrix -->
     <div class="card">
       <div class="card-header-sm">
-        <span>🔥 FLAGSHIP & SPIN-OFF BRAND PORTFOLIO</span>
+        <span>FLAGSHIP & SPIN-OFF BRAND PORTFOLIO</span>
         <span style="font-size: 5.2pt; color: #64748b;">Primary Flagship: SPORT IQ</span>
       </div>
       <table class="custom-table">
@@ -746,7 +748,7 @@ const htmlContent = `<!DOCTYPE html>
   </div>
 </div>
 
-<!-- ================= PAGE 2: BUSINESS MODEL & VALUE CREATION ENGINE ================= -->
+<!-- ================= PAGE 2: CORE ENGINEERING TEAM & BUSINESS MODEL ================= -->
 <div class="page">
   <div class="page-body">
     <div class="doc-header">
@@ -759,94 +761,51 @@ const htmlContent = `<!DOCTYPE html>
       </div>
       <div class="doc-meta-badge">
         <span class="confidential-tag">STRICTLY CONFIDENTIAL</span>
-        <div class="doc-date">BUSINESS MODEL & UNIT ECONOMICS</div>
+        <div class="doc-date">ENGINEERING CORE & BUSINESS MODEL</div>
       </div>
     </div>
 
     <div class="section-title">
-      <span>💰 THE BUSINESS MODEL: THREE REVENUE PILLARS & HIGH-MARGIN ENGINE</span>
-      <span class="tag">Monetization Framework</span>
+      <span>TECHNICAL TEAM STRUCTURE & COMMERCIAL MONETIZATION ENGINE</span>
+      <span class="tag">Execution Engine</span>
     </div>
 
-    <p style="font-size: 6.8pt; color: #475569; margin-bottom: 4px; line-height: 1.25;">
-      SPORT IQ operates a high-margin, diversified monetization model designed for cashflow positivity by Month 5. By bypassing expensive traditional advertising agencies and delivering high-intent sports fans directly to brands, we unlock an 86.4% gross margin.
-    </p>
-
-    <!-- INFOGRAPHIC 2: THE BUSINESS MODEL & MONETIZATION ENGINE -->
-    <div class="diagram-card">
-      <div class="diagram-title">
-        <span>💸 INFOGRAPHIC: THE SPORT IQ BUSINESS MODEL & REVENUE ENGINE</span>
-        <span style="font-size: 5pt; color: #a7f3d0;">86.4% Gross Operating Margin</span>
-      </div>
-      <svg viewBox="0 0 760 135" style="width: 100%; height: auto; display: block;">
-        <!-- Inflow 1 -->
-        <g>
-          <rect x="15" y="15" width="220" height="105" rx="6" fill="#064e3b" stroke="#34d399" stroke-width="1.2"/>
-          <text x="125" y="34" fill="#a7f3d0" font-size="9.5" font-weight="800" text-anchor="middle" font-family="Plus Jakarta Sans">1. BRAND SPONSORSHIPS (52%)</text>
-          <text x="25" y="52" fill="#ffffff" font-size="8" font-family="Plus Jakarta Sans">• Native "Powered by [Brand]" cards</text>
-          <text x="25" y="66" fill="#ffffff" font-size="8" font-family="Plus Jakarta Sans">• High CTR social match bulletins</text>
-          <text x="25" y="80" fill="#ffffff" font-size="8" font-family="Plus Jakarta Sans">• Sponsored WhatsApp VIP drops</text>
-          <text x="125" y="104" fill="#34d399" font-size="9" font-weight="800" text-anchor="middle" font-family="JetBrains Mono">High Engagement CTR</text>
-        </g>
-
-        <!-- Inflow 2 -->
-        <g>
-          <rect x="270" y="15" width="220" height="105" rx="6" fill="#1e293b" stroke="#3b82f6" stroke-width="1.2"/>
-          <text x="380" y="34" fill="#93c5fd" font-size="9.5" font-weight="800" text-anchor="middle" font-family="Plus Jakarta Sans">2. GAMING AFFILIATES (28%)</text>
-          <text x="280" y="52" fill="#ffffff" font-size="8" font-family="Plus Jakarta Sans">• Dream11 & My11Circle referral CPA</text>
-          <text x="280" y="66" fill="#ffffff" font-size="8" font-family="Plus Jakarta Sans">• Fantasy team tactical tips</text>
-          <text x="280" y="80" fill="#ffffff" font-size="8" font-family="Plus Jakarta Sans">• Sports merchandise affiliate cuts</text>
-          <text x="380" y="104" fill="#60a5fa" font-size="9" font-weight="800" text-anchor="middle" font-family="JetBrains Mono">₹150-₹300 CPA / User</text>
-        </g>
-
-        <!-- Inflow 3 -->
-        <g>
-          <rect x="525" y="15" width="220" height="105" rx="6" fill="#431407" stroke="#fb923c" stroke-width="1.2"/>
-          <text x="635" y="34" fill="#fed7aa" font-size="9.5" font-weight="800" text-anchor="middle" font-family="Plus Jakarta Sans">3. PRO MICRO-SUBS (20%)</text>
-          <text x="535" y="52" fill="#ffffff" font-size="8" font-family="Plus Jakarta Sans">• ₹49 / month ad-free bulletin tier</text>
-          <text x="535" y="66" fill="#ffffff" font-size="8" font-family="Plus Jakarta Sans">• Advanced fantasy analytics sheets</text>
-          <text x="535" y="80" fill="#ffffff" font-size="8" font-family="Plus Jakarta Sans">• Exclusive Telegram VIP room</text>
-          <text x="635" y="104" fill="#fb923c" font-size="9" font-weight="800" text-anchor="middle" font-family="JetBrains Mono">Recurring MRR Stream</text>
-        </g>
-      </svg>
-    </div>
-
-    <!-- Core Revenue Pillar Deep Dive -->
+    <!-- Team Structure: Sayan (CTO) + 1 Full-Time Developer + Rajrup (CGO) -->
     <div class="grid-3">
-      <div class="card">
-        <div class="card-header-sm" style="color: #dc2626;">📢 Direct Brand Sponsorships</div>
-        <p style="font-size: 5.8pt; color: #475569; line-height: 1.18;">
-          Co-branded match cards ("Powered by Brand X") distributed across our app and 50+ creator social stories. High CTR due to zero visual ad fatigue.
-        </p>
-      </div>
-      <div class="card">
-        <div class="card-header-sm" style="color: #0f172a;">🔗 Gaming & Fantasy Affiliates</div>
-        <p style="font-size: 5.8pt; color: #475569; line-height: 1.18;">
-          Seamless integration with fantasy sports platforms (Dream11 / My11Circle / FanCode) yielding ₹150–₹300 CPA commissions per high-intent user.
-        </p>
-      </div>
-      <div class="card">
-        <div class="card-header-sm" style="color: #d97706;">👑 SPORT IQ Pro Subscriptions</div>
-        <p style="font-size: 5.8pt; color: #475569; line-height: 1.18;">
-          ₹49/month micro-membership unlocking ad-free UI, advanced fantasy match analytics sheets, and exclusive VIP community chat access.
-        </p>
-      </div>
-    </div>
-
-    <!-- Leadership Division & Production Synergy -->
-    <div class="grid-2">
       <!-- Sayan Role Card -->
       <div class="role-card sayan">
         <div class="role-badge-row">
           <div>
             <div class="role-name">Sayan Bhattacharya</div>
-            <div class="role-title">Co-Founder, Chief Technology Officer & Head of Product</div>
+            <div class="role-title">Co-Founder & CTO</div>
           </div>
-          <span class="tag-pill tag-red">Tech & Product</span>
+          <span class="tag-pill tag-red">Product Architecture</span>
         </div>
         <div class="role-summary">
-          <strong>Mandate:</strong> Building sub-2.5s AI summary pipelines, serverless match card generators, low-latency live scores, and full-stack PWA/Mobile performance.
+          <strong>Mandate:</strong> System architecture, sub-2.5s AI summary pipelines, sports data API integration, and cloud infrastructure scale.
         </div>
+        <ul class="role-list">
+          <li>Leads AI scraping engine & webhook pipelines.</li>
+          <li>Manages 100k+ concurrent user infrastructure.</li>
+        </ul>
+      </div>
+
+      <!-- Full-Time Developer Role Card -->
+      <div class="role-card dev">
+        <div class="role-badge-row">
+          <div>
+            <div class="role-name">Full-Time Developer</div>
+            <div class="role-title">Full-Stack / AI Engineer</div>
+          </div>
+          <span class="tag-pill tag-dark" style="background:#eff6ff; color:#1d4ed8; border-color:#bfdbfe;">Dedicated Core</span>
+        </div>
+        <div class="role-summary">
+          <strong>Mandate:</strong> Working 100% full-time alongside Sayan (CTO) on PWA frontend, automated card renderer, and real-time backend updates.
+        </div>
+        <ul class="role-list">
+          <li>Builds dynamic story card generator.</li>
+          <li>Optimizes offline PWA caching & push loops.</li>
+        </ul>
       </div>
 
       <!-- Rajrup Role Card -->
@@ -854,20 +813,85 @@ const htmlContent = `<!DOCTYPE html>
         <div class="role-badge-row">
           <div>
             <div class="role-name">Rajrup</div>
-            <div class="role-title">Co-Founder, Chief Growth Officer & Head of Distribution</div>
+            <div class="role-title">Co-Founder & CGO</div>
           </div>
-          <span class="tag-pill tag-dark">Growth & Commercial</span>
+          <span class="tag-pill tag-dark">Growth & Monetization</span>
         </div>
         <div class="role-summary">
-          <strong>Mandate:</strong> Onboarding 50+ micro-creators, moderating WhatsApp VIP broadcast loops, securing brand sponsors, and driving CAC < ₹3.80.
+          <strong>Mandate:</strong> Creator syndication, brand sponsorship deals, WhatsApp VIP community loops, and affiliate growth.
         </div>
+        <ul class="role-list">
+          <li>Onboards 50+ regional micro-creators.</li>
+          <li>Drives CAC < ₹3.80 across channels.</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- INFOGRAPHIC 2: THE BUSINESS MODEL & MONETIZATION ENGINE -->
+    <div class="diagram-card">
+      <div class="diagram-title">
+        <span>INFOGRAPHIC: THE SPORT IQ BUSINESS MODEL & REVENUE ENGINE</span>
+        <span style="font-size: 5pt; color: #a7f3d0;">86.4% Gross Operating Margin</span>
+      </div>
+      <svg viewBox="0 0 760 120" style="width: 100%; height: auto; display: block;">
+        <!-- Inflow 1 -->
+        <g>
+          <rect x="15" y="15" width="220" height="90" rx="5" fill="#064e3b" stroke="#34d399" stroke-width="1.2"/>
+          <text x="125" y="32" fill="#a7f3d0" font-size="9" font-weight="800" text-anchor="middle" font-family="Plus Jakarta Sans">1. BRAND SPONSORSHIPS (52%)</text>
+          <text x="25" y="48" fill="#ffffff" font-size="7.5" font-family="Plus Jakarta Sans">• Native "Powered by [Brand]" cards</text>
+          <text x="25" y="60" fill="#ffffff" font-size="7.5" font-family="Plus Jakarta Sans">• High CTR social match bulletins</text>
+          <text x="25" y="72" fill="#ffffff" font-size="7.5" font-family="Plus Jakarta Sans">• Sponsored WhatsApp VIP drops</text>
+          <text x="125" y="94" fill="#34d399" font-size="8.5" font-weight="800" text-anchor="middle" font-family="JetBrains Mono">High Engagement CTR</text>
+        </g>
+
+        <!-- Inflow 2 -->
+        <g>
+          <rect x="270" y="15" width="220" height="90" rx="5" fill="#1e293b" stroke="#3b82f6" stroke-width="1.2"/>
+          <text x="380" y="32" fill="#93c5fd" font-size="9" font-weight="800" text-anchor="middle" font-family="Plus Jakarta Sans">2. GAMING AFFILIATES (28%)</text>
+          <text x="280" y="48" fill="#ffffff" font-size="7.5" font-family="Plus Jakarta Sans">• Dream11 & My11Circle referral CPA</text>
+          <text x="280" y="60" fill="#ffffff" font-size="7.5" font-family="Plus Jakarta Sans">• Fantasy team tactical tips</text>
+          <text x="280" y="72" fill="#ffffff" font-size="7.5" font-family="Plus Jakarta Sans">• Sports merchandise affiliate cuts</text>
+          <text x="380" y="94" fill="#60a5fa" font-size="8.5" font-weight="800" text-anchor="middle" font-family="JetBrains Mono">₹150-₹300 CPA / User</text>
+        </g>
+
+        <!-- Inflow 3 -->
+        <g>
+          <rect x="525" y="15" width="220" height="90" rx="5" fill="#431407" stroke="#fb923c" stroke-width="1.2"/>
+          <text x="635" y="32" fill="#fed7aa" font-size="9" font-weight="800" text-anchor="middle" font-family="Plus Jakarta Sans">3. PRO MICRO-SUBS (20%)</text>
+          <text x="535" y="48" fill="#ffffff" font-size="7.5" font-family="Plus Jakarta Sans">• ₹49 / month ad-free bulletin tier</text>
+          <text x="535" y="60" fill="#ffffff" font-size="7.5" font-family="Plus Jakarta Sans">• Advanced fantasy analytics sheets</text>
+          <text x="535" y="72" fill="#ffffff" font-size="7.5" font-family="Plus Jakarta Sans">• Exclusive Telegram VIP room</text>
+          <text x="635" y="94" fill="#fb923c" font-size="8.5" font-weight="800" text-anchor="middle" font-family="JetBrains Mono">Recurring MRR Stream</text>
+        </g>
+      </svg>
+    </div>
+
+    <!-- Core Revenue Pillar Deep Dive -->
+    <div class="grid-3">
+      <div class="card">
+        <div class="card-header-sm" style="color: #dc2626;">Direct Brand Sponsorships</div>
+        <p style="font-size: 5.8pt; color: #475569; line-height: 1.18;">
+          Co-branded match cards ("Powered by Brand X") distributed across our app and 50+ creator social stories. High CTR due to zero visual ad fatigue.
+        </p>
+      </div>
+      <div class="card">
+        <div class="card-header-sm" style="color: #0f172a;">Gaming & Fantasy Affiliates</div>
+        <p style="font-size: 5.8pt; color: #475569; line-height: 1.18;">
+          Seamless integration with fantasy sports platforms (Dream11 / My11Circle / FanCode) yielding ₹150–₹300 CPA commissions per high-intent user.
+        </p>
+      </div>
+      <div class="card">
+        <div class="card-header-sm" style="color: #d97706;">SPORT IQ Pro Subscriptions</div>
+        <p style="font-size: 5.8pt; color: #475569; line-height: 1.18;">
+          ₹49/month micro-membership unlocking ad-free UI, advanced fantasy match analytics sheets, and exclusive VIP community chat access.
+        </p>
       </div>
     </div>
 
     <!-- Governance & Vesting -->
     <div class="card" style="background: #f8fafc;">
       <div class="card-header-sm">
-        <span>⚖️ EQUITY ALIGNMENT & 4-YEAR VESTING GOVERNANCE</span>
+        <span>EQUITY ALIGNMENT & 4-YEAR VESTING GOVERNANCE</span>
         <span class="tag-pill tag-dark">1-Year Cliff Standard</span>
       </div>
       <div class="grid-3" style="font-size: 5.6pt; color: #475569; line-height: 1.18;">
@@ -891,7 +915,7 @@ const htmlContent = `<!DOCTYPE html>
   </div>
 </div>
 
-<!-- ================= PAGE 3: CAPITAL ALLOCATION MATRIX ================= -->
+<!-- ================= PAGE 3: CAPITAL ALLOCATION MATRIX (WITH 1 FULL-TIME DEV) ================= -->
 <div class="page">
   <div class="page-body">
     <div class="doc-header">
@@ -904,82 +928,82 @@ const htmlContent = `<!DOCTYPE html>
       </div>
       <div class="doc-meta-badge">
         <span class="confidential-tag">STRICTLY CONFIDENTIAL</span>
-        <div class="doc-date">CAPITAL DEPLOYMENT</div>
+        <div class="doc-date">CAPITAL STRUCTURE</div>
       </div>
     </div>
 
     <div class="section-title">
-      <span>💰 ₹5,00,000 SEED CAPITAL ALLOCATION & COST OPTIMIZATION</span>
-      <span class="tag">6-Month Runway</span>
+      <span>₹5,00,000 SEED CAPITAL ALLOCATION (INCLUDING 1 FULL-TIME DEVELOPER)</span>
+      <span class="tag">6-Month Budget</span>
     </div>
 
     <p style="font-size: 6.8pt; color: #475569; margin-bottom: 4px; line-height: 1.25;">
-      A zero-waste capital deployment framework engineered to maximize organic viral velocity while securing robust infrastructure for 100k+ concurrent users during peak tournament matches.
+      A disciplined capital allocation framework supporting 1 Full-Time Lead Software Developer working directly alongside Sayan (CTO), while securing creator distribution and sports data infrastructure.
     </p>
 
     <!-- Allocation Visual Diagram & Breakdown Table -->
     <div class="grid-2">
       <!-- Visual Allocation Bar Chart -->
       <div class="chart-box" style="text-align: left; padding: 5px;">
-        <div style="font-size: 6.5pt; font-weight: 700; color: #0f172a; margin-bottom: 3px;">Capital Allocation by Strategic Bucket</div>
+        <div style="font-size: 6.5pt; font-weight: 700; color: #0f172a; margin-bottom: 3px;">Capital Allocation Breakdown</div>
         
-        <!-- Growth -->
+        <!-- Engineering Core -->
         <div style="margin-bottom: 3px;">
           <div style="display: flex; justify-content: space-between; font-size: 5.8pt; font-weight: 600; color: #0f172a; margin-bottom: 1px;">
-            <span>1. Influencer & Creator Distribution Engine</span>
-            <span style="color: #dc2626; font-family: 'JetBrains Mono';">₹2,10,000 (42%)</span>
+            <span>1. Core Tech & 1 Full-Time Dev Stipend (6 Months)</span>
+            <span style="color: #2563eb; font-family: 'JetBrains Mono';">₹1,80,000 (36%)</span>
           </div>
           <div style="width: 100%; height: 6px; background: #e2e8f0; border-radius: 3px; overflow: hidden;">
-            <div style="width: 42%; height: 100%; background: #dc2626;"></div>
+            <div style="width: 36%; height: 100%; background: #2563eb;"></div>
           </div>
         </div>
 
-        <!-- Tech -->
+        <!-- Creator Engine -->
         <div style="margin-bottom: 3px;">
           <div style="display: flex; justify-content: space-between; font-size: 5.8pt; font-weight: 600; color: #0f172a; margin-bottom: 1px;">
-            <span>2. Product Architecture & Cloud Infrastructure</span>
-            <span style="color: #0f172a; font-family: 'JetBrains Mono';">₹1,20,000 (24%)</span>
+            <span>2. Creator Distribution & Viral Growth</span>
+            <span style="color: #dc2626; font-family: 'JetBrains Mono';">₹1,60,000 (32%)</span>
           </div>
           <div style="width: 100%; height: 6px; background: #e2e8f0; border-radius: 3px; overflow: hidden;">
-            <div style="width: 24%; height: 100%; background: #0f172a;"></div>
+            <div style="width: 32%; height: 100%; background: #dc2626;"></div>
           </div>
         </div>
 
-        <!-- Creative -->
+        <!-- Data APIs & Infrastructure -->
         <div style="margin-bottom: 3px;">
           <div style="display: flex; justify-content: space-between; font-size: 5.8pt; font-weight: 600; color: #0f172a; margin-bottom: 1px;">
-            <span>3. Creative Asset Kits & Micro-Writers</span>
-            <span style="color: #e11d48; font-family: 'JetBrains Mono';">₹70,000 (14%)</span>
+            <span>3. Sports Data APIs & Cloud Serverless</span>
+            <span style="color: #0f172a; font-family: 'JetBrains Mono';">₹70,000 (14%)</span>
           </div>
           <div style="width: 100%; height: 6px; background: #e2e8f0; border-radius: 3px; overflow: hidden;">
-            <div style="width: 14%; height: 100%; background: #e11d48;"></div>
+            <div style="width: 14%; height: 100%; background: #0f172a;"></div>
           </div>
         </div>
 
-        <!-- Emergency Reserve -->
+        <!-- Creative & Vernacular -->
         <div style="margin-bottom: 3px;">
           <div style="display: flex; justify-content: space-between; font-size: 5.8pt; font-weight: 600; color: #0f172a; margin-bottom: 1px;">
-            <span>4. Working Capital & Scaling Reserve</span>
-            <span style="color: #d97706; font-family: 'JetBrains Mono';">₹70,000 (14%)</span>
+            <span>4. Creative Templates & Regional Translators</span>
+            <span style="color: #e11d48; font-family: 'JetBrains Mono';">₹40,000 (8%)</span>
           </div>
           <div style="width: 100%; height: 6px; background: #e2e8f0; border-radius: 3px; overflow: hidden;">
-            <div style="width: 14%; height: 100%; background: #d97706;"></div>
+            <div style="width: 8%; height: 100%; background: #e11d48;"></div>
           </div>
         </div>
 
-        <!-- Legal & Setup -->
+        <!-- Reserve & Legal -->
         <div>
           <div style="display: flex; justify-content: space-between; font-size: 5.8pt; font-weight: 600; color: #0f172a; margin-bottom: 1px;">
-            <span>5. Legal, Trademark, App Store Licenses</span>
-            <span style="color: #64748b; font-family: 'JetBrains Mono';">₹30,000 (6%)</span>
+            <span>5. Entity Setup, Licenses & Working Reserve</span>
+            <span style="color: #d97706; font-family: 'JetBrains Mono';">₹50,000 (10%)</span>
           </div>
           <div style="width: 100%; height: 6px; background: #e2e8f0; border-radius: 3px; overflow: hidden;">
-            <div style="width: 6%; height: 100%; background: #64748b;"></div>
+            <div style="width: 10%; height: 100%; background: #d97706;"></div>
           </div>
         </div>
 
         <div style="margin-top: 4px; padding: 3px 5px; background: #ffffff; border: 1px dashed #cbd5e1; border-radius: 3px; font-size: 5.4pt; color: #475569;">
-          <strong>Strategic Takeaway:</strong> 56% of total capital is dedicated directly to market-facing customer acquisition and viral creative content, while 30% secures robust tech/legal foundation, backed by a 14% safety reserve.
+          <strong>Strategic Allocation:</strong> 36% dedicated to full-time engineering capacity (Sayan CTO + 1 Full-Time Lead Developer), 32% to creator distribution, 14% to live sports data APIs, ensuring a robust product and rapid user acquisition.
         </div>
       </div>
 
@@ -995,49 +1019,49 @@ const htmlContent = `<!DOCTYPE html>
           </thead>
           <tbody>
             <tr>
+              <td><strong>1 Full-Time Software Developer (6 Months)</strong></td>
+              <td class="num">₹1,80,000</td>
+              <td class="num">36.0%</td>
+            </tr>
+            <tr>
               <td><strong>35 Micro-Creators (10k-70k reach)</strong></td>
-              <td class="num">₹1,40,000</td>
-              <td class="num">28.0%</td>
+              <td class="num">₹1,20,000</td>
+              <td class="num">24.0%</td>
             </tr>
             <tr>
-              <td><strong>Paid Social Testing & Boosts</strong></td>
-              <td class="num">₹50,000</td>
-              <td class="num">10.0%</td>
-            </tr>
-            <tr>
-              <td><strong>Sports Data API Feeds & Webhooks</strong></td>
-              <td class="num">₹55,000</td>
-              <td class="num">11.0%</td>
-            </tr>
-            <tr>
-              <td><strong>Cloud Serverless & CDN Infrastructure</strong></td>
-              <td class="num">₹30,000</td>
-              <td class="num">6.0%</td>
-            </tr>
-            <tr>
-              <td><strong>Domain, Push & WhatsApp API</strong></td>
-              <td class="num">₹35,000</td>
-              <td class="num">7.0%</td>
-            </tr>
-            <tr>
-              <td><strong>Motion Design & Graphic Asset Kits</strong></td>
+              <td><strong>Paid Social Growth Boosts</strong></td>
               <td class="num">₹40,000</td>
               <td class="num">8.0%</td>
             </tr>
             <tr>
-              <td><strong>Regional Translation & Micro-Writers</strong></td>
-              <td class="num">₹30,000</td>
-              <td class="num">6.0%</td>
+              <td><strong>Sports Data API Feeds (Cricket & Football)</strong></td>
+              <td class="num">₹45,000</td>
+              <td class="num">9.0%</td>
             </tr>
             <tr>
-              <td><strong>Entity Setup & App Licenses</strong></td>
-              <td class="num">₹30,000</td>
-              <td class="num">6.0%</td>
+              <td><strong>Cloud Serverless & CDN Infrastructure</strong></td>
+              <td class="num">₹25,000</td>
+              <td class="num">5.0%</td>
             </tr>
             <tr>
-              <td><strong>Contingency Reserve</strong></td>
-              <td class="num">₹90,000</td>
-              <td class="num">18.0%</td>
+              <td><strong>Motion Graphic Story Templates</strong></td>
+              <td class="num">₹25,000</td>
+              <td class="num">5.0%</td>
+            </tr>
+            <tr>
+              <td><strong>Regional Vernacular Micro-Writers</strong></td>
+              <td class="num">₹15,000</td>
+              <td class="num">3.0%</td>
+            </tr>
+            <tr>
+              <td><strong>Company Incorporation & App Store Fees</strong></td>
+              <td class="num">₹20,000</td>
+              <td class="num">4.0%</td>
+            </tr>
+            <tr>
+              <td><strong>Working Capital Reserve</strong></td>
+              <td class="num">₹30,000</td>
+              <td class="num">6.0%</td>
             </tr>
             <tr class="total-row">
               <td><strong>TOTAL SEED CAPITAL DEPLOYED</strong></td>
@@ -1052,7 +1076,7 @@ const htmlContent = `<!DOCTYPE html>
     <!-- Capital Deployment Tranches -->
     <div class="card" style="background: #f8fafc;">
       <div class="card-header-sm">
-        <span>📊 TRANCHE DISBURSEMENT GATES & SENSITIVITY SCENARIOS</span>
+        <span>TRANCHE DISBURSEMENT GATES & MILESTONES</span>
         <span class="tag-pill tag-dark">Milestone Tranches</span>
       </div>
       <table class="custom-table" style="margin: 0;">
@@ -1068,13 +1092,13 @@ const htmlContent = `<!DOCTYPE html>
           <tr>
             <td><strong>Tranche 1 (Month 1)</strong></td>
             <td>Company incorporation, PWA deployment, core scraper setup.</td>
-            <td>Cloud infrastructure, sports data APIs, legal filings.</td>
+            <td>Full-Time Dev onboarding, cloud infra, sports data APIs.</td>
             <td class="num">₹2,00,000</td>
           </tr>
           <tr>
             <td><strong>Tranche 2 (Month 2-3)</strong></td>
             <td>Beta retention D7 > 35%, 5k MAU achieved, WhatsApp VIP live.</td>
-            <td>35 micro-creator campaign rollout, paid performance boosts.</td>
+            <td>35 micro-creator campaign rollout, paid social boosts.</td>
             <td class="num">₹2,00,000</td>
           </tr>
           <tr>
@@ -1095,7 +1119,7 @@ const htmlContent = `<!DOCTYPE html>
   </div>
 </div>
 
-<!-- ================= PAGE 4: 6-MONTH EXECUTION ROADMAP & VALUE LIFECYCLE ================= -->
+<!-- ================= PAGE 4: 6-MONTH ROADMAP & VALUE LIFECYCLE ================= -->
 <div class="page">
   <div class="page-body">
     <div class="doc-header">
@@ -1108,19 +1132,19 @@ const htmlContent = `<!DOCTYPE html>
       </div>
       <div class="doc-meta-badge">
         <span class="confidential-tag">STRICTLY CONFIDENTIAL</span>
-        <div class="doc-date">GTM & VALUE CREATION</div>
+        <div class="doc-date">GTM & MILESTONE ROADMAP</div>
       </div>
     </div>
 
     <div class="section-title">
-      <span>🗓️ INFOGRAPHIC & 6-MONTH MILESTONE EXECUTION ROADMAP</span>
+      <span>INFOGRAPHIC & 6-MONTH MILESTONE EXECUTION ROADMAP</span>
       <span class="tag">Zero to 75,000 MAU</span>
     </div>
 
     <!-- INFOGRAPHIC 3: CAPITAL DEPLOYMENT TO CASHFLOW BREAKEVEN -->
     <div class="diagram-card">
       <div class="diagram-title">
-        <span>📈 INFOGRAPHIC: SEED CAPITAL DEPLOYMENT TO BREAKEVEN (VALUE LIFECYCLE)</span>
+        <span>INFOGRAPHIC: CAPITAL DEPLOYMENT TO CASHFLOW BREAKEVEN</span>
         <span style="font-size: 5pt; color: #fde68a;">Month 5 Cashflow Positive</span>
       </div>
       <svg viewBox="0 0 760 120" style="width: 100%; height: auto; display: block;">
@@ -1129,7 +1153,7 @@ const htmlContent = `<!DOCTYPE html>
           <rect x="15" y="15" width="165" height="90" rx="5" fill="#1e293b" stroke="#ef4444" stroke-width="1.2"/>
           <text x="97" y="32" fill="#fca5a5" font-size="9" font-weight="800" text-anchor="middle" font-family="Plus Jakarta Sans">MONTH 1: SEED SETUP</text>
           <text x="25" y="48" fill="#ffffff" font-size="7.5" font-family="Plus Jakarta Sans">• ₹2.0L Tranche 1 Input</text>
-          <text x="25" y="60" fill="#ffffff" font-size="7.5" font-family="Plus Jakarta Sans">• PWA & Scrapers Live</text>
+          <text x="25" y="60" fill="#ffffff" font-size="7.5" font-family="Plus Jakarta Sans">• Full-Time Dev Onboarded</text>
           <text x="25" y="72" fill="#ffffff" font-size="7.5" font-family="Plus Jakarta Sans">• 35 Creator Deals Secured</text>
           <text x="97" y="92" fill="#ef4444" font-size="8" font-weight="800" text-anchor="middle" font-family="JetBrains Mono">MVP Delivered</text>
         </g>
@@ -1172,9 +1196,9 @@ const htmlContent = `<!DOCTYPE html>
         <div class="month-badge red">MONTH 1</div>
         <div class="month-title">Architecture & MVP Build</div>
         <ul class="month-points">
-          <li><strong>Tech:</strong> Deploy core SPORT IQ PWA, integrate live sports APIs, build 15-second summary card generator.</li>
-          <li><strong>Growth:</strong> Direct outreach to 100+ creators; secure 35 pre-launch commitments; establish Telegram alpha room.</li>
-          <li><strong>Milestone:</strong> Functional MVP generating automated cards in < 2.5s.</li>
+          <li><strong>Tech:</strong> Onboard Full-Time Developer; deploy core PWA; integrate live sports APIs & AI card renderer.</li>
+          <li><strong>Growth:</strong> Secure 35 micro-creator commitments; establish Telegram alpha room.</li>
+          <li><strong>Milestone:</strong> Functional MVP generating cards in < 2.5s.</li>
         </ul>
       </div>
 
@@ -1184,7 +1208,7 @@ const htmlContent = `<!DOCTYPE html>
         <div class="month-title">Closed Beta & Seeding (5k Users)</div>
         <ul class="month-points">
           <li><strong>Tech:</strong> Android APK & Web Beta release; test push notification speed under 10k concurrent loads.</li>
-          <li><strong>Growth:</strong> Launch initial 15 micro-creator shoutouts; kick off WhatsApp VIP groups; run referral contest.</li>
+          <li><strong>Growth:</strong> Launch initial 15 micro-creator shoutouts; kick off WhatsApp VIP groups.</li>
           <li><strong>Milestone:</strong> 5,000 Beta MAU with D7 retention > 38%.</li>
         </ul>
       </div>
@@ -1195,7 +1219,7 @@ const htmlContent = `<!DOCTYPE html>
         <div class="month-title">Public Launch (25k MAU)</div>
         <ul class="month-points">
           <li><strong>Tech:</strong> Google Play Store launch; automated tournament bracket trackers; real-time polling modules.</li>
-          <li><strong>Growth:</strong> Full creator syndication blast; launch X match threads; onboard first direct brand sponsors.</li>
+          <li><strong>Growth:</strong> Creator syndication blast; onboard first direct brand sponsors.</li>
           <li><strong>Revenue:</strong> ₹25,000 first month ad & sponsorship inflow.</li>
         </ul>
       </div>
@@ -1206,7 +1230,7 @@ const htmlContent = `<!DOCTYPE html>
         <div class="month-title">Affiliates & Engagement Depth</div>
         <ul class="month-points">
           <li><strong>Tech:</strong> Gamified fantasy prediction battleground; user badges; offline bulletin reading support.</li>
-          <li><strong>Growth:</strong> Partner with sports gaming platforms on CPA affiliate model; podcast shoutout syndication.</li>
+          <li><strong>Growth:</strong> Partner with sports gaming platforms on CPA affiliate model.</li>
           <li><strong>Revenue:</strong> ₹70,000/mo (Brand Ads + Gaming Affiliates).</li>
         </ul>
       </div>
@@ -1216,7 +1240,7 @@ const htmlContent = `<!DOCTYPE html>
         <div class="month-badge" style="background: #d97706;">MONTH 5: BREAKEVEN</div>
         <div class="month-title">Pro Sub & Vernacular (75k MAU)</div>
         <ul class="month-points">
-          <li><strong>Tech:</strong> Launch Hindi & regional feeds; launch ₹49/mo "SPORT IQ Pro" ad-free micro-subscription.</li>
+          <li><strong>Tech:</strong> Launch Hindi & regional feeds; launch ₹49/mo "SPORT IQ Pro" ad-free subscription.</li>
           <li><strong>Growth:</strong> Tier-2/3 regional creator campaign; campus ambassador program across 20 college sports clubs.</li>
           <li><strong>Revenue:</strong> ₹1,45,000/mo (Operational cashflow positive).</li>
         </ul>
@@ -1225,10 +1249,10 @@ const htmlContent = `<!DOCTYPE html>
       <!-- Month 6 -->
       <div class="month-card" style="border-top: 2.5px solid #0f172a;">
         <div class="month-badge">MONTH 6: SEED PITCH</div>
-        <div class="month-title">Institutional Seed Round Pitch</div>
+        <div class="month-title">Institutional Seed Pitch</div>
         <ul class="month-points">
-          <li><strong>Tech:</strong> Present high-availability telemetry, sub-second latency records, and AI synthesis documentation.</li>
-          <li><strong>Growth:</strong> Present CAC/LTV cohorts, 75k+ MAU, and ₹2.45L MRR to Angels & Seed VCs for ₹2.5 Cr - ₹5 Cr round.</li>
+          <li><strong>Tech:</strong> High-availability telemetry, sub-second latency records, and AI synthesis documentation.</li>
+          <li><strong>Growth:</strong> Present CAC/LTV cohorts, 75k+ MAU, and ₹2.45L MRR to Angels & VCs for ₹2.5 Cr - ₹5 Cr round.</li>
           <li><strong>Revenue:</strong> ₹2,45,000/mo recurring revenue run-rate.</li>
         </ul>
       </div>
@@ -1237,7 +1261,7 @@ const htmlContent = `<!DOCTYPE html>
     <!-- User Acquisition Channel Matrix -->
     <div class="card">
       <div class="card-header-sm">
-        <span>🎯 MULTI-CHANNEL ACQUISITION ENGINE & ORGANIC VIRALITY LOOPS</span>
+        <span>MULTI-CHANNEL ACQUISITION ENGINE & ORGANIC VIRALITY LOOPS</span>
         <span class="tag-pill tag-dark">CAC < ₹4.00</span>
       </div>
       <table class="custom-table" style="margin-top: 1px;">
@@ -1304,7 +1328,7 @@ const htmlContent = `<!DOCTYPE html>
     </div>
 
     <div class="section-title">
-      <span>📈 12-MONTH REVENUE PROJECTIONS & FINANCIAL ARCHITECTURE</span>
+      <span>12-MONTH REVENUE PROJECTIONS & FINANCIAL ARCHITECTURE</span>
       <span class="tag">Conservative Projections</span>
     </div>
 
@@ -1424,7 +1448,7 @@ const htmlContent = `<!DOCTYPE html>
     <!-- Cost Structure -->
     <div class="card">
       <div class="card-header-sm">
-        <span>📊 OPERATING COST STRUCTURE & EBITDA MARGIN DYNAMICS</span>
+        <span>OPERATING COST STRUCTURE & EBITDA MARGIN DYNAMICS</span>
         <span class="tag-pill tag-green">Profitable by Month 5</span>
       </div>
       <table class="custom-table" style="margin-top: 1px;">
@@ -1438,27 +1462,33 @@ const htmlContent = `<!DOCTYPE html>
         </thead>
         <tbody>
           <tr>
+            <td><strong>Engineering Team (1 Dev + CTO)</strong></td>
+            <td>Full-time software developer salary + Sayan CTO technical execution.</td>
+            <td class="num">22.0%</td>
+            <td class="num" style="color: #16a34a;">Fixed Baseline</td>
+          </tr>
+          <tr>
             <td><strong>Creator & Influencer Payouts</strong></td>
             <td>Performance rev-share and monthly retainers for top Tier-2/3 creators.</td>
-            <td class="num">28.0%</td>
+            <td class="num">20.0%</td>
             <td class="num" style="color: #16a34a;">Variable</td>
           </tr>
           <tr>
             <td><strong>Cloud Serverless & CDN</strong></td>
             <td>Supabase, AWS Lambda, Cloudflare edge, live WebSocket traffic.</td>
-            <td class="num">8.5%</td>
+            <td class="num">7.5%</td>
             <td class="num" style="color: #16a34a;">Subsidized</td>
           </tr>
           <tr>
             <td><strong>Sports Data API Feeds</strong></td>
             <td>Real-time live cricket, football, and motorsport data feeds.</td>
-            <td class="num">6.5%</td>
+            <td class="num">5.5%</td>
             <td class="num" style="color: #16a34a;">Fixed Tier</td>
           </tr>
           <tr class="total-row">
             <td><strong>NET OPERATING EBITDA MARGIN</strong></td>
             <td><strong>Cash-generative digital sports bulletin platform</strong></td>
-            <td class="num"><strong>57.0%</strong></td>
+            <td class="num"><strong>45.0%</strong></td>
             <td class="num" style="color: #be123c;"><strong>High Cashflow</strong></td>
           </tr>
         </tbody>
@@ -1491,7 +1521,7 @@ const htmlContent = `<!DOCTYPE html>
     </div>
 
     <div class="section-title">
-      <span>🤝 CONSULTANT & ADVISORY ENGAGEMENT FRAMEWORK</span>
+      <span>CONSULTANT & ADVISORY ENGAGEMENT FRAMEWORK</span>
       <span class="tag">Strategic Collaboration</span>
     </div>
 
@@ -1502,7 +1532,7 @@ const htmlContent = `<!DOCTYPE html>
     <!-- Consultant Scope & Terms -->
     <div class="grid-2">
       <div class="card">
-        <div class="card-header-sm" style="color: #0f172a;">🎯 Advisory Scope & Deliverables</div>
+        <div class="card-header-sm" style="color: #0f172a;">Advisory Scope & Deliverables</div>
         <ul class="role-list">
           <li><strong>Investor Syndication:</strong> Facilitating strategic introductions to angel networks and early-stage VCs for ₹2.5 Cr - ₹5 Cr seed round.</li>
           <li><strong>Sponsorship Dealmaking:</strong> Connecting growth lead to regional brand marketing heads, sports brands, and gaming platforms.</li>
@@ -1512,11 +1542,11 @@ const htmlContent = `<!DOCTYPE html>
       </div>
 
       <div class="card">
-        <div class="card-header-sm" style="color: #0f172a;">💼 Commercial Terms & Advisory Structure</div>
+        <div class="card-header-sm" style="color: #0f172a;">Commercial Terms & Advisory Structure</div>
         <ul class="role-list">
           <li><strong>Advisory Equity / Retainer:</strong> Structured equity options (1.5% - 3.0% pool with 12-month milestone vesting) or success fees.</li>
           <li><strong>Information Rights:</strong> Complete monthly access to real-time analytics dashboard, P&L statements, and telemetry logs.</li>
-          <li><strong>Meeting Cadence:</strong> Bi-weekly 45-minute operational sync with Sayan (CTO) and Rajrup (CGO) + monthly governance review.</li>
+          <li><strong>Meeting Cadence:</strong> Bi-weekly 45-minute operational sync with Sayan (CTO), Full-Time Developer, and Rajrup (CGO).</li>
           <li><strong>Dialmate AI Backing:</strong> Backed by Dialmate AI's corporate legal and AI infrastructure guarantees.</li>
         </ul>
       </div>
@@ -1525,7 +1555,7 @@ const htmlContent = `<!DOCTYPE html>
     <!-- Immediate Next Action Items -->
     <div class="card highlight">
       <div class="card-header-sm">
-        <span>⚡ IMMEDIATE ACTION ITEMS & 14-DAY EXECUTION ROADMAP</span>
+        <span>IMMEDIATE ACTION ITEMS & 14-DAY EXECUTION ROADMAP</span>
         <span class="tag-pill tag-red">Action Plan</span>
       </div>
       <table class="custom-table" style="margin: 1px 0 0 0;">
@@ -1546,8 +1576,8 @@ const htmlContent = `<!DOCTYPE html>
           </tr>
           <tr>
             <td><strong>Day 4 - 7</strong></td>
-            <td>Deploy live SPORT IQ PWA prototype with automated scraping & AI bulletin card generator.</td>
-            <td>Sayan Bhattacharya (CTO)</td>
+            <td>Onboard Full-Time Software Developer & deploy live PWA prototype with automated card generator.</td>
+            <td>Sayan Bhattacharya (CTO) & Full-Time Dev</td>
             <td style="text-align: center;"><span class="tag-pill tag-dark">Sprint Active</span></td>
           </tr>
           <tr>
@@ -1559,7 +1589,7 @@ const htmlContent = `<!DOCTYPE html>
           <tr>
             <td><strong>Day 11 - 14</strong></td>
             <td>Release Closed Beta (Android + Web) to first 1,000 sports fans; initiate telemetry tracking.</td>
-            <td>Sayan & Rajrup</td>
+            <td>Sayan, Full-Time Dev & Rajrup</td>
             <td style="text-align: center;"><span class="tag-pill tag-amber">Scheduled</span></td>
           </tr>
         </tbody>
@@ -1569,7 +1599,7 @@ const htmlContent = `<!DOCTYPE html>
     <!-- Formal Leadership & Advisory Sign-off Block -->
     <div class="card" style="background: #f8fafc; border: 1px solid #cbd5e1;">
       <div class="card-header-sm" style="margin-bottom: 1px;">
-        <span>📝 VENTURE LEADERSHIP & ADVISORY SIGN-OFF</span>
+        <span>VENTURE LEADERSHIP & ADVISORY SIGN-OFF</span>
         <span class="tag-pill tag-dark">Formal Endorsement</span>
       </div>
       <div class="grid-4" style="font-size: 5.5pt; color: #475569; line-height: 1.18; margin-top: 2px;">
@@ -1579,14 +1609,14 @@ const htmlContent = `<!DOCTYPE html>
           <span style="color: #64748b;">Signature: [Executed]</span>
         </div>
         <div style="border-top: 1px dashed #94a3b8; padding-top: 2px;">
+          <strong style="color: #0f172a;">Full-Time Lead Developer</strong><br>
+          Full-Stack & AI Pipeline Engineer<br>
+          <span style="color: #2563eb; font-weight: 700;">Signature: [Assigned]</span>
+        </div>
+        <div style="border-top: 1px dashed #94a3b8; padding-top: 2px;">
           <strong style="color: #0f172a;">Rajrup</strong><br>
           Co-Founder & CGO / Head of Growth<br>
           <span style="color: #64748b;">Signature: [Executed]</span>
-        </div>
-        <div style="border-top: 1px dashed #94a3b8; padding-top: 2px;">
-          <strong style="color: #0f172a;">Dialmate AI Technologies</strong><br>
-          Incubation & Corporate Partner<br>
-          <span style="color: #64748b;">Signature: [Authorized]</span>
         </div>
         <div style="border-top: 1px dashed #94a3b8; padding-top: 2px;">
           <strong style="color: #0f172a;">Strategic Consultant / Advisor</strong><br>
