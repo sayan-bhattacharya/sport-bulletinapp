@@ -149,16 +149,20 @@ export default function App() {
   const fadeUp = useFadeUp();
 
   return (
-    <div className="app-shell">
-      {/* GLOBAL HEADER */}
-      <header className="header">
-        <div className="header-brand-wrap">
-          <img src={logoSrc} alt="SPORT IQ Logo" className="nav-brand-logo" />
-          <div className="header-brand-text">
-            <a href="#top" className="brand-title">
-              SPORT <span className="brand-accent">IQ</span>
+    <div className="page">
+      {/* NAVIGATION BAR */}
+      <header className="nav">
+        <div className="nav-brand-group">
+          <img
+            src={logoSrc}
+            alt="SPORT IQ Logo"
+            className="nav-logo-img"
+          />
+          <div className="nav-brand-text-block">
+            <a className="nav-brand" href="#top" aria-label="SPORT IQ home">
+              SPORT <span>IQ</span>
             </a>
-            <span className="brand-incubation-tag">Incubated by Dialmate AI</span>
+            <div className="nav-tagline">News • Insights • Scores • Stories</div>
           </div>
         </div>
 
@@ -200,23 +204,6 @@ export default function App() {
                 <span>Incubated by Dialmate AI</span>
               </div>
 
-              {/* READABLE & PROMINENT BRAND HEADER LOCKUP */}
-              <div className="hero-brand-lockup">
-                <img
-                  src={logoSrc}
-                  alt="SPORT IQ Logo"
-                  className="hero-brand-logo"
-                />
-                <div className="hero-brand-details">
-                  <div className="hero-brand-name">
-                    SPORT <span className="highlight">IQ</span>
-                  </div>
-                  <div className="hero-brand-sub">
-                    News • Insights • Scores • Stories
-                  </div>
-                </div>
-              </div>
-
               <h1 className="hero-title">
                 The 15-Second <span>Match Pulse</span> for Next-Gen Fans.
               </h1>
@@ -249,7 +236,7 @@ export default function App() {
               </div>
             </div>
 
-            {/* HIGHLIGHTED & FULLY ASPECTED VIDEO CONTAINER */}
+            {/* HIGHLIGHTED & FULLY ASPECTED 16:9 VIDEO CONTAINER */}
             <div className="hero-visual-card">
               <Suspense fallback={<div style={{ aspectRatio: "16/9", background: "#0e1422", width: "100%" }} />}>
                 <HeroPlayer />
