@@ -4,13 +4,15 @@ const chalk = "#f4f1ea";
 const signal = "#e11d2e";
 const dim = "rgba(244, 241, 234, 0.72)";
 
-/** Match the 8s compressed hero MP4 */
 export const SCORE_ADDA_FPS = 30;
 export const SCORE_ADDA_DURATION = 240;
 
+const baseUrl = import.meta.env.BASE_URL || "/";
+const logoAssetUrl = `${baseUrl}sport_iq_logo.png`;
+
 /**
- * Transparent kinetic overlay — sits on top of the real hero MP4.
- * No solid fill so the background video stays visible.
+ * Transparent kinetic overlay — sits on top of the real hero MP4 video.
+ * Zero solid background so the live match video plays underneath seamlessly.
  */
 export const ScoreAddaLoop: React.FC = () => {
   const frame = useCurrentFrame();
@@ -58,58 +60,108 @@ export const ScoreAddaLoop: React.FC = () => {
   const pulse = interpolate(
     frame % Math.round(fps * 1.2),
     [0, Math.round(fps * 0.6), Math.round(fps * 1.2)],
-    [1, 1.35, 1],
+    [1, 1.25, 1],
     { extrapolateRight: "clamp" }
   );
 
-  const frameGlow = interpolate(frame, [0, 40, 120, 200, 239], [0.15, 0.35, 0.2, 0.4, 0.15], {
-    extrapolateLeft: "clamp",
-    extrapolateRight: "clamp",
-  });
-
   return (
-    <AbsoluteFill style={{ backgroundColor: "transparent", overflow: "hidden" }}>
-      <AbsoluteFill
+    <AbsoluteFill
+      style={{
+        backgroundColor: "transparent",
+        overflow: "hidden",
+        pointerEvents: "none",
+      }}
+    >
+      {/* PERSISTENT SLEEK TOP CORNER WATERMARK BADGE */}
+      <div
         style={{
-          backgroundImage: `radial-gradient(ellipse 70% 55% at 75% 35%, rgba(225,29,46,${0.18 + frameGlow * 0.2}), transparent 55%)`,
+          position: "absolute",
+          top: 24,
+          left: 28,
+          display: "flex",
+          alignItems: "center",
+          gap: 12,
+          background: "rgba(7, 10, 18, 0.72)",
+          backdropFilter: "blur(12px)",
+          WebkitBackdropFilter: "blur(12px)",
+          border: "1px solid rgba(220, 38, 38, 0.35)",
+          padding: "6px 14px 6px 10px",
+          borderRadius: 30,
+          boxShadow: "0 8px 24px rgba(0,0,0,0.5), 0 0 16px rgba(220,38,38,0.2)",
+          zIndex: 10,
         }}
-      />
+      >
+        <img
+          src={logoAssetUrl}
+          alt="SPORT IQ"
+          style={{
+            width: 26,
+            height: 26,
+            objectFit: "contain",
+            filter: "drop-shadow(0 2px 8px rgba(220,38,38,0.5))",
+          }}
+        />
+        <div style={{ display: "flex", alignItems: "center", gap: 8 }}>
+          <div
+            style={{
+              width: 8,
+              height: 8,
+              borderRadius: "50%",
+              background: signal,
+              scale: String(pulse),
+              boxShadow: "0 0 10px #ef4444",
+            }}
+          />
+          <span
+            style={{
+              fontFamily: "Plus Jakarta Sans, sans-serif",
+              fontSize: 13,
+              fontWeight: 800,
+              letterSpacing: 1.5,
+              color: "#ffffff",
+              textTransform: "uppercase",
+            }}
+          >
+            SPORT IQ <span style={{ color: signal }}>LIVE</span>
+          </span>
+        </div>
+      </div>
 
+      {/* LIGHT SWEEP SCANLINE */}
       <div
         style={{
           position: "absolute",
           top: 0,
+          bottom: 0,
           left: `${sweep}%`,
-          width: "16%",
-          height: "100%",
-          background: "linear-gradient(90deg, transparent, rgba(244,241,234,0.12), transparent)",
-          transform: "skewX(-12deg)",
-          mixBlendMode: "screen",
+          width: 80,
+          background: "linear-gradient(90deg, transparent, rgba(255,255,255,0.08), transparent)",
+          transform: "skewX(-20deg)",
+          pointerEvents: "none",
         }}
       />
 
+      {/* TOP STREAMING TICKER */}
       <div
         style={{
           position: "absolute",
-          top: 40,
-          left: 0,
-          right: 0,
+          top: 24,
+          right: 28,
+          width: "55%",
           overflow: "hidden",
-          borderTop: "1px solid rgba(244,241,234,0.2)",
-          borderBottom: "1px solid rgba(244,241,234,0.2)",
-          padding: "12px 0",
-          background: "rgba(7,8,12,0.45)",
-          backdropFilter: "blur(6px)",
+          borderBottom: "1px solid rgba(244,241,234,0.15)",
+          paddingBottom: 6,
+          background: "linear-gradient(90deg, transparent, rgba(7, 10, 18, 0.4))",
         }}
       >
         <div
           style={{
-            display: "flex",
-            gap: 48,
+            display: "inline-flex",
+            gap: 40,
             whiteSpace: "nowrap",
             translate: `${tickerX}px 0px`,
             fontFamily: "Bebas Neue, sans-serif",
-            fontSize: 26,
+            fontSize: 22,
             letterSpacing: 2,
             color: chalk,
           }}
@@ -126,22 +178,29 @@ export const ScoreAddaLoop: React.FC = () => {
         </div>
       </div>
 
+      {/* CRICKET MOMENTUM CARD */}
       <div
         style={{
           position: "absolute",
           left: width * 0.07,
-          top: height * 0.3,
+          top: height * 0.32,
           opacity: cricketOpacity,
           color: chalk,
-          maxWidth: width * 0.4,
-          textShadow: "0 8px 28px rgba(0,0,0,0.55)",
+          maxWidth: width * 0.45,
+          background: "rgba(7, 10, 18, 0.65)",
+          backdropFilter: "blur(12px)",
+          WebkitBackdropFilter: "blur(12px)",
+          padding: "20px 28px",
+          borderRadius: 16,
+          border: "1px solid rgba(244,241,234,0.15)",
+          boxShadow: "0 16px 36px rgba(0,0,0,0.6)",
         }}
       >
-        <div style={{ display: "flex", alignItems: "center", gap: 12, marginBottom: 14 }}>
+        <div style={{ display: "flex", alignItems: "center", gap: 12, marginBottom: 10 }}>
           <div
             style={{
-              width: 11,
-              height: 11,
+              width: 10,
+              height: 10,
               borderRadius: "50%",
               background: signal,
               scale: String(pulse),
@@ -151,41 +210,48 @@ export const ScoreAddaLoop: React.FC = () => {
           <span
             style={{
               fontFamily: "Plus Jakarta Sans, sans-serif",
-              fontSize: 16,
-              fontWeight: 700,
-              letterSpacing: 3,
+              fontSize: 14,
+              fontWeight: 800,
+              letterSpacing: 2.5,
               textTransform: "uppercase",
               color: signal,
             }}
           >
-            Live cricket pulse
+            Live Cricket Pulse
           </span>
         </div>
         <div
           style={{
             fontFamily: "Bebas Neue, sans-serif",
-            fontSize: 92,
+            fontSize: 78,
             lineHeight: 0.9,
             letterSpacing: 1,
           }}
         >
           IND 184/4
         </div>
-        <div style={{ fontFamily: "Plus Jakarta Sans, sans-serif", fontSize: 24, marginTop: 10, color: dim }}>
-          17.2 ov · Target 201
+        <div style={{ fontFamily: "Plus Jakarta Sans, sans-serif", fontSize: 18, marginTop: 8, color: dim }}>
+          17.2 ov · Target 201 · Req. 6.1
         </div>
       </div>
 
+      {/* FOOTBALL MOMENTUM CARD */}
       <div
         style={{
           position: "absolute",
           right: width * 0.07,
-          top: height * 0.34,
+          top: height * 0.36,
           opacity: footballOpacity,
           color: chalk,
           textAlign: "right",
-          maxWidth: width * 0.45,
-          textShadow: "0 8px 28px rgba(0,0,0,0.55)",
+          maxWidth: width * 0.48,
+          background: "rgba(7, 10, 18, 0.65)",
+          backdropFilter: "blur(12px)",
+          WebkitBackdropFilter: "blur(12px)",
+          padding: "20px 28px",
+          borderRadius: 16,
+          border: "1px solid rgba(244,241,234,0.15)",
+          boxShadow: "0 16px 36px rgba(0,0,0,0.6)",
         }}
       >
         <div
@@ -194,25 +260,25 @@ export const ScoreAddaLoop: React.FC = () => {
             alignItems: "center",
             justifyContent: "flex-end",
             gap: 12,
-            marginBottom: 14,
+            marginBottom: 10,
           }}
         >
           <span
             style={{
               fontFamily: "Plus Jakarta Sans, sans-serif",
-              fontSize: 16,
-              fontWeight: 700,
-              letterSpacing: 3,
+              fontSize: 14,
+              fontWeight: 800,
+              letterSpacing: 2.5,
               textTransform: "uppercase",
               color: signal,
             }}
           >
-            Football live
+            Football Live
           </span>
           <div
             style={{
-              width: 11,
-              height: 11,
+              width: 10,
+              height: 10,
               borderRadius: "50%",
               background: signal,
               scale: String(pulse),
@@ -223,18 +289,19 @@ export const ScoreAddaLoop: React.FC = () => {
         <div
           style={{
             fontFamily: "Bebas Neue, sans-serif",
-            fontSize: 84,
+            fontSize: 74,
             lineHeight: 0.9,
             letterSpacing: 1,
           }}
         >
           MUM 1 — MBSG 1
         </div>
-        <div style={{ fontFamily: "Plus Jakarta Sans, sans-serif", fontSize: 24, marginTop: 10, color: dim }}>
-          64' · ISL Matchday
+        <div style={{ fontFamily: "Plus Jakarta Sans, sans-serif", fontSize: 18, marginTop: 8, color: dim }}>
+          64' · ISL Matchday · Petratos 72'
         </div>
       </div>
 
+      {/* BRAND CRESCENDO OVERLAY WITH EXTRACTED TRANSPARENT LOGO BADGE */}
       <div
         style={{
           position: "absolute",
@@ -245,27 +312,41 @@ export const ScoreAddaLoop: React.FC = () => {
           justifyContent: "center",
           opacity: brandOpacity,
           scale: String(brandScale),
-          paddingTop: 48,
           pointerEvents: "none",
+          background: "radial-gradient(circle at center, rgba(7, 10, 18, 0.7) 0%, transparent 75%)",
         }}
       >
+        {/* Sleek extracted 3D Logo Asset with Transparent Alpha */}
+        <img
+          src={logoAssetUrl}
+          alt="SPORT IQ Logo"
+          style={{
+            width: 140,
+            height: 140,
+            objectFit: "contain",
+            filter: "drop-shadow(0 16px 36px rgba(220, 38, 38, 0.55))",
+            marginBottom: 14,
+          }}
+        />
+
         <div
           style={{
             fontFamily: "Bebas Neue, sans-serif",
-            fontSize: Math.min(width * 0.13, 200),
+            fontSize: Math.min(width * 0.12, 170),
             lineHeight: 0.85,
             color: chalk,
             letterSpacing: 4,
             textAlign: "center",
-            textShadow: "0 12px 40px rgba(0,0,0,0.65)",
+            textShadow: "0 12px 40px rgba(0,0,0,0.75)",
           }}
         >
           SPORT
           <span style={{ color: signal }}> IQ</span>
         </div>
+
         <div
           style={{
-            marginTop: 22,
+            marginTop: 18,
             opacity: tagOpacity,
             fontFamily: "Plus Jakarta Sans, sans-serif",
             fontSize: 22,
@@ -273,18 +354,20 @@ export const ScoreAddaLoop: React.FC = () => {
             letterSpacing: 3,
             textTransform: "uppercase",
             color: dim,
-            textShadow: "0 6px 20px rgba(0,0,0,0.55)",
+            textShadow: "0 6px 20px rgba(0,0,0,0.65)",
           }}
         >
           News • Insights • Scores • Stories
         </div>
       </div>
 
+      {/* BORDER FRAME */}
       <div
         style={{
           position: "absolute",
-          inset: 18,
-          border: "1px solid rgba(244,241,234,0.18)",
+          inset: 14,
+          border: "1px solid rgba(244,241,234,0.12)",
+          borderRadius: 14,
           pointerEvents: "none",
         }}
       />
