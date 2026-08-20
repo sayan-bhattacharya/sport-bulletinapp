@@ -401,6 +401,117 @@
     font-size: 0.62rem;
     color: #e2e8f0;
   }
+
+  /* Responsive Media Queries for Tablet / iPad (768px - 1024px) */
+  @media (max-width: 1024px) {
+    body {
+      overflow-y: auto;
+      height: auto;
+      min-height: 100vh;
+    }
+
+    .deck-header {
+      padding: 8px 16px;
+      height: auto;
+      min-height: 52px;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .slide-viewport {
+      padding: 12px 14px;
+      height: auto;
+      min-height: calc(100vh - 60px);
+      overflow-y: visible;
+    }
+
+    .slide-container {
+      max-height: none;
+      height: auto;
+      min-height: calc(100vh - 84px);
+      padding: 20px 24px;
+      overflow-y: visible;
+    }
+
+    .slide-body {
+      overflow: visible;
+      gap: 14px;
+    }
+
+    .grid-4 {
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+    }
+
+    .grid-3 {
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+    }
+
+    .info-canvas {
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
+    }
+
+    .info-canvas svg {
+      min-width: 580px;
+    }
+  }
+
+  /* Responsive Media Queries for Mobile (<768px) */
+  @media (max-width: 768px) {
+    .deck-header {
+      flex-direction: column;
+      align-items: stretch;
+      gap: 8px;
+    }
+
+    .deck-controls {
+      justify-content: space-between;
+      width: 100%;
+      flex-wrap: wrap;
+    }
+
+    .slide-title {
+      font-size: 1.25rem;
+      line-height: 1.25;
+    }
+
+    .slide-subtitle {
+      font-size: 0.78rem;
+    }
+
+    .grid-4, .grid-3, .grid-2 {
+      grid-template-columns: 1fr;
+      gap: 10px;
+    }
+
+    .metric-stat {
+      font-size: 1.3rem;
+    }
+
+    .metric-label {
+      font-size: 0.65rem;
+    }
+
+    .slide-footer {
+      flex-direction: column;
+      gap: 4px;
+      text-align: center;
+      padding-top: 12px;
+    }
+
+    table.deck-table {
+      font-size: 0.7rem;
+      display: block;
+      overflow-x: auto;
+      white-space: nowrap;
+    }
+
+    .kbd-hint {
+      display: none;
+    }
+  }
 </style>
 </head>
 <body>
@@ -426,78 +537,78 @@
     <!-- SLIDE 1: Title & Infographic Flywheel -->
     <div class="slide-container active" data-slide="1">
       <div class="slide-header">
-        <div class="slide-category">[SEED INVESTMENT MEMORANDUM]</div>
+        <div class="slide-category">[PRE-SEED INVESTMENT MEMORANDUM]</div>
         <h1 class="slide-title">SPORT IQ: The 15-Second <span class="highlight">Match Pulse</span> for Next-Gen Fans</h1>
         <p class="slide-subtitle">High-Velocity Digital Sports Bulletin Venture | Incubated by Dialmate AI</p>
       </div>
       <div class="slide-body">
         <div class="grid-4">
           <div class="card-box accent-red">
-            <div class="metric-stat red">INR 5.00 L</div>
-            <div class="metric-label">Seed Capital Runway</div>
+            <div class="metric-stat red">INR 9.00 L</div>
+            <div class="metric-label">Pre-Seed Angel Round</div>
           </div>
           <div class="card-box accent-green">
-            <div class="metric-stat green">Month 5</div>
-            <div class="metric-label">Cashflow Breakeven</div>
+            <div class="metric-stat green">3 Angels @ ₹3L</div>
+            <div class="metric-label">3.0% Equity Per Ticket</div>
           </div>
           <div class="card-box accent-blue">
-            <div class="metric-stat blue">86.4%</div>
+            <div class="metric-stat blue">88.5%</div>
             <div class="metric-label">Gross Margin</div>
           </div>
           <div class="card-box">
-            <div class="metric-stat amber">1 Dev + CTO</div>
-            <div class="metric-label">Dedicated Tech Core</div>
+            <div class="metric-stat amber">Month 4</div>
+            <div class="metric-label">Cashflow Breakeven</div>
           </div>
         </div>
 
         <!-- ANT-V STYLE INFOGRAPHIC FLYWHEEL -->
         <div class="info-canvas" style="padding: 8px 12px;">
           <svg viewBox="0 0 760 85">
-            <!-- Node 1: AI Scraper -->
+            <!-- Node 1: AI Scraper & Data Lake -->
             <rect x="10" y="10" width="165" height="65" rx="6" fill="#131d2e" stroke="#ef4444" stroke-width="1.2"/>
             <circle cx="28" cy="28" r="10" fill="#ef4444"/>
             <text x="28" y="32" fill="#ffffff" font-size="8" font-weight="900" text-anchor="middle" font-family="JetBrains Mono">1</text>
-            <text x="44" y="27" fill="#ffffff" font-size="8" font-weight="800" font-family="Plus Jakarta Sans">AI Data Pipeline</text>
-            <text x="20" y="48" fill="#94a3b8" font-size="6.8" font-family="Plus Jakarta Sans">Sub-2.5s live scrapers extract</text>
-            <text x="20" y="59" fill="#94a3b8" font-size="6.8" font-family="Plus Jakarta Sans">critical match turning points</text>
+            <text x="44" y="27" fill="#ffffff" font-size="8" font-weight="800" font-family="Plus Jakarta Sans">Scrapers & Data Lake</text>
+            <text x="20" y="48" fill="#94a3b8" font-size="6.8" font-family="Plus Jakarta Sans">Scrapers + APIs ingest into</text>
+            <text x="20" y="59" fill="#94a3b8" font-size="6.8" font-family="Plus Jakarta Sans">Serverless Cloud Data Lake</text>
 
             <!-- Arrow 1 -->
-            <path d="M 180 42 L 200 42" stroke="#ef4444" stroke-width="1.5" marker-end="url(#arrow)"/>
+            <path d="M 180 42 L 200 42" stroke="#ef4444" stroke-width="1.5"/>
 
-            <!-- Node 2: 15s Tactical Pulse -->
+            <!-- Node 2: Dialmate AI Intelligence -->
             <rect x="205" y="10" width="165" height="65" rx="6" fill="#131d2e" stroke="#3b82f6" stroke-width="1.2"/>
             <circle cx="223" cy="28" r="10" fill="#3b82f6"/>
             <text x="223" y="32" fill="#ffffff" font-size="8" font-weight="900" text-anchor="middle" font-family="JetBrains Mono">2</text>
-            <text x="239" y="27" fill="#ffffff" font-size="8" font-weight="800" font-family="Plus Jakarta Sans">15s Tactical Pulse</text>
-            <text x="215" y="48" fill="#94a3b8" font-size="6.8" font-family="Plus Jakarta Sans">35-word concise bulletins</text>
-            <text x="215" y="59" fill="#94a3b8" font-size="6.8" font-family="Plus Jakarta Sans">Cricket + Football equal parity</text>
+            <text x="239" y="27" fill="#ffffff" font-size="8" font-weight="800" font-family="Plus Jakarta Sans">AI Intelligence Layer</text>
+            <text x="215" y="48" fill="#94a3b8" font-size="6.8" font-family="Plus Jakarta Sans">LLM contextual synthesis in</text>
+            <text x="215" y="59" fill="#94a3b8" font-size="6.8" font-family="Plus Jakarta Sans">&lt; 2.5s generation latency</text>
 
             <!-- Arrow 2 -->
             <path d="M 375 42 L 395 42" stroke="#3b82f6" stroke-width="1.5"/>
 
-            <!-- Node 3: Viral Story Cards -->
+            <!-- Node 3: Shorts & Long-Form -->
             <rect x="400" y="10" width="165" height="65" rx="6" fill="#131d2e" stroke="#10b981" stroke-width="1.2"/>
             <circle cx="418" cy="28" r="10" fill="#10b981"/>
             <text x="418" y="32" fill="#ffffff" font-size="8" font-weight="900" text-anchor="middle" font-family="JetBrains Mono">3</text>
-            <text x="434" y="27" fill="#ffffff" font-size="8" font-weight="800" font-family="Plus Jakarta Sans">1-Click Story Cards</text>
-            <text x="410" y="48" fill="#94a3b8" font-size="6.8" font-family="Plus Jakarta Sans">Automated WhatsApp/IG cards</text>
-            <text x="410" y="59" fill="#94a3b8" font-size="6.8" font-family="Plus Jakarta Sans">driving organic K-factor 1.34</text>
+            <text x="434" y="27" fill="#ffffff" font-size="8" font-weight="800" font-family="Plus Jakarta Sans">Shorts & Long-Form</text>
+            <text x="410" y="48" fill="#94a3b8" font-size="6.8" font-family="Plus Jakarta Sans">15s Reels + 35-Word Cards</text>
+            <text x="410" y="59" fill="#94a3b8" font-size="6.8" font-family="Plus Jakarta Sans">+ Deep Tactical Breakdowns</text>
 
             <!-- Arrow 3 -->
             <path d="M 570 42 L 590 42" stroke="#10b981" stroke-width="1.5"/>
 
-            <!-- Node 4: High-Margin Monetization -->
+            <!-- Node 4: 4 Monetization Pillars -->
             <rect x="595" y="10" width="155" height="65" rx="6" fill="#064e3b" stroke="#34d399" stroke-width="1.5"/>
             <circle cx="613" cy="28" r="10" fill="#34d399"/>
             <text x="613" y="32" fill="#064e3b" font-size="8" font-weight="900" text-anchor="middle" font-family="JetBrains Mono">4</text>
-            <text x="629" y="27" fill="#a7f3d0" font-size="8" font-weight="800" font-family="Plus Jakarta Sans">Month 5 Cashflow</text>
-            <text x="605" y="48" fill="#ffffff" font-size="6.8" font-family="Plus Jakarta Sans">Native Sponsors + Gaming CPA</text>
-            <text x="605" y="59" fill="#34d399" font-size="6.8" font-weight="700" font-family="JetBrains Mono">INR 1.45L MRR Breakeven</text>
+            <text x="629" y="27" fill="#a7f3d0" font-size="8" font-weight="800" font-family="Plus Jakarta Sans">4 Revenue Pillars</text>
+            <text x="605" y="48" fill="#ffffff" font-size="6.8" font-family="Plus Jakarta Sans">API B2B + Sponsors + Pro</text>
+            <text x="605" y="59" fill="#34d399" font-size="6.8" font-weight="700" font-family="JetBrains Mono">INR 5.85L MRR by Month 6</text>
           </svg>
         </div>
       </div>
       <div class="slide-footer">
-        <span>Confidential | Prepared for Investor & Strategic Review</span>
+        <span>Confidential | Prepared for Pre-Seed Investor Review</span>
         <span>Slide 01 of 20</span>
       </div>
     </div>
@@ -612,59 +723,65 @@
       </div>
     </div>
 
-    <!-- SLIDE 4: Comparative Matrix Diagram -->
+    <!-- SLIDE 4: Data Engine & AI Intelligence Layer -->
     <div class="slide-container" data-slide="4">
       <div class="slide-header">
-        <div class="slide-category">[COMPETITIVE INNOVATION MATRIX]</div>
-        <h2 class="slide-title">What Competitors Have NOT Done</h2>
-        <p class="slide-subtitle">Why existing media giants cannot copy our low-friction model.</p>
+        <div class="slide-category">[TECH MOAT & ARCHITECTURE]</div>
+        <h2 class="slide-title">Data Pipelines & Cloud Data Lake Engine</h2>
+        <p class="slide-subtitle">Scrapers + Official APIs → Cloud Data Lake → Dialmate AI → Shorts & Long-Form Content</p>
       </div>
       <div class="slide-body">
-        <table class="deck-table">
-          <thead>
-            <tr>
-              <th>Feature / Moat</th>
-              <th>Legacy Scorecards (Cricbuzz)</th>
-              <th>News Apps (Inshorts)</th>
-              <th>SPORT IQ (The New Standard)</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td><strong>Time to Match Context</strong></td>
-              <td>45–60s (Nested UI)</td>
-              <td>20s (Generic Non-Sports)</td>
-              <td style="color: #34d399; font-weight:800;">[YES] &lt; 2.5s (35-Word Pulse)</td>
-            </tr>
-            <tr>
-              <td><strong>Dual-Sport Parity</strong></td>
-              <td>0% Football (Cricket Silo)</td>
-              <td>Unstructured Random Feed</td>
-              <td style="color: #34d399; font-weight:800;">[YES] Cricket + Football 50/50 Grid</td>
-            </tr>
-            <tr>
-              <td><strong>Visual Shareability</strong></td>
-              <td>Static text / tables</td>
-              <td>Plain text cards only</td>
-              <td style="color: #34d399; font-weight:800;">[YES] Auto 1-Click Story Cards</td>
-            </tr>
-            <tr>
-              <td><strong>Ad Experience</strong></td>
-              <td>68.5% banner display bloat</td>
-              <td>Intrusive full-screen popups</td>
-              <td style="color: #34d399; font-weight:800;">[YES] Zero-Ad Native Sponsor Cards</td>
-            </tr>
-            <tr>
-              <td><strong>RAM & Battery Load</strong></td>
-              <td>380 MB (Heavy bloat)</td>
-              <td>210 MB</td>
-              <td style="color: #34d399; font-weight:800;">[YES] &lt; 25 MB (Ultra-Light Edge PWA)</td>
-            </tr>
-          </tbody>
-        </table>
+        <div class="info-canvas">
+          <svg viewBox="0 0 760 115">
+            <!-- Stage 1: Ingestion -->
+            <rect x="15" y="10" width="165" height="95" rx="6" fill="#131d2e" stroke="#ef4444" stroke-width="1.2"/>
+            <text x="97" y="26" fill="#ef4444" font-size="8.5" font-weight="900" text-anchor="middle" font-family="Plus Jakarta Sans">1. HYBRID INGESTION</text>
+            <text x="25" y="44" fill="#e2e8f0" font-size="6.8" font-family="Plus Jakarta Sans">• Twitter/X Live Commentary</text>
+            <text x="25" y="56" fill="#e2e8f0" font-size="6.8" font-family="Plus Jakarta Sans">• Cricket & Football API Feeds</text>
+            <text x="25" y="68" fill="#e2e8f0" font-size="6.8" font-family="Plus Jakarta Sans">• RSS News & Web Stats Parsers</text>
+            <text x="25" y="80" fill="#e2e8f0" font-size="6.8" font-family="Plus Jakarta Sans">• Audio/Video Press Transcripts</text>
+            <text x="97" y="96" fill="#ef4444" font-size="7" font-weight="800" text-anchor="middle" font-family="JetBrains Mono">&lt; 1.2s Real-Time Latency</text>
+
+            <!-- Arrow 1 -->
+            <path d="M 180 57 L 205 57" stroke="#ef4444" stroke-width="1.5"/>
+
+            <!-- Stage 2: Data Lake -->
+            <rect x="210" y="10" width="165" height="95" rx="6" fill="#131d2e" stroke="#3b82f6" stroke-width="1.2"/>
+            <text x="292" y="26" fill="#3b82f6" font-size="8.5" font-weight="900" text-anchor="middle" font-family="Plus Jakarta Sans">2. CLOUD DATA LAKE</text>
+            <text x="220" y="44" fill="#e2e8f0" font-size="6.8" font-family="Plus Jakarta Sans">• Supabase / Cloudflare R2 Store</text>
+            <text x="220" y="56" fill="#e2e8f0" font-size="6.8" font-family="Plus Jakarta Sans">• Ball-by-ball Telemetry Logs</text>
+            <text x="220" y="68" fill="#e2e8f0" font-size="6.8" font-family="Plus Jakarta Sans">• Historical Player Form Indices</text>
+            <text x="220" y="80" fill="#e2e8f0" font-size="6.8" font-family="Plus Jakarta Sans">• Real-time Social Sentiment</text>
+            <text x="292" y="96" fill="#3b82f6" font-size="7" font-weight="800" text-anchor="middle" font-family="JetBrains Mono">Zero Vendor Overhead</text>
+
+            <!-- Arrow 2 -->
+            <path d="M 375 57 L 400 57" stroke="#3b82f6" stroke-width="1.5"/>
+
+            <!-- Stage 3: Dialmate AI -->
+            <rect x="405" y="10" width="165" height="95" rx="6" fill="#131d2e" stroke="#8b5cf6" stroke-width="1.2"/>
+            <text x="487" y="26" fill="#8b5cf6" font-size="8.5" font-weight="900" text-anchor="middle" font-family="Plus Jakarta Sans">3. DIALMATE AI LAYER</text>
+            <text x="415" y="44" fill="#e2e8f0" font-size="6.8" font-family="Plus Jakarta Sans">• LLM Context Synthesizer</text>
+            <text x="415" y="56" fill="#e2e8f0" font-size="6.8" font-family="Plus Jakarta Sans">• Match Pivot Point Extractor</text>
+            <text x="415" y="68" fill="#e2e8f0" font-size="6.8" font-family="Plus Jakarta Sans">• Automated Graphic Generator</text>
+            <text x="415" y="80" fill="#e2e8f0" font-size="6.8" font-family="Plus Jakarta Sans">• Remotion Short-Video Render</text>
+            <text x="487" y="96" fill="#8b5cf6" font-size="7" font-weight="800" text-anchor="middle" font-family="JetBrains Mono">&lt; 2.5s Generation Engine</text>
+
+            <!-- Arrow 3 -->
+            <path d="M 570 57 L 595 57" stroke="#8b5cf6" stroke-width="1.5"/>
+
+            <!-- Stage 4: Dual Output -->
+            <rect x="600" y="10" width="150" height="95" rx="6" fill="#064e3b" stroke="#34d399" stroke-width="1.5"/>
+            <text x="675" y="26" fill="#34d399" font-size="8.5" font-weight="900" text-anchor="middle" font-family="Plus Jakarta Sans">4. DUAL OUTPUTS</text>
+            <text x="608" y="44" fill="#ffffff" font-size="6.8" font-weight="800" font-family="Plus Jakarta Sans">▶ SHORTS:</text>
+            <text x="608" y="54" fill="#a7f3d0" font-size="6.2" font-family="Plus Jakarta Sans">15s Videos & 35-W Cards</text>
+            <text x="608" y="68" fill="#ffffff" font-size="6.8" font-weight="800" font-family="Plus Jakarta Sans">📄 LONG-FORM:</text>
+            <text x="608" y="78" fill="#a7f3d0" font-size="6.2" font-family="Plus Jakarta Sans">Tactical Analytics Dossiers</text>
+            <text x="675" y="96" fill="#34d399" font-size="7" font-weight="800" text-anchor="middle" font-family="JetBrains Mono">Dual Content Engine</text>
+          </svg>
+        </div>
       </div>
       <div class="slide-footer">
-        <span>Category Disruption: Clean, snackable, and optimized for viral sharing.</span>
+        <span>Technology Moat: Automated ingestion lake + Dialmate AI synth generating Shorts and Long-Form content.</span>
         <span>Slide 04 of 20</span>
       </div>
     </div>
@@ -1262,47 +1379,47 @@
     <div class="slide-container" data-slide="18">
       <div class="slide-header">
         <div class="slide-category">[CAPITAL DEPLOYMENT]</div>
-        <h2 class="slide-title">INR 5,00,000 Seed Capital Allocation</h2>
-        <p class="slide-subtitle">Supporting 1 Full-Time Software Developer alongside Sayan (CTO) for 6 months.</p>
+        <h2 class="slide-title">INR 9,00,000 Pre-Seed Capital Allocation</h2>
+        <p class="slide-subtitle">Structured deployment across 3 Angel Tickets (₹3,00,000 INR each) for 6–8 Months Runway.</p>
       </div>
       <div class="slide-body">
         <div class="grid-2">
           <div class="card-box">
-            <h3>Fund Allocation Breakdown</h3>
+            <h3>Pre-Seed Capital Allocation (₹9.0L)</h3>
             <table class="deck-table" style="margin-top: 4px;">
               <tbody>
                 <tr>
-                  <td><strong>1 Full-Time Dev Stipend (6 Mos)</strong></td>
-                  <td class="num">INR 1,80,000 (36%)</td>
+                  <td><strong>Micro-Creator & Growth Syndication</strong></td>
+                  <td class="num">INR 4,00,000 (44.4%)</td>
                 </tr>
                 <tr>
-                  <td><strong>35 Creator Distribution & Growth</strong></td>
-                  <td class="num">INR 1,60,000 (32%)</td>
+                  <td><strong>Data Lake & AI Pipeline Engine</strong></td>
+                  <td class="num">INR 2,10,000 (23.3%)</td>
                 </tr>
                 <tr>
-                  <td><strong>Sports Data APIs & Cloud Infra</strong></td>
-                  <td class="num">INR 70,000 (14%)</td>
+                  <td><strong>Short Video & Asset Production</strong></td>
+                  <td class="num">INR 1,20,000 (13.3%)</td>
                 </tr>
                 <tr>
-                  <td><strong>Creative Templates & Writers</strong></td>
-                  <td class="num">INR 40,000 (8%)</td>
+                  <td><strong>Working Capital & Tournament Reserve</strong></td>
+                  <td class="num">INR 1,20,000 (13.3%)</td>
                 </tr>
                 <tr>
-                  <td><strong>Legal Setup & Working Reserve</strong></td>
-                  <td class="num">INR 50,000 (10%)</td>
+                  <td><strong>Legal Incorporation & Developer Keys</strong></td>
+                  <td class="num">INR 50,000 (5.6%)</td>
                 </tr>
                 <tr class="highlight-row">
-                  <td><strong>TOTAL SEED BUDGET</strong></td>
-                  <td class="num"><strong>INR 5,00,000 (100%)</strong></td>
+                  <td><strong>TOTAL PRE-SEED FUNDING</strong></td>
+                  <td class="num"><strong>INR 9,00,000 (100%)</strong></td>
                 </tr>
               </tbody>
             </table>
           </div>
           <div class="card-box accent-red">
             <h3>Disbursement Tranches</h3>
-            <p>• <strong>Tranche 1 (Month 1): INR 2,00,000</strong> — Full-Time Dev onboarded, PWA deployed, scrapers setup.<br><br>
-               • <strong>Tranche 2 (Month 2–3): INR 2,00,000</strong> — 25k MAU milestone, 35 creator rollout, WhatsApp VIP launch.<br><br>
-               • <strong>Tranche 3 (Month 4–5): INR 1,00,000</strong> — 50k MAU reached, pre-monetization sponsor lock, Month 5 live.</p>
+            <p>• <strong>Tranche 1 (Closing): INR 3,00,000</strong> — Data Lake live, scrapers operational, 35 creator contracts.<br><br>
+               • <strong>Tranche 2 (Month 2–3): INR 3,00,000</strong> — 25k MAU achieved, WhatsApp VIP network, B2B API beta.<br><br>
+               • <strong>Tranche 3 (Month 4): INR 3,00,000</strong> — 50k MAU, Cashflow Breakeven reached, scaling to Month 6.</p>
           </div>
         </div>
       </div>
@@ -1312,65 +1429,79 @@
       </div>
     </div>
 
-    <!-- SLIDE 19: Team & Leadership -->
+    <!-- SLIDE 19: Cap Table & Governance Alignment -->
     <div class="slide-container" data-slide="19">
       <div class="slide-header">
-        <div class="slide-category">[FOUNDING TEAM]</div>
-        <h2 class="slide-title">Leadership & Execution Moat</h2>
-        <p class="slide-subtitle">Clear technical and commercial division of responsibilities.</p>
+        <div class="slide-category">[CAP TABLE & GOVERNANCE]</div>
+        <h2 class="slide-title">Cap Table Strategy & Founder Alignment</h2>
+        <p class="slide-subtitle">83.0% Founder Majority Equity Retained to Drive Venture to Series A Scale.</p>
       </div>
       <div class="slide-body">
-        <div class="grid-3">
-          <div class="card-box accent-red">
-            <h3>Sayan Bhattacharya</h3>
-            <p style="color: var(--accent-crimson); font-weight:700; font-size:0.75rem; margin-bottom:6px;">Co-Founder & CTO / Head of Product</p>
-            <p>Leads sub-2.5s AI summary scrapers, serverless card generator, sports data API integration, and cloud architecture scale.</p>
+        <div class="grid-2">
+          <div class="card-box">
+            <h3>Post-Pre-Seed Cap Table</h3>
+            <table class="deck-table" style="margin-top: 4px;">
+              <tbody>
+                <tr>
+                  <td><strong>Sayan Bhattacharya (Co-Founder & CTO)</strong></td>
+                  <td class="num"><strong>41.5%</strong></td>
+                </tr>
+                <tr>
+                  <td><strong>Rajrup (Co-Founder & CGO)</strong></td>
+                  <td class="num"><strong>41.5%</strong></td>
+                </tr>
+                <tr>
+                  <td><strong>ESOP Pool (Key Hires & Lead Devs)</strong></td>
+                  <td class="num"><strong>8.0%</strong></td>
+                </tr>
+                <tr class="highlight-row">
+                  <td><strong>3 Pre-Seed Angels (₹3L each for 3.0%)</strong></td>
+                  <td class="num"><strong>9.0% (3.0% each)</strong></td>
+                </tr>
+              </tbody>
+            </table>
           </div>
           <div class="card-box accent-blue">
-            <h3>Full-Time Lead Developer</h3>
-            <p style="color: var(--accent-blue); font-weight:700; font-size:0.75rem; margin-bottom:6px;">Full-Stack & AI Pipeline Engineer</p>
-            <p>Works 100% full-time alongside Sayan on PWA frontend, dynamic story card renderer, and real-time score webhooks.</p>
-          </div>
-          <div class="card-box">
-            <h3>Rajrup</h3>
-            <p style="color: #ffffff; font-weight:700; font-size:0.75rem; margin-bottom:6px;">Co-Founder & CGO / Head of Growth</p>
-            <p>Leads creator syndication (35+ creators), WhatsApp VIP broadcast loops, brand sponsorship pre-selling, and affiliate deals.</p>
+            <h3>Founder Vesting & Protections</h3>
+            <p>• <strong>Vesting Schedule:</strong> 4-year vesting with 1-year cliff for both co-founders.<br><br>
+               • <strong>100% IP Assignment:</strong> All scrapers, data lake logic, and codeassigned to entity.<br><br>
+               • <strong>Board Structure:</strong> 2 Founder Seats + 1 Investor Observer Seat.</p>
           </div>
         </div>
       </div>
       <div class="slide-footer">
-        <span>Governance: Standard 4-year vesting with 1-year cliff and 10% ESOP pool for future key hires.</span>
+        <span>Governance: Clean corporate structure protecting co-founder majority control.</span>
         <span>Slide 19 of 20</span>
       </div>
     </div>
 
-    <!-- SLIDE 20: The Ask & Investment Summary -->
+    <!-- SLIDE 20: The Pre-Seed Angel Investment Opportunity -->
     <div class="slide-container" data-slide="20">
       <div class="slide-header">
-        <div class="slide-category">[THE INVESTMENT ASK]</div>
-        <h2 class="slide-title">Seed Summary & Milestone Deliverables</h2>
-        <p class="slide-subtitle">Securing the ₹5,00,000 micro-seed runway to unlock Month 5 cashflow and Year 1 scale.</p>
+        <div class="slide-category">[ANGEL INVESTMENT OPPORTUNITY]</div>
+        <h2 class="slide-title">Pre-Seed Angel Ticket & Milestone Deliverables</h2>
+        <p class="slide-subtitle">Participate with ₹3,00,000 INR for 3.0% Equity in India's Fastest AI Sports Bulletin.</p>
       </div>
       <div class="slide-body">
         <div class="grid-2">
           <div class="card-box accent-green">
-            <h3>What This INR 5,00,000 Unlocks</h3>
-            <p>• 1 Dedicated Full-Time Software Developer for 6 months.<br>
-               • 75,000 Active Monthly Users (MAU) across Cricket & Football.<br>
-               • Month 5 Cashflow Breakeven (INR 1,45,000 MRR).<br>
-               • Positioned for Institutional Seed Round (INR 2.5 Cr - 5 Cr) in Month 6.</p>
+            <h3>What Your INR 3,00,000 Angel Ticket Unlocks</h3>
+            <p>• <strong>3.0% Equity Stake</strong> at ₹1.00 Crore Post-Money Valuation.<br>
+               • <strong>130,000 Active MAU</strong> target by Month 6.<br>
+               • <strong>Cashflow Breakeven</strong> by Month 4 (₹1.65L MRR).<br>
+               • <strong>Target 15x–20x Return</strong> at Series A round (Targeting ₹15 Cr–₹20 Cr valuation).</p>
           </div>
           <div class="card-box">
-            <h3>Next 14-Day Immediate Action Plan</h3>
-            <p>• <strong>Day 1–3:</strong> Pvt Ltd incorporation and SPORT IQ trademark filing.<br>
-               • <strong>Day 4–7:</strong> Onboard Full-Time Developer; deploy live PWA prototype.<br>
-               • <strong>Day 8–10:</strong> Finalize 35 creator contracts; seed WhatsApp VIP groups.<br>
-               • <strong>Day 11–14:</strong> Release Closed Beta to first 1,000 sports fans.</p>
+            <h3>Immediate Execution Plan (Next 14 Days)</h3>
+            <p>• <strong>Day 1–3:</strong> Pvt Ltd incorporation & IP assignment agreement.<br>
+               • <strong>Day 4–7:</strong> Deploy live PWA with Data Lake & Dialmate AI engine.<br>
+               • <strong>Day 8–10:</strong> Contract 50+ micro-creators & seed WhatsApp VIP groups.<br>
+               • <strong>Day 11–14:</strong> Roll out Closed Beta to first 5,000 sports fans.</p>
           </div>
         </div>
       </div>
       <div class="slide-footer">
-        <span>SPORT IQ — High-Velocity Sports Bulletin | Dialmate AI Incubation</span>
+        <span>SPORT IQ — High-Velocity Sports Bulletin | Incubated by Dialmate AI</span>
         <span>Slide 20 of 20</span>
       </div>
     </div>
@@ -1421,6 +1552,29 @@
         updateSlide();
       }
     });
+
+    // Touch & Swipe Navigation Support for iPad and Mobile
+    let touchStartX = 0;
+    let touchEndX = 0;
+
+    document.addEventListener('touchstart', (e) => {
+      touchStartX = e.changedTouches[0].screenX;
+    }, { passive: true });
+
+    document.addEventListener('touchend', (e) => {
+      touchEndX = e.changedTouches[0].screenX;
+      handleSwipe();
+    }, { passive: true });
+
+    function handleSwipe() {
+      const swipeThreshold = 50;
+      if (touchEndX < touchStartX - swipeThreshold) {
+        nextSlide();
+      }
+      if (touchEndX > touchStartX + swipeThreshold) {
+        prevSlide();
+      }
+    }
   </script>
 </body>
 </html>

@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SPORT IQ — Internal Founder Financial & Operational Alignment (₹9 Lakhs Pre-Seed)</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg-primary: #070a11;
+    --bg-card: #0d131f;
+    --bg-card-alt: #131d2e;
+    --accent-red: #dc2626;
+    --accent-crimson: #ef4444;
+    --accent-green: #10b981;
+    --accent-blue: #3b82f6;
+    --accent-amber: #f59e0b;
+    --accent-purple: #8b5cf6;
+    --text-primary: #f8fafc;
+    --text-secondary: #94a3b8;
+    --border-card: #24324a;
+    --border-light: rgba(255, 255, 255, 0.08);
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+    background-color: var(--bg-primary);
+    color: var(--text-primary);
+    line-height: 1.6;
+    padding: 32px 20px;
+  }
+
+  .container {
+    max-width: 1040px;
+    margin: 0 auto;
+    background: var(--bg-card);
+    border: 1px solid var(--border-card);
+    border-radius: 16px;
+    padding: 40px;
+    box-shadow: 0 24px 60px rgba(0, 0, 0, 0.6), 0 0 40px rgba(239, 68, 68, 0.08);
+  }
+
+  .header {
+    border-bottom: 1px solid var(--border-card);
+    padding-bottom: 24px;
+    margin-bottom: 32px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+
+  .badge {
+    background: rgba(239, 68, 68, 0.15);
+    color: var(--accent-crimson);
+    border: 1px solid rgba(239, 68, 68, 0.4);
+    padding: 4px 12px;
+    border-radius: 6px;
+    font-size: 0.75rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    display: inline-block;
+    margin-bottom: 12px;
+  }
+
+  h1 { font-size: 2.2rem; font-weight: 900; line-height: 1.2; letter-spacing: -0.5px; margin-bottom: 8px; }
+  .subtitle { font-size: 1rem; color: var(--text-secondary); }
+
+  .nav-btn {
+    background: var(--bg-card-alt);
+    border: 1px solid var(--border-card);
+    color: var(--text-primary);
+    padding: 8px 16px;
+    border-radius: 8px;
+    font-size: 0.85rem;
+    font-weight: 700;
+    text-decoration: none;
+    transition: all 0.2s ease;
+  }
+  .nav-btn:hover { background: var(--accent-red); border-color: var(--accent-red); color: #fff; }
+
+  .grid-4 { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; margin: 24px 0; }
+  .metric-box {
+    background: var(--bg-card-alt);
+    border: 1px solid var(--border-card);
+    border-radius: 12px;
+    padding: 20px;
+    text-align: center;
+  }
+  .metric-val { font-family: 'JetBrains Mono', monospace; font-size: 1.6rem; font-weight: 800; }
+  .metric-val.red { color: var(--accent-crimson); }
+  .metric-val.green { color: var(--accent-green); }
+  .metric-val.blue { color: var(--accent-blue); }
+  .metric-val.amber { color: var(--accent-amber); }
+  .metric-lbl { font-size: 0.78rem; color: var(--text-secondary); font-weight: 700; text-transform: uppercase; margin-top: 6px; }
+
+  h2 { font-size: 1.4rem; font-weight: 800; color: var(--text-primary); margin: 36px 0 16px 0; border-left: 4px solid var(--accent-crimson); padding-left: 12px; }
+  p { color: #cbd5e1; margin-bottom: 14px; font-size: 0.95rem; }
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    font-size: 0.9rem;
+  }
+  th, td {
+    padding: 12px 16px;
+    border: 1px solid var(--border-card);
+    text-align: left;
+  }
+  th { background: #131d2e; color: #f8fafc; font-weight: 800; text-transform: uppercase; font-size: 0.75rem; letter-spacing: 0.5px; }
+  tr:nth-child(even) { background: rgba(255, 255, 255, 0.02); }
+
+  .diagram-box {
+    background: #090e18;
+    border: 1px solid var(--border-card);
+    border-radius: 12px;
+    padding: 24px;
+    margin: 20px 0;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.85rem;
+    color: #38bdf8;
+    overflow-x: auto;
+  }
+
+  .sign-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+    margin-top: 40px;
+    padding-top: 24px;
+    border-top: 1px solid var(--border-card);
+  }
+  .sign-card {
+    background: var(--bg-card-alt);
+    border: 1px dashed var(--border-card);
+    border-radius: 12px;
+    padding: 20px;
+  }
+
+  @media (max-width: 768px) {
+    .grid-4 { grid-template-columns: 1fr 1fr; }
+    .sign-grid { grid-template-columns: 1fr; }
+    .header { flex-direction: column; gap: 16px; }
+  }
+</style>
+</head>
+<body>
+
+<div class="container">
+  <header class="header">
+    <div>
+      <span class="badge">Strictly Confidential — Co-Founders Only</span>
+      <h1>INTERNAL FINANCIAL & OPERATIONAL ALIGNMENT</h1>
+      <p class="subtitle">SPORT IQ Pre-Seed Strategy: ₹9,00,000 INR Allocation & Dilution Blueprint</p>
+    </div>
+    <div>
+      <a href="investor_deck.html" class="nav-btn">← Back to Investor Deck</a>
+    </div>
+  </header>
+
+  <!-- Metric Summary -->
+  <div class="grid-4">
+    <div class="metric-box">
+      <div class="metric-val red">₹9.00 Lakhs</div>
+      <div class="metric-lbl">Pre-Seed Capital</div>
+    </div>
+    <div class="metric-box">
+      <div class="metric-val green">3 Angels @ ₹3L</div>
+      <div class="metric-lbl">Round Structure</div>
+    </div>
+    <div class="metric-box">
+      <div class="metric-val blue">9.0% Total</div>
+      <div class="metric-lbl">Pre-Seed Dilution</div>
+    </div>
+    <div class="metric-box">
+      <div class="metric-val amber">83.0%</div>
+      <div class="metric-lbl">Founder Majority</div>
+    </div>
+  </div>
+
+  <h2>1. Executive Summary & Investment Structure</h2>
+  <p>To launch and scale <strong>SPORT IQ</strong> into India's leading AI-synthesized digital sports bulletin, co-founders <strong>Sayan Bhattacharya (CTO)</strong> and <strong>Rajrup (CGO)</strong> have aligned on a <strong>₹9,00,000 INR Pre-Seed Round</strong>.</p>
+  <p>The round executes a syndicated 3-angel structure: <strong>3 Angel Investors contributing ₹3,00,000 INR each for 3.0% equity per ticket</strong>. This yields a ₹1.00 Crore post-money valuation while protecting co-founder majority equity (83.0% combined).</p>
+
+  <h2>2. Cap Table & Dilution Strategy</h2>
+  <table>
+    <thead>
+      <tr>
+        <th>Shareholder / Entity</th>
+        <th>Pre-Money</th>
+        <th>Dilution</th>
+        <th>Post-Money Stake</th>
+        <th>Role & Key Mandate</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>Sayan Bhattacharya</strong></td>
+        <td>45.6%</td>
+        <td>-4.1%</td>
+        <td><strong>41.5%</strong></td>
+        <td>Co-Founder & CTO (Data Lake, AI Pipelines, Mobile PWA)</td>
+      </tr>
+      <tr>
+        <td><strong>Rajrup</strong></td>
+        <td>45.6%</td>
+        <td>-4.1%</td>
+        <td><strong>41.5%</strong></td>
+        <td>Co-Founder & CGO (Creator Network, Distribution, Virality)</td>
+      </tr>
+      <tr>
+        <td><strong>ESOP Pool</strong></td>
+        <td>8.8%</td>
+        <td>-0.8%</td>
+        <td><strong>8.0%</strong></td>
+        <td>Reserved for Lead Engineering & Content Hires</td>
+      </tr>
+      <tr>
+        <td><strong>Angel Investor 1</strong></td>
+        <td>0.0%</td>
+        <td>+3.0%</td>
+        <td><strong>3.0%</strong></td>
+        <td>₹3,00,000 Seed Allocation + Media Advisory</td>
+      </tr>
+      <tr>
+        <td><strong>Angel Investor 2</strong></td>
+        <td>0.0%</td>
+        <td>+3.0%</td>
+        <td><strong>3.0%</strong></td>
+        <td>₹3,00,000 Seed Allocation + Brand Partnerships</td>
+      </tr>
+      <tr>
+        <td><strong>Angel Investor 3</strong></td>
+        <td>0.0%</td>
+        <td>+3.0%</td>
+        <td><strong>3.0%</strong></td>
+        <td>₹3,00,000 Seed Allocation + Investor Intros</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h2>3. Capital Allocation Matrix (₹9,00,000 Deployment)</h2>
+  <table>
+    <thead>
+      <tr>
+        <th>Category</th>
+        <th>Amount (INR)</th>
+        <th>% Share</th>
+        <th>Core Deployment Items</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>Data Lake & AI Pipeline Engine</strong></td>
+        <td>₹2,10,000</td>
+        <td>23.3%</td>
+        <td>Cricket/Football APIs, High-Speed Twitter/X Scrapers, Supabase Data Lake, LLM Tokens</td>
+      </tr>
+      <tr>
+        <td><strong>Creator Syndication & Growth</strong></td>
+        <td>₹4,00,000</td>
+        <td>44.4%</td>
+        <td>50+ Regional Micro-Creators (10k-70k followers), WhatsApp VIP Channels, Performance Boosts</td>
+      </tr>
+      <tr>
+        <td><strong>Short Video & Asset Production</strong></td>
+        <td>₹1,20,000</td>
+        <td>13.3%</td>
+        <td>Remotion Automated Video Templates, Sound Packs, Vernacular Micro-Writers</td>
+      </tr>
+      <tr>
+        <td><strong>Legal, Incorporation & IP</strong></td>
+        <td>₹50,000</td>
+        <td>5.6%</td>
+        <td>Pvt Ltd Setup, GST, Trademark Filing, 100% IP Assignment, Apple/Google Developer Keys</td>
+      </tr>
+      <tr>
+        <td><strong>Working Capital & Reserve</strong></td>
+        <td>₹1,20,000</td>
+        <td>13.3%</td>
+        <td>Tournament Traffic Reserve (IPL, T20 World Cup, UEFA Finals)</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h2>4. Data Engine Architecture & Content Generator</h2>
+  <div class="diagram-box">
+┌─────────────────────────────────────────────────────────────────────────┐
+│                      SPORT IQ DATA ENGINE PIPELINE                      │
+├─────────────────────────────────────────────────────────────────────────┤
+│ [1. INGESTION]   Scrapers (Twitter/X commentary, RSS, Web) + Live APIs  │
+│                        │                                                │
+│ [2. DATA LAKE]   Raw Data Lake (Telemetry, Transcripts, Sentiment, Stats)│
+│                        │                                                │
+│ [3. AI LAYER]    Dialmate AI Intelligence Layer (LLM + Multimodal Synthesizer) │
+│                        │                                                │
+│ [4. OUTPUT]      ├── SHORTS (15s Videos, 35-Word Cards, WhatsApp Infographics)│
+│                  └── LONG-FORM (Tactical Breakdowns, Analytics Dossiers)│
+└─────────────────────────────────────────────────────────────────────────┘
+  </div>
+
+  <h2>5. 4-Pillar Revenue Generation Model</h2>
+  <ul>
+    <li><strong>Pillar 1: B2B Data & Content Syndication API (35%):</strong> White-labeled bulletin and short video feeds licensed to sports blogs and news apps (₹25k-50k/mo per client).</li>
+    <li><strong>Pillar 2: Creator Co-Sponsorship & Native Badges (35%):</strong> Brand sponsor placements on viral match cards and short video reels.</li>
+    <li><strong>Pillar 3: SPORT IQ Pro B2C Subscriptions (18%):</strong> Premium ad-free 15s pulse, fantasy signals, and tactical telemetry @ ₹99/mo.</li>
+    <li><strong>Pillar 4: Affiliate Sports Merch & Fantasy (12%):</strong> Contextual referral links for FanCode merchandise and fantasy contests.</li>
+  </ul>
+
+  <h2>6. Financial Ramp & Breakeven Roadmap</h2>
+  <table>
+    <thead>
+      <tr>
+        <th>Timeline</th>
+        <th>MAU Target</th>
+        <th>Monthly Revenue</th>
+        <th>OpEx</th>
+        <th>Net Status</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr><td>Month 1</td><td>2,500</td><td>₹0</td><td>₹65,000</td><td>Initial Infra & Scraping Setup</td></tr>
+      <tr><td>Month 2</td><td>8,500</td><td>₹15,000</td><td>₹75,000</td><td>Closed Beta + WhatsApp VIP</td></tr>
+      <tr><td>Month 3</td><td>25,000</td><td>₹65,000</td><td>₹95,000</td><td>First B2B API Client</td></tr>
+      <tr><td><strong>Month 4</strong></td><td><strong>50,000</strong></td><td><strong>₹1,65,000</strong></td><td><strong>₹1,15,000</strong></td><td><span style="color:#10b981; font-weight:800;">CASHFLOW BREAKEVEN ACHIEVED</span></td></tr>
+      <tr><td>Month 6</td><td>130,000</td><td>₹5,85,000</td><td>₹1,85,000</td><td>Institutional Seed Pitch (₹2.5 Cr @ ₹15 Cr Val)</td></tr>
+    </tbody>
+  </table>
+
+  <div class="sign-grid">
+    <div class="sign-card">
+      <div style="font-weight: 800; color: #f8fafc; font-size: 1rem;">Sayan Bhattacharya</div>
+      <div style="font-size: 0.8rem; color: #94a3b8;">Co-Founder & Chief Technology Officer</div>
+      <div style="margin-top: 16px; font-family: 'JetBrains Mono'; font-size: 0.75rem; color: #ef4444;">Signed & Confirmed</div>
+    </div>
+    <div class="sign-card">
+      <div style="font-weight: 800; color: #f8fafc; font-size: 1rem;">Rajrup</div>
+      <div style="font-size: 0.8rem; color: #94a3b8;">Co-Founder & Chief Growth Officer</div>
+      <div style="margin-top: 16px; font-family: 'JetBrains Mono'; font-size: 0.75rem; color: #ef4444;">Signed & Confirmed</div>
+    </div>
+  </div>
+
+</div>
+
+</body>
+</html>
